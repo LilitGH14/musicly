@@ -1,5 +1,5 @@
 "use client"
-import brand_data from '@/data/brand-data';
+import brand_data from '../../../data/brand-data';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';
 import Link from 'next/link';

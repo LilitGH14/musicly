@@ -1,5 +1,5 @@
 "use client"
-import trending_genre_data from '@/data/trending-genres-data';
+import trending_genre_data from '../../data/trending-genres-data';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';
 import Link from 'next/link';

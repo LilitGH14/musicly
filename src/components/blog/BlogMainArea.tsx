@@ -4,7 +4,7 @@ import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 import Link from 'next/link';
 import BlogSidebar from './BlogSidebar';
 import PaginationTwo from '../common/pagination/PaginationTwo';
-import latest_news_data from '@/data/latest-news-data';
+import latest_news_data from '../../data/latest-news-data';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import ModalVideo from 'react-modal-video';

@@ -4,7 +4,7 @@ import Breadcrumb from '../common/breadcrumb/Breadcrumb';
 import Link from 'next/link';
 import IdeasAdviceSidebar from './IdeasAdviceSidebar';
 import PaginationTwo from '../common/pagination/PaginationTwo';
-import ideas_advice_data from '@/data/ideas-advice-data';
+import ideas_advice_data from '../../data/ideas-advice-data';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';

@@ -3,14 +3,14 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import NiceSelect from '../common/NiceSelect';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
-import products_data from '@/data/products-data';
+import products_data from '../../data/products-data';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import { useAppDispatch } from '@/redux/hooks';
 import { cart_product } from '@/redux/slices/cartSlice';
 import { ProductsType } from '@/types/types';
 import { wishlist_product } from '@/redux/slices/wishlist-slice';
-import { genres_filter_select, genres_select } from '@/data/nice-select-data';
+import { genres_filter_select, genres_select } from '../../data/nice-select-data';
 import ShopModal from '../common/ShopModal/ShopModal';
 
 const ProductArea = () => {

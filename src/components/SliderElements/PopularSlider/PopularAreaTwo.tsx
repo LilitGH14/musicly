@@ -1,5 +1,5 @@
 "use client"
-import popular_categories from '@/data/popular-categories-data';
+import popular_categories from '../../../data/popular-categories-data';
 import { imageLoader } from '@/hooks/ImageLoader';
 import TrandingBgImg from '../../../../public/assets/img/trending/tranding-bg.png';
 import Image from 'next/image';

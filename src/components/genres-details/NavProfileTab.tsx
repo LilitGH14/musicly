@@ -6,7 +6,7 @@ import singerImg from '../../../public/assets/img/header/singer.png';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import AudioPlayer from 'react-h5-audio-player';
-import song_playlist from '@/data/song-playlist-data';
+import song_playlist from '../../data/song-playlist-data';
 
 const NavProfileTab = () => {
     const [currentSongIndex, setCurrentSongIndex] = useState(0);

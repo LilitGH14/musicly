@@ -1,5 +1,5 @@
 "use client"
-import future_partner_data from '@/data/future-partner-data';
+import future_partner_data from '../../../data/future-partner-data';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';
 import React from 'react';

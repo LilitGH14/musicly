@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { ProductsType } from "@/types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+
 interface CartState {
   cartProducts: ProductsType[];
 }
@@ -58,9 +59,8 @@ export const cartSlice = createSlice({
         const totalCart = state.cartProducts[cartIndex].quantity ?? 0;
         if (totalCart > 1) {
           state.cartProducts[cartIndex].quantity = totalCart - 1;
-          toast.error(`Decrease cart quantity`, { position: "top-left", });
-        }
-        else {
+          toast.error(`Decrease cart quantity`, { position: "top-left" });
+        } else {
           toast.error(`Quantity cannot be less than 1`);
         }
       }

@@ -12,7 +12,7 @@ import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css/bundle';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
-import testimonial_data from '@/data/testimonial-data';
+import testimonial_data from '../../../data/testimonial-data';
 import { TImageData } from '@/types/types';
 
 const TestimonialSliderOne = () => {

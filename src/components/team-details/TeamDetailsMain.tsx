@@ -6,7 +6,7 @@ import BioData from './BioData';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import { TTeamData, idType } from '@/types/types';
-import team_data from '@/data/team-data';
+import team_data from '../../data/team-data';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
 
 const TeamDetailsMain = ({ id }: idType) => {

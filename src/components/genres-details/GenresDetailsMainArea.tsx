@@ -12,7 +12,7 @@ import BookingArea from './BookingArea';
 import BrandLikeArea from './BrandLikeArea';
 import GenresFaq from './GenresFaq';
 import { idType } from '@/types/types';
-import genres_listing_data from '@/data/genres-listing-data';
+import genres_listing_data from '../../data/genres-listing-data';
 import GetRatting from '@/hooks/GetRating';
 import ModalVideo from 'react-modal-video';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';

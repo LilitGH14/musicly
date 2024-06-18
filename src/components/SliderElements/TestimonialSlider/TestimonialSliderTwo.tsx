@@ -10,7 +10,7 @@ import image6 from '../../../../public/assets/img/testimonial/testimonial-12.png
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import { TImageData } from '@/types/types';
-import testimonial_data from '@/data/testimonial-data';
+import testimonial_data from '../../../data/testimonial-data';
 //swiper-slider
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';

@@ -2,7 +2,7 @@
 import React from 'react';
 import BradcrumbThree from '../common/breadcrumb/BradcrumbThree';
 import Link from 'next/link';
-import latest_news_data from '@/data/latest-news-data';
+import latest_news_data from '../../data/latest-news-data';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import PaginationData from '../common/pagination/pagination-data';

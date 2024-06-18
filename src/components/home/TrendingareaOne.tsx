@@ -1,5 +1,5 @@
 "use client"
-import trending_genre_data from '@/data/trending-genres-data';
+import trending_genre_data from '../../data/trending-genres-data';
 import Link from 'next/link';
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';

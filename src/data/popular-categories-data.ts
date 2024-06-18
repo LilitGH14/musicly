@@ -1,8 +1,8 @@
 
-import image1 from '../../public/assets/img/popular/popular-01.png';
-import image2 from '../../public/assets/img/popular/popular-02.png';
-import image3 from '../../public/assets/img/popular/popular-03.png';
-import image4 from '../../public/assets/img/popular/popular-04.png';
+import image1 from '../../public/assets/img/genres/1.jpg';
+import image2 from '../../public/assets/img/genres/2.jpg';
+import image3 from '../../public/assets/img/genres/3.jpg';
+import image4 from '../../public/assets/img/genres/4.jpg';
 import { TPopularData } from '@/types/types';
 
 
@@ -11,42 +11,42 @@ const popular_categories: TPopularData[] = [
     {
         id: 1,
         image: image1,
-        title: "Singers"
+        title: "Song 1"
     },
     {
         id: 2,
         image: image2,
-        title: "Bands & Group"
+        title: "Song 2"
     },
     {
         id: 3,
         image: image3,
-        title: "Tributes"
+        title: "Song 3"
     },
     {
         id: 4,
         image: image4,
-        title: "Solo Musicians"
+        title: "Song 4"
     },
     {
         id: 5,
         image: image1,
-        title: "Singers"
+        title: "Song 5"
     },
     {
         id: 6,
         image: image2,
-        title: "Bands & Group"
+        title: "Song 6"
     },
     {
         id: 7,
         image: image3,
-        title: "Tributes"
+        title: "Song 7"
     },
     {
         id: 8,
         image: image4,
-        title: "Solo Musicians"
+        title: "Song 8"
     },
     //tab-2 data
     {

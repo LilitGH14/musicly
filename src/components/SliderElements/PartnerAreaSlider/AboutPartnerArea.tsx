@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper';
 import 'swiper/css/bundle';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
-import future_partner_data from '@/data/future-partner-data';
+import future_partner_data from '../../../data/future-partner-data';
 
 const AboutPartnerArea = () => {
     return (

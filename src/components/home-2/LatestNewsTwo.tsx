@@ -1,5 +1,5 @@
 "use client"
-import latest_news_data from '@/data/latest-news-data';
+import latest_news_data from '../../data/latest-news-data';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';
 import Link from 'next/link';

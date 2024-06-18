@@ -9,7 +9,7 @@ import chooseBgImg from '../../../public/assets/img/choose/choose-bg.png'
 import EventMapArea from './EventMapArea';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
 import { TLetestNews, idType } from '@/types/types';
-import latest_news_data from '@/data/latest-news-data';
+import latest_news_data from '../../data/latest-news-data';
 
 const EventDetailsMain = ({ id }: idType) => {
     const event: TLetestNews | undefined = latest_news_data.find((item) => item.id == id)

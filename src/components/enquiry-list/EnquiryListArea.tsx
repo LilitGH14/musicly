@@ -1,5 +1,5 @@
 "use client"
-import genres_listing_data from '@/data/genres-listing-data';
+import genres_listing_data from '../../data/genres-listing-data';
 import GetRatting from '@/hooks/GetRating';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';

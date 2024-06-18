@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import NiceSelect from '../common/NiceSelect';
-import { bannerFormSelectOne, bannerFormSelectThree, bannerFormSelectTwo } from '@/data/nice-select-data';
+import { bannerFormSelectOne, bannerFormSelectThree, bannerFormSelectTwo } from '../../data/nice-select-data';
 
 const FindMusicianArea = () => {
     const selectHandler = () => { }

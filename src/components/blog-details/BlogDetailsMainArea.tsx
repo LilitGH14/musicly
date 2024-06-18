@@ -11,7 +11,7 @@ import authorImg from '../../../public/assets/img/news/author.png';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import { TLetestNews, idType } from '@/types/types';
-import latest_news_data from '@/data/latest-news-data';
+import latest_news_data from '../../data/latest-news-data';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
 
 const BlogDetailsMainArea = ({ id }: idType) => {

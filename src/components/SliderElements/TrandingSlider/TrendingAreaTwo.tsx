@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link';
 import React from 'react';
-import trending_genre_data from '@/data/trending-genres-data';
+import trending_genre_data from '../../../data/trending-genres-data';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
 import trandingBg from '../../../../public/assets/img/trending/tranding-bg.png';

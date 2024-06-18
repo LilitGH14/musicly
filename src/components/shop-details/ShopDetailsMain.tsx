@@ -3,7 +3,7 @@ import React from 'react';
 import ShopBradcrumb from '../common/breadcrumb/ShopBradcrumb';
 import Link from 'next/link';
 import { ProductsType, idType } from '@/types/types';
-import products_data from '@/data/products-data';
+import products_data from '../../data/products-data';
 import thumb1 from "../../../public/assets/img/shop/product-02.png";
 import thumb2 from "../../../public/assets/img/shop/product-03.png";
 import thumb3 from "../../../public/assets/img/shop/product-04.png";

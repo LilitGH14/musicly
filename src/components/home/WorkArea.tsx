@@ -9,9 +9,9 @@ import workStarImg from '../../../public/assets/img/work/star.png';
 import workArrowImg from '../../../public/assets/img/work/arrow.png';
 import Image from 'next/image';
 import { imageLoader } from '@/hooks/ImageLoader';
-import WorkFutureSvgIconOne from '@/svg/WorkFutureIconOne';
-import WorkFutureSvgIconTwo from '@/svg/WorkFutureSvgIconTwo';
-import WorkFutureSvgIconThree from '@/svg/WorkFutureSvgIconThree';
+import WorkFutureSvgIconOne from '../../../public/assets/img/svg/WorkFutureIconOne';
+import WorkFutureSvgIconTwo from '../../../public/assets/img/svg/WorkFutureSvgIconTwo';
+import WorkFutureSvgIconThree from '../../../public/assets/img/svg/WorkFutureSvgIconThree';
 import Link from 'next/link';
 import { TWorkFuture } from '@/types/types';
 

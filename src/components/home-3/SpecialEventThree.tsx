@@ -1,5 +1,5 @@
 "use client"
-import special_event_data from '@/data/special-event-data';
+import special_event_data from '../../data/special-event-data';
 import EventBgImg from '../../../public/assets/img/event/event-bg-3.png'
 import Link from 'next/link';
 import React, { useState } from 'react';

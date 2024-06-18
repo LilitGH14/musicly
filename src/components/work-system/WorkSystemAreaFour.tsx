@@ -1,8 +1,8 @@
 "use client"
 import { imageLoader } from '@/hooks/ImageLoader';
-import WorkFutureIconOne from '@/svg/WorkFutureIconOne';
-import WorkFutureSvgIconThree from '@/svg/WorkFutureSvgIconThree';
-import WorkFutureSvgIconTwo from '@/svg/WorkFutureSvgIconTwo';
+import WorkFutureIconOne from '../../../public/assets/img/svg/WorkFutureIconOne';
+import WorkFutureSvgIconThree from '../../../public/assets/img/svg/WorkFutureSvgIconThree';
+import WorkFutureSvgIconTwo from '../../../public/assets/img/svg/WorkFutureSvgIconTwo';
 import workIcon from '../../../public/assets/img/banner/banner-thumb-01.jpg';
 import arrowIcon from '../../../public/assets/img/work/arrow.png';
 import { TWorkFuture } from '@/types/types';

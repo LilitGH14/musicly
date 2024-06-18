@@ -1,5 +1,5 @@
 "use client"
-import popular_band_fuction_data from '@/data/popular-band-function-data';
+import popular_band_fuction_data from '../../data/popular-band-function-data';
 import GetRatting from '@/hooks/GetRating';
 import { imageLoader } from '@/hooks/ImageLoader';
 import Image from 'next/image';

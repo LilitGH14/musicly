@@ -7,7 +7,7 @@ import { imageLoader } from '@/hooks/ImageLoader';
 import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
 import AdviceGenresListingArea from './AdviceGenresListingArea';
 import { TIdeasAdvice, idType } from '@/types/types';
-import ideas_advice_data from '@/data/ideas-advice-data';
+import ideas_advice_data from '../../data/ideas-advice-data';
 
 const IdeasAdviceDetailsMain = ({ id }: idType) => {
     const advice: TIdeasAdvice | undefined = ideas_advice_data.find((item) => item.id == id)
