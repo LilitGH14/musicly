@@ -5,7 +5,7 @@ const LoginArea = () => {
     return (
         <>
             <Breadcrumb title="Login" />
-            <section className="ms-login-area pb-50 pt-130">
+            <section className="ms-login-area pb-20 pt-130">
                 <div className="container">
                     <div className="ms-maxw-510 mx-auto">
                         <div className="ms-login-wrap  ms-login-space ms-bg-2">

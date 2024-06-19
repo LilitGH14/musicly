@@ -11,11 +11,6 @@
 		text-transform: capitalize;
 		display: inline-block;
 		font-family: var(--bd-ff-subtitle);
-		background: var(--clr-gradient-4);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
 		line-height: 1;
 	}
 
@@ -45,6 +40,10 @@
 		&-wrapper {
 			position: relative;
 			z-index: 5;
+
+			span{
+				color:#b268da;
+			}
 
 			&.text-center {
 				p {

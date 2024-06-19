@@ -34,21 +34,10 @@ const menu_data: TMenuItem[] = [
             { title: "Home Style 03", link: "/home-3" },
         ],
     },
-    {
-        id: 2,
-        hasDropdown: false,
-        title: "About us",
-        link: "/about",
-    },
-    {
-        id: 3,
-        hasDropdown: false,
-        title: "How It Works",
-        link: "/work-system",
-    },
+
     {
         id: 4,
-        title: "Pages",
+        title: "Services",
         link: "#",
         megaMenu: true,
         hasDropdown: false,
@@ -110,18 +99,27 @@ const menu_data: TMenuItem[] = [
         id: 5,
         hasDropdown: true,
         title: "Blog",
-        link: "/news",
-        submenus: [
-            { title: "Blog", link: "/blog" },
-            { title: "Blog Details", link: "/blog-details" }
-        ],
+        link: "/blogs",
+    },
+
+    {
+        id: 3,
+        hasDropdown: false,
+        title: "How It Works",
+        link: "/work-system",
     },
     {
-        id: 6,
+        id: 2,
         hasDropdown: false,
-        title: "Help Center",
-        link: "/contact",
+        title: "About us",
+        link: "/about",
     },
+    // {
+    //     id: 6,
+    //     hasDropdown: false,
+    //     title: "Help Center",
+    //     link: "/contact",
+    // },
 ]
 
 export default menu_data;
