@@ -13,15 +13,11 @@
 }
 
 .ms-banner__bg-title {
-    font-size: 200px;
+    font-size: 150px;
     line-height: 1;
     font-family: var(--bd-ff-subtitle);
     font-weight: var(--bd-fw-regular);
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: cover;
-    background-position: center;
-    color: transparent;
+    color: #b46add;
     margin-bottom: 50px;
     display: inline-block;
 
@@ -36,7 +32,7 @@
 
 .ms-banner__title {
     font-weight: var(--bd-fw-sbold);
-    font-size: 50px;
+    font-size: 40px;
     color: var(--clr-common-white);
     line-height: 1.2;
     text-transform: capitalize;

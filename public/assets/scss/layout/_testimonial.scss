@@ -6,8 +6,7 @@
 .ms-tm-border {
 	border: 2px solid var(--clr-border-1);
 	border-radius: 15px;
-	padding-top: 130px;
-	padding-bottom: 70px;
+	padding: 20px 0;
 
 	@media #{$md, $xs, $sm} {
 		padding-top: 80px;

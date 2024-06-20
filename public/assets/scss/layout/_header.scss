@@ -555,6 +555,11 @@
   }
 }
 
+.ms-song-active{
+  display: flex;
+  justify-content: space-between;
+}
+
 .ms-ns-active .swiper-slide {
   width: auto;
 }

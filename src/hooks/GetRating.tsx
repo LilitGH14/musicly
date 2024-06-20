@@ -5,6 +5,7 @@ interface rattingType {
 const GetRatting = ({ averageRating }: rattingType) => {
     const getRating = (ratingsNum: number) => {
         const roundedRatings = Math.floor(ratingsNum);
+        console.log('ratingsNum', ratingsNum)
         const isHalfStar = ratingsNum % 1 !== 0;
 
         const emptyRatingCount = 5 - roundedRatings - (isHalfStar ? 1 : 0);

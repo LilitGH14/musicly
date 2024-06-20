@@ -12,7 +12,7 @@
 }
 
 .scroll__text h3 {
-    font-size: 65px;
+    font-size: 45px;
     font-weight: var(--bd-fw-regular);
     line-height: 1;
     color: var(--clr-common-white);
@@ -21,11 +21,11 @@
     margin-bottom: 0;
 
     @media #{$xl, $lg, $md, $sm, $xs} {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     @media #{$xxs} {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -54,6 +54,12 @@
     }
 }
 
+.text__scroll-wrapper{
+    position: relative;
+    right: 17px;
+    width: 101%;
+}
+
 .scroll__text .swiper-slide {
     width: auto;
     margin: 0 25px;
@@ -72,8 +78,8 @@
 }
 
 .ms-ts-space {
-    padding-top: 260px;
-    padding-bottom: 0px;
+    padding-top: 150px;
+    padding-bottom: 24px;
 
     @media #{$lg, $md} {
         padding-top: 130px;

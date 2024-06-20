@@ -35,6 +35,23 @@ export const text_scroll_data: TScroll[] = [
     title: "us",
     color: "text-color-2",
   },
+  {
+    title: "Share",
+  },
+  {
+    title: "your",
+  },
+  {
+    title: "story",
+    color: "text-color-1",
+  },
+  {
+    title: "with",
+  },
+  {
+    title: "us",
+    color: "text-color-2",
+  },
 ];
 
 export const text_scroll_two: TScroll[] = [

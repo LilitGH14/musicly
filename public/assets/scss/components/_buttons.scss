@@ -7,7 +7,9 @@
   font-size: 16px;
   color: var(--clr-common-white);
   font-weight: var(--bd-fw-medium);
-  background: var(--clr-gradient-3);
+  // background: var(--clr-gradient-3);
+  background: linear-gradient(142.4deg, rgb(195, 101, 218) 5%, rgb(156, 110, 206) 28.2%, rgb(111, 119, 216) 62.5%, rgb(93, 97, 161) 89.1%);
+
   padding: 0px 32px;
   @include inline-flex();
   align-items: center;
