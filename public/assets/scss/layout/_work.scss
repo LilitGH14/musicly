@@ -238,8 +238,8 @@
 
 // work system css 
 .ms-work-system-grid {
-	display: grid;
-	grid-template-columns: auto auto auto;
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 
 	@media #{$lg, $md} {
@@ -250,8 +250,8 @@
 		grid-template-columns: auto;
 	}
 
-	.work__features-item:last-child {
-		margin-bottom: 55px;
+	.work__features-item {
+		width: 50%;
 	}
 }
 

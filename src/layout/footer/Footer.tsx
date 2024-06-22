@@ -68,15 +68,6 @@ const Footer = () => {
                       <i className="fa-sharp fa-solid fa-paper-plane"></i>
                     </button>
                   </div>
-
-                  <div className="ms-subscribe2-mobile p-relative mb-10 d-sm-none">
-                    <i className="flaticon-mail"></i>
-                    <input type="text" placeholder="Enter your mail" />
-                    <button type="submit" className="ms-subscribe2-m-btn">
-                      Subscribe Now{" "}
-                      <i className="fa-sharp fa-solid fa-paper-plane"></i>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -105,24 +96,9 @@ const Footer = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="ms-footer2-rating pt-25">
-                    <h3>
-                      Excellent : 1050 Review On{" "}
-                      <Link href="#">
-                        <Image
-                          src={FooterStartImg}
-                          loader={imageLoader}
-                          placeholder="blur"
-                          loading="lazy"
-                          style={{ width: "100%", height: "auto" }}
-                          alt="footer image"
-                        />
-                      </Link>
-                    </h3>
-                  </div>
                 </div>
               </div>
-              <div className="col-xxl-2 col-lg-3 col-md-6">
+              <div className="col-xxl-2 col-lg-2 col-md-6">
                 <div className="ms-footer2-widget ms-footer2-widget2 mb-50">
                   <h3 className="ms-footer2-title">Company</h3>
                   <ul>
@@ -135,70 +111,24 @@ const Footer = () => {
                     <li>
                       <Link href="/terms-policy">Terms & Policy</Link>
                     </li>
-                    <li>
-                      <Link href="/contact">Help & Support</Link>
-                    </li>
-                    <li>
-                      <Link href="/faq">Faq</Link>
-                    </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-xxl-2 col-lg-3 col-md-6">
+              <div className="col-xxl-2 col-lg-2 col-md-6">
                 <div className="ms-footer2-widget mb-50">
-                  <h3 className="ms-footer2-title">Local Band Group</h3>
+                  <h3 className="ms-footer2-title">Genres</h3>
                   <ul>
                     <li>
-                      <Link href="/team">The Tricks</Link>
+                      <Link href="/genres">New</Link>
                     </li>
                     <li>
-                      <Link href="/team">Sound City</Link>
+                      <Link href="/genres">Band</Link>
                     </li>
                     <li>
-                      <Link href="/team">Big Teaser</Link>
+                      <Link href="/genres">Duet</Link>
                     </li>
                     <li>
-                      <Link href="/team">The New Tones</Link>
-                    </li>
-                    <li>
-                      <Link href="/team">Halos Music</Link>
-                    </li>
-                    <li>
-                      <Link href="/team">Soho Soul</Link>
-                    </li>
-                    <li>
-                      <Link href="/team">Atlantic</Link>
-                    </li>
-                    <li>
-                      <Link href="/team">The Fiction</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-xxl-2 col-lg-3 col-md-6">
-                <div className="ms-footer2-widget mb-50">
-                  <h3 className="ms-footer2-title">Trending Genres</h3>
-                  <ul>
-                    <li>
-                      <Link href="/genres">Wedding Bands</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">Jazz & Swing</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">Musician</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">Classical Musician</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">Corporate Party</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">Premiere Party Band</Link>
-                    </li>
-                    <li>
-                      <Link href="/genres">DJ Songs</Link>
+                      <Link href="/genres">Solo</Link>
                     </li>
                   </ul>
                 </div>
@@ -222,15 +152,6 @@ const Footer = () => {
                     <li>
                       <Link href="/contact">South Korea</Link>
                     </li>
-                    <li>
-                      <Link href="/contact">Japan</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Singapore</Link>
-                    </li>
-                    <li>
-                      <Link href="/contact">Hong Kong</Link>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -241,7 +162,7 @@ const Footer = () => {
           <div className="container">
             <div className="ms-footer-bottom-wrap text-center pt-35 pb-20">
               <div className="ms-footer-copy">
-                <p>© Musicly 2024, All Rights Reserved</p>
+                <p>© BeatSoul 2024, All Rights Reserved</p>
               </div>
             </div>
           </div>

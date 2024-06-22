@@ -27,7 +27,7 @@ const NiceSelect: React.FC<NiceSelectProps> = ({
 }) => {
   const [open, setOpen] = useState(false);
   const { setNiceSelectData } = useGlobalContext()
-  const [current, setCurrent] = useState<Option>(options[defaultCurrent]);
+  const [current, setCurrent] = useState<Option>();
   const onClose = useCallback(() => {
     setOpen(false);
   }, []);

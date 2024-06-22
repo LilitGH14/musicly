@@ -1,4 +1,4 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
 /* ------------------------------------------ */
 /*  09 - breadcrumb css  */
@@ -6,36 +6,62 @@
 
 // Breadcrumb style
 .ms-page-title {
-	font-weight: 600;
-	font-size: 50px;
-	color: var(--clr-common-white);
-	line-height: 1.4 !important;
+  font-weight: 600;
+  font-size: 50px;
+  color: var(--clr-common-white);
+  line-height: 1.4 !important;
 
-	@media #{$sm, $xs} {
-		font-size: 40px;
-	}
+  @media #{$sm, $xs} {
+    font-size: 40px;
+  }
 
-	@media #{$xxs} {
-		font-size: 34px;
-	}
+  @media #{$xxs} {
+    font-size: 34px;
+  }
 }
 
 .page-title-icon {
-	color: var(--clr-theme-1);
-	width: 80px;
-	height: 80px;
-	border: 1px solid var(--clr-theme-1);
-	line-height: 83px;
-	font-size: 40px;
-	border-radius: 50%;
+  color: var(--clr-theme-1);
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--clr-theme-1);
+  line-height: 83px;
+  font-size: 40px;
+  border-radius: 50%;
 }
 
 .page-title-spacing {
-	padding-top: 130px;
-	padding-bottom: 130px;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-	@media #{$sm,$xs} {
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
+  .add-story-btn {
+    color: white;
+    background: linear-gradient(
+      142.4deg,
+      rgb(195, 101, 218) 5%,
+      rgb(156, 110, 206) 28.2%,
+      rgb(111, 119, 216) 62.5%,
+      rgb(93, 97, 161) 89.1%
+    );
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    width: fit-content;
+    margin: 20px 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media #{$sm,$xs} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }

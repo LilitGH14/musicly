@@ -5,6 +5,7 @@ import ReduxProvider from "@/redux/provider";
 import { ToastContainer } from "react-toastify";
 import UseMousePointer from "@/utils/MouseCursorUtilis";
 import { DirectionProvider } from "@/hooks/useDirection";
+
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
