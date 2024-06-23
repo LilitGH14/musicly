@@ -1,19 +1,15 @@
-import Setting from '@/components/common/setting/Setting';
-import BlogMainArea from '@/components/blog/BlogMainArea';
-import Wrapper from '@/layout/DefaultWrapper';
-import React from 'react';
+import BlogMainArea from "@/components/Blog/BlogMainArea";
+import Wrapper from "@/layout/DefaultWrapper";
+import React from "react";
 
 const page = () => {
-    return (
-        <Wrapper>
-            <div className="ms-all-content ms-all-content-space">
-                <main>
-                    <BlogMainArea />
-                    <Setting />
-                </main>
-            </div>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <main className="ms-all-content ms-all-content-space">
+        <BlogMainArea />
+      </main>
+    </Wrapper>
+  );
 };
 
 export default page;

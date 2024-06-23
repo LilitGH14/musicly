@@ -1,19 +1,16 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import { configureStore as configureStoreRTK } from "@reduxjs/toolkit";
-import { cartSlice } from "./slices/cartSlice";
-import { wishlistSlice } from "./slices/wishlist-slice";
+import {
+  applyMiddleware,
+  combineReducers,
+  createStore,
+} from "@reduxjs/toolkit";
 import {
   persistStore,
   persistReducer,
-  FLUSH,
-  REHYDRATE,
-  PAUSE,
-  PERSIST,
-  PURGE,
-  REGISTER,
   Persistor,
 } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import thunk from "redux-thunk";
+import { cartSlice } from "./slices/aboutDataSlice";
 
 const storage = createWebStorage("local");
 const persistConfig = {
@@ -25,20 +22,11 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    cart: cartSlice.reducer,
-    wishlist: wishlistSlice.reducer,
+    about: cartSlice.reducer,
   })
 );
 
-const store = configureStoreRTK({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
+const store = createStore(persistedReducer, applyMiddleware(thunk));
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

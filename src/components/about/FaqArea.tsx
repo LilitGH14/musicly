@@ -1,78 +1,29 @@
-"use client";
+import { fetchFaqData } from "@/services/about";
+import { FaqItemType } from "@/types/types";
 import React, { useEffect, useState } from "react";
 
-const data = [
-  {
-    collapse_id: "collapseOne",
-    id: "headingOne",
-    question: "Faq_question_1",
-    answer: "Faq_answer_1",
-  },
-  {
-    collapse_id: "collapseTwo",
-    id: "headingTwo",
-    question: "Faq_question_2",
-    answer: "Faq_answer_2",
-  },
-  {
-    collapse_id: "collapseThree",
-    id: "headingThree",
-    question: "Faq_question_3",
-    answer: "Faq_answer_3",
-  },
-  {
-    collapse_id: "collapseFour",
-    id: "headingFour",
-    question: "Faq_question_4",
-    answer: "Faq_answer_4",
-  },
-  {
-    collapse_id: "collapseFive",
-    id: "headingFive",
-    question: "Faq_question_5",
-    answer: "Faq_answer_5",
-  },
-  {
-    collapse_id: "collapseSix",
-    id: "headingSix",
-    question: "Faq_question_6",
-    answer: "Faq_answer_6",
-  },
-];
-
-type TFaqItem = {
-  collapse_id: string;
-  id: string;
-  question: string;
-  answer: string;
-};
-
-type TWrapperClass = {
-  wrapperBgClass?: string;
-};
-
-const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
-  const [faqData, setFaqData] = useState<TFaqItem[]>([]);
+const FaqArea = ({ dict }: { dict: any }) => {
+  const [faqData, setFaqData] = useState<FaqItemType[]>([]);
 
   useEffect(() => {
-    setFaqData(data);
+    fetchFaqData().then((res) => {
+      if (res.ResponseCode == 200) {
+        setFaqData(res.ResponseData);
+      }
+    });
   }, []);
 
   return (
-    <section
-      className={`ms-faq-area pt-50 pb-30 fix ${
-        wrapperBgClass ? wrapperBgClass : ""
-      }`}
-    >
+    <section className="ms-faq-area pt-50 pb-30 fix">
       <div className="bd-accordion-fix">
         <div className="container">
           <div className="row align-items-center mb-15 bdFadeUp">
             <div className="col-xl-7 col-lg-10">
               <div className="section__title-wrapper section__title-wrapper-faq mb-40">
                 <h2 className="section__title mb-40 bd-title-anim">
-                  {"Faq_area_title"}
+                  {dict.Faq_area_title}
                 </h2>
-                <p>{"Faq_area_text"} </p>
+                <p>{dict.Faq_area_text}</p>
               </div>
             </div>
           </div>
@@ -91,7 +42,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                       <div className="ms-faq-group">
                         {faqData
                           .slice(0, Math.floor(faqData.length / 2))
-                          .map((item: any) => {
+                          .map((item: FaqItemType) => {
                             return (
                               <div className="accordion-item" key={item.id}>
                                 <h2 className="accordion-header" id={item.id}>
@@ -103,7 +54,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                                     aria-expanded="false"
                                     aria-controls={item.collapse_id}
                                   >
-                                    {item.question}
+                                    {dict[item.question]}
                                   </button>
                                 </h2>
                                 <div
@@ -113,7 +64,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                                   data-bs-parent="#accordionExample"
                                 >
                                   <div className="accordion-body">
-                                    {item.answer}
+                                    {dict[item.answer]}
                                   </div>
                                 </div>
                               </div>
@@ -123,7 +74,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                       <div className="ms-faq-group">
                         {faqData
                           .slice(Math.floor(faqData.length / 2))
-                          .map((item: any) => {
+                          .map((item: FaqItemType) => {
                             return (
                               <div className="accordion-item" key={item.id}>
                                 <h2 className="accordion-header" id={item.id}>
@@ -135,7 +86,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                                     aria-expanded="true"
                                     aria-controls={item.collapse_id}
                                   >
-                                    {item.question}
+                                    {dict[item.question]}
                                   </button>
                                 </h2>
                                 <div
@@ -145,7 +96,7 @@ const FaqArea = ({ wrapperBgClass }: TWrapperClass) => {
                                   data-bs-parent="#accordionExample"
                                 >
                                   <div className="accordion-body">
-                                    {item.answer}
+                                    {dict[item.answer]}
                                   </div>
                                 </div>
                               </div>

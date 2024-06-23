@@ -11,7 +11,6 @@ const page = () => {
                 <main>
                     <Breadcrumb title='Privacy & Policy' />
                     <PrivacyTermsAndRefund policyActive="active" />
-                    <Setting />
                 </main>
             </div>
         </Wrapper>

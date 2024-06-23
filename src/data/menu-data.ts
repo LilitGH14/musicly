@@ -31,14 +31,14 @@ const menu_data: TMenuItem[] = [
   },
   {
     id: 2,
-    title: "Forum",
-    link: "/genres",
+    title: "Blog",
+    link: "/blog",
     hasDropdown: false,
   },
   {
     id: 3,
     title: "Songs",
-    link: "/genres",
+    link: "/songs",
     hasDropdown: false,
   },
 //   {

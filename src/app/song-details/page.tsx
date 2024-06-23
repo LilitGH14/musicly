@@ -1,14 +1,15 @@
-import EventDetailsMain from "@/components/event-details/EventDetailsMain";
+import GenresDetailsMainArea from "@/components/songs-details/GenresDetailsMainArea";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
 
-const page = ({ params }: { params: { id: number } }) => {
-  const id = params.id;
+const page = () => {
+  const id = 1;
+
   return (
     <Wrapper>
       <div className="ms-all-content ms-all-content-space">
         <main>
-          <EventDetailsMain id={id} />
+          <GenresDetailsMainArea id={id} />
         </main>
       </div>
     </Wrapper>

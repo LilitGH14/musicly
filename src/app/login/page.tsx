@@ -10,7 +10,6 @@ const page = () => {
                 <div className="ms-all-content ms-all-content-space">
                     <main>
                         <LoginArea />
-                        <Setting />
                     </main>
                 </div>
             </Wrapper>
