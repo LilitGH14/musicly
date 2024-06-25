@@ -1,5 +1,5 @@
 import React from "react";
-import WorkBg from "../../../../public/assets/img/bg/work-bg.jpg";
+import WorkBg from "../../../../public/assets/img/bg/main-bg.jpg";
 
 type TProps = {
   title: string | undefined;

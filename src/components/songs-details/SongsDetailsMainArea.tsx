@@ -1,23 +1,44 @@
 "use client";
-import React from "react";
-import GenresSidebar from "./GenresSidebar";
-import NavContactTab from "./NavContactTab";
+import React, { useEffect, useState } from "react";
 import NavProfileTab from "./NavProfileTab";
-import GenresContent from "./GenresContent";
-import { idType } from "@/types/types";
-import genres_listing_data from "../../data/genres-listing-data";
+import SongLyrics from "./SongLyrics";
+import Sidebar from "./Sidebar";
+import { usePathname } from "next/navigation";
+import { fetchSongDataById } from "@/services/songs";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 
-const GenresDetailsMainArea = ({ id }: idType) => {
-  const genreData: any = genres_listing_data.find((item) => item.id == id);
+const SongsDetailsMainArea = () => {
+  const pathname = usePathname();
+
+  const [dict, setDict] = useState<{ [key: string]: string }>({});
+  const [song, setSong] = useState<any>();
+
+  useEffect(() => {
+    const id = +pathname.split("/")[pathname.split("/").length - 1];
+
+    fetchSongDataById(id).then((res) => {
+      if (res.ResponseCode == 200) {
+        setSong(res.ResponseData);
+      }
+    });
+  }, [pathname]);
+
+  useEffect(() => {
+    getDictionary("en").then((res) => {
+      setDict(res);
+    });
+  }, []);
 
   return (
-    <section className="ms-genres-area pt-130 pb-70">
+    <section className="ms-genres-area pb-70">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-xl-7">
             <div className="ms-genres-top text-center mb-50">
-              <h2 className="ms-title2 white-text mb-20">{genreData.title}</h2>
-              <p className="ms-text2">{genreData.description}</p>
+              <h2 className="ms-title2 white-text mb-20">
+                {song?.songGivenName}
+              </h2>
+              <p className="ms-text2">{song?.description}</p>
             </div>
           </div>
         </div>
@@ -43,7 +64,7 @@ const GenresDetailsMainArea = ({ id }: idType) => {
                       aria-controls="nav-home"
                       aria-selected="true"
                     >
-                      Lyrics
+                      {dict.Lyrics}
                     </button>
                     <button
                       className="nav-link prevent"
@@ -55,19 +76,7 @@ const GenresDetailsMainArea = ({ id }: idType) => {
                       aria-controls="nav-profile"
                       aria-selected="false"
                     >
-                      Listen
-                    </button>
-                    <button
-                      className="nav-link prevent"
-                      id="nav-contact-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#nav-contact"
-                      type="button"
-                      role="tab"
-                      aria-controls="nav-contact"
-                      aria-selected="false"
-                    >
-                      Reviews
+                      {dict.Listen}
                     </button>
                   </div>
                 </nav>
@@ -81,7 +90,7 @@ const GenresDetailsMainArea = ({ id }: idType) => {
                     aria-labelledby="nav-home-tab"
                     tabIndex={0}
                   >
-                    <GenresContent />
+                    <SongLyrics  dict={dict} content={song?.lyrics}/>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -92,24 +101,15 @@ const GenresDetailsMainArea = ({ id }: idType) => {
                   >
                     <NavProfileTab />
                   </div>
-                  <div
-                    className="tab-pane fade"
-                    id="nav-contact"
-                    role="tabpanel"
-                    aria-labelledby="nav-contact-tab"
-                    tabIndex={0}
-                  >
-                    <NavContactTab />
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <GenresSidebar />
+          <Sidebar />
         </div>
       </div>
     </section>
   );
 };
 
-export default GenresDetailsMainArea;
+export default SongsDetailsMainArea;

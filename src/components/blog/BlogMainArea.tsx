@@ -12,6 +12,7 @@ import blogBgImage from "../../../public/assets/img/blog/story.jpg";
 const BlogMainArea = () => {
   const [storiesData, setStoriesData] = useState<StoryType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [slicedIndex, setSlicedIndex] = useState<number[]>([]);
 
   useEffect(() => {
     fetchStoriesData().then((res) => {
@@ -21,6 +22,10 @@ const BlogMainArea = () => {
     });
   }, []);
 
+  useEffect(() => {
+    setSlicedIndex([(currentPage - 1) * 6, currentPage * 6]);
+  }, [currentPage]);
+
   return (
     <>
       <BradcrumbThree title="Stories" />
@@ -28,9 +33,9 @@ const BlogMainArea = () => {
         <div className="container">
           <div className="ms-border2 pb-40">
             <div className="row ms-event3-wrap">
-              {storiesData.slice(0, 6).map((item: StoryType) => (
+              {storiesData.slice(...slicedIndex).map((item: StoryType) => (
                 <div className="col-xl-4 col-md-6" key={item.id}>
-                  <Link href={`/event-details/${item.id}`}>
+                  <Link href={`/blog-details/${item.id}`}>
                     <div className="ms-event3-item mb-25">
                       <div className="ms-event3-img ms-overlay10 fix ms-br-15 p-relative zindex-10">
                         <Image

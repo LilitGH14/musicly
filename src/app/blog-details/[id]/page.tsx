@@ -1,16 +1,13 @@
-import EventDetailsMain from "@/components/event-details/EventDetailsMain";
+import BlogDetailsMain from "@/components/blog-details/BlogDetailsMain";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
 
-const page = ({ params }: { params: { id: number } }) => {
-  const id = params.id;
+const page = () => {
   return (
     <Wrapper>
-      <div className="ms-all-content ms-all-content-space">
-        <main>
-          <EventDetailsMain id={id} />
-        </main>
-      </div>
+      <main className="ms-all-content ms-all-content-space">
+        <BlogDetailsMain />
+      </main>
     </Wrapper>
   );
 };

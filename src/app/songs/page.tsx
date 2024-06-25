@@ -1,15 +1,13 @@
-import GenresMainArea from "@/components/songs/GenresMainArea";
+import SongsMainArea from "@/components/songs/SongsMainArea";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
 
 const page = () => {
   return (
     <Wrapper>
-      <div className="ms-all-content ms-content-mobile-space pt-125">
-        <main>
-          <GenresMainArea />
-        </main>
-      </div>
+      <main className="ms-all-content ms-content-mobile-space pt-125">
+        <SongsMainArea />
+      </main>
     </Wrapper>
   );
 };

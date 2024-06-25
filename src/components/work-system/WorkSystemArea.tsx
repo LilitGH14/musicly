@@ -4,48 +4,38 @@ import WorkFutureIconOne from "../../../public/assets/img/svg/WorkFutureIconOne"
 import WorkFutureSvgIconThree from "../../../public/assets/img/svg/WorkFutureSvgIconThree";
 import WorkFutureSvgIconTwo from "../../../public/assets/img/svg/WorkFutureSvgIconTwo";
 import arrowIcon from "../../../public/assets/img/work/arrow.png";
-import { TWorkFuture } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchHowItWorksData } from "@/services/how-it-works";
+import { InstructionType } from "@/types/types";
 
-const work_future_data: TWorkFuture[] = [
-  {
-    id: 1,
-    icon: <WorkFutureIconOne />,
-    title: "How_it_works_feature1_title",
-    description: "How_it_works_feature1_description",
-  },
-  {
-    id: 2,
-    icon: <WorkFutureSvgIconTwo />,
-    title: "How_it_works_feature2_title",
-    description: "How_it_works_feature2_description",
-  },
-  {
-    id: 3,
-    icon: <WorkFutureSvgIconThree />,
-    title: "How_it_works_feature3_title",
-    description: "How_it_works_feature3_description",
-  },
-  {
-    id: 4,
-    icon: <WorkFutureSvgIconThree />,
-    title: "How_it_works_feature4_title",
-    description: "How_it_works_feature4_description",
-  },
-];
+const work_future_icons: { [key: string]: JSX.Element } = {
+  WorkFutureIconOne: <WorkFutureIconOne />,
+  WorkFutureSvgIconTwo: <WorkFutureSvgIconTwo />,
+  WorkFutureSvgIconThree: <WorkFutureSvgIconThree />,
+};
 
-const WorkSystemAreaFour = ({ dict }: { dict: any }) => {
+const WorkSystemArea = ({ dict }: { dict: any }) => {
+  const [instructions, setInstructions] = useState<InstructionType[]>([]);
+
+  useEffect(() => {
+    fetchHowItWorksData().then((res) => {
+      if (res.ResponseCode == 200) {
+        setInstructions(res.ResponseData);
+      }
+    });
+  }, []);
+
   return (
     <section className="ms-work-system-area pt-130 pb-130">
       <div className="container">
         <div className="ms-work-system-wrap">
           <div className="ms-work-system-grid mb-10">
-            {work_future_data.map((item) => (
+            {instructions.map((item: InstructionType) => (
               <div className="work__features-item" key={item.id}>
                 <div className="work__features-icon">
-                  <span>{item.icon}</span>
+                  <span>{work_future_icons[item.icon]}</span>
                 </div>
                 <div className="work__features-content">
                   <h4>{dict[item.title]}</h4>
@@ -96,4 +86,4 @@ const WorkSystemAreaFour = ({ dict }: { dict: any }) => {
   );
 };
 
-export default WorkSystemAreaFour;
+export default WorkSystemArea;

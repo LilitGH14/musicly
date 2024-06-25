@@ -2,22 +2,22 @@ type TNiceSelectData = {
   id: number;
   optionName: string;
 };
-export const bannerFormSelectOne: TNiceSelectData[] = [
+export const bannerFormSelect: TNiceSelectData[] = [
   {
     id: 1,
-    optionName: "Bands & Groups",
+    optionName: "Band/Group",
   },
   {
     id: 2,
-    optionName: "Duets",
+    optionName: "Duet",
   },
   {
     id: 3,
-    optionName: "Solos",
+    optionName: "Solo",
   },
   {
     id: 4,
-    optionName: "new",
+    optionName: "New",
   },
   {
     id: 5,
@@ -25,28 +25,6 @@ export const bannerFormSelectOne: TNiceSelectData[] = [
   },
 ];
 
-export const bannerFormSelectTwo: TNiceSelectData[] = [
-    {
-        id: 1,
-        optionName: "Bands & Groups",
-      },
-      {
-        id: 2,
-        optionName: "Duets",
-      },
-      {
-        id: 3,
-        optionName: "Solos",
-      },
-      {
-        id: 4,
-        optionName: "new",
-      },
-      {
-        id: 5,
-        optionName: "Popular",
-      },
-];
 export const bannerFormSelectThree: TNiceSelectData[] = [
   {
     id: 1,

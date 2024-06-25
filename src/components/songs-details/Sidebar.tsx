@@ -3,7 +3,7 @@ import Modal from "../common/modal/Modal";
 import song_playlist from "@/data/song-playlist-data";
 import AudioPlayer from "react-h5-audio-player";
 
-const GenresSidebar = ({}: any) => {
+const Sidebar = ({}: any) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -90,4 +90,4 @@ const GenresSidebar = ({}: any) => {
   );
 };
 
-export default GenresSidebar;
+export default Sidebar;

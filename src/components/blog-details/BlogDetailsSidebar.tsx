@@ -1,0 +1,36 @@
+import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { StoryDetailsType } from "@/types/types";
+import React, { useState } from "react";
+
+type BlogDetailsSidebarPropsType = { story: StoryDetailsType };
+const BlogDetailsSidebar = ({ story }: BlogDetailsSidebarPropsType) => {
+  const [dict, setDict] = useState<{ [key: string]: string }>({});
+
+  getDictionary("en").then((res) => {
+    setDict(res);
+  });
+
+  return (
+    <div className="ms-event-sidebar mb-60">
+      <h3 className="ms-event-sidebar-title">{dict.Story_details}</h3>
+      <div className="ms-event-sidebar-item">
+        <div className="ms-event-sidebar-inner">
+          <h4 className="ms-event-title2">{dict.Author}</h4>
+          <span className="ms-event-stext">{story?.username}</span>
+        </div>
+        <div className="ms-event-sidebar-inner">
+          <h4 className="ms-event-title2">{dict.Date}</h4>
+          <span className="ms-event-stext">{story?.date}</span>
+        </div>
+        <div className="ms-event-sidebar-inner">
+          <h4 className="ms-event-title2">{dict.Category}</h4>
+          <span className="ms-event-stext">
+            {story?.category.map((m: string) => m)}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogDetailsSidebar;

@@ -176,5 +176,30 @@ export type StoryType = {
   title: string;
   description: string;
   date: string;
-  comment: number;
+};
+
+export type StoryDetailsType = {
+  id: number;
+  category: string[];
+  username: string;
+  title: string;
+  description: string;
+  date: string;
+};
+
+export type InstructionType = {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+};
+
+export type SongType = {
+  id: number;
+  videoUrl: string;
+  songGivenName: string;
+  description: string;
+  isGenerated: boolean;
+  songName: string;
+  username: string;
 };

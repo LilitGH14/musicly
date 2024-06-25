@@ -1,21 +1,40 @@
 "use client";
-import genres_listing_data from "../../data/genres-listing-data";
-import GetRatting from "@/hooks/GetRating";
 import { imageLoader } from "@/hooks/ImageLoader";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import PaginationData from "../common/pagination/pagination-data";
+import { SongType } from "@/types/types";
+import eventImg1 from "../../../public/assets/img/blog/story.jpg";
 
-const GenresListingArea = () => {
+type SongsListingAreaProps = {
+  dict: { [key: string]: string };
+  resultCount: number;
+  changeCurrentPage: (page: number) => void;
+  currentPage: number;
+  pagesCount: number;
+  songs: SongType[];
+  slicedIndex: number[];
+};
+const SongsListingArea = ({
+  dict,
+  resultCount,
+  currentPage,
+  pagesCount,
+  changeCurrentPage,
+  songs,
+  slicedIndex,
+}: SongsListingAreaProps) => {
   return (
-    <div className="ms-genres-listing pt-130 pb-110 ">
+    <div className="ms-genres-listing pb-110 ">
       <div className="container">
         <div className="ms-border2 pb-30 mb-65">
           <div className="row">
             <div className="col-sm-8">
               <div className="ms-genres-filter ms-genres-select ms-genres-nice-select">
-                <span className="ms-genres-text">Results(233)</span>
+                <span className="ms-genres-text">
+                  {dict.Results}({resultCount})
+                </span>
               </div>
             </div>
             <div className="col-sm-4">
@@ -72,63 +91,54 @@ const GenresListingArea = () => {
             tabIndex={0}
           >
             <div className="row">
-              {genres_listing_data.slice(0, 14).map((item) => (
+              {songs.slice(...slicedIndex).map((item) => (
                 <div className="col-xl-6" key={item.id}>
-                  <div className="ms-genres-item ms-genres-flex mb-25">
-                    <div className="ms-genres-img ms-br-15 fix w-img genres-img-214">
-                      <Link href={`/genres-details/${item.id}`}>
+                  <Link href={`/song-details/${item.id}`}>
+                    <div className="ms-genres-item ms-genres-flex mb-25">
+                      <div className="ms-genres-img ms-br-15 fix w-img genres-img-214">
                         <Image
-                          src={item.image}
+                          src={eventImg1}
                           loader={imageLoader}
                           placeholder="blur"
                           loading="lazy"
                           style={{ width: "100%", height: "auto" }}
                           alt="genres img"
                         />
-                      </Link>
-                      {item.videoUrl && (
-                        <Link
-                          className="popup-video ms-genres-video"
-                          href={item.videoUrl}
-                        >
-                          <i className="fa-sharp fa-solid fa-play"></i>
-                        </Link>
-                      )}
-                      <span className="ms-genres-price">
-                        From ${item.price}
-                      </span>
-                    </div>
-                    <div className="ms-genres-content p-relative">
-                      <span className={`ms-genres-star ${item.activeClass}`}>
-                        <i className="fa-light fa-star"></i>
-                      </span>
-                      <h4 className="ms-genres-title">
-                        <Link href={`/genres-details/${item.id}`}>
-                          {item.title}
-                        </Link>
-                      </h4>
-                      <p className="mb-30">{item.description}</p>
-                      <div className="ms-fun-brand-bottom ms-genres-rating">
-                        <div className="ms-fun-brand-location">
-                          <Link href={item.mapLink} target="_blank">
-                            {" "}
-                            <i className="flaticon-pin"></i>
-                            {item.location}
+                        {item.videoUrl && (
+                          <Link
+                            className="popup-video ms-genres-video"
+                            href={item.videoUrl}
+                          >
+                            <i className="fa-sharp fa-solid fa-play"></i>
                           </Link>
-                        </div>
-                        <div className="ms-fun-brand-rating">
-                          <GetRatting averageRating={item.ratings} />
-                          <span>({item.ratingNum})</span>
+                        )}
+                      </div>
+                      <div className="ms-genres-content p-relative">
+                        <span className={`ms-genres-star`}>
+                          <i className="fa-light fa-star"></i>
+                        </span>
+                        <h4 className="ms-genres-title">
+                          {item.songGivenName}
+                        </h4>
+                        <p className="mb-30">{item.description}</p>
+                        <div className="ms-fun-brand-bottom ms-genres-rating">
+                          <div className="ms-fun-brand-rating">
+                            <span>{dict.Votes}: 20</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               ))}
             </div>
             <div className="row">
               <div className="col-xl-12">
-                <PaginationData />
+                <PaginationData
+                  pagesCount={pagesCount}
+                  currentPage={currentPage}
+                  changeCurrentPage={changeCurrentPage}
+                />
               </div>
             </div>
           </div>
@@ -140,13 +150,13 @@ const GenresListingArea = () => {
             tabIndex={0}
           >
             <div className="row">
-              {genres_listing_data.slice(14, 23).map((item) => (
+              {songs.slice(...slicedIndex).map((item) => (
                 <div className="col-xl-4 col-lg-6" key={item.id}>
                   <div className="ms-genres-item mb-25">
                     <div className="ms-genres-img ms-br-15 fix w-img mb-30">
                       <Link href={`/genres-details/${item.id}`}>
                         <Image
-                          src={item.image}
+                          src={eventImg1}
                           loader={imageLoader}
                           placeholder="blur"
                           loading="lazy"
@@ -162,31 +172,20 @@ const GenresListingArea = () => {
                           <i className="fa-sharp fa-solid fa-play"></i>
                         </Link>
                       )}
-                      <span className="ms-genres-price">
-                        From ${item.price}
-                      </span>
                     </div>
                     <div className="ms-genres-content p-relative">
-                      <span className={`ms-genres-star ${item.activeClass}`}>
+                      <span className={`ms-genres-star`}>
                         <i className="fa-light fa-star"></i>
                       </span>
                       <h4 className="ms-genres-title">
                         <Link href={`/genres-details/${item.id}`}>
-                          {item.title}
+                          {item.songGivenName}
                         </Link>
                       </h4>
                       <p className="mb-30">{item.description}</p>
                       <div className="ms-fun-brand-bottom ms-genres-rating">
-                        <div className="ms-fun-brand-location">
-                          <Link href={item.mapLink} target="_blank">
-                            {" "}
-                            <i className="flaticon-pin"></i>
-                            {item.location}
-                          </Link>
-                        </div>
                         <div className="ms-fun-brand-rating">
-                          <GetRatting averageRating={item.ratings} />
-                          <span>({item.ratingNum})</span>
+                          <span>{dict.Votes}: 45</span>
                         </div>
                       </div>
                     </div>
@@ -196,7 +195,11 @@ const GenresListingArea = () => {
             </div>
             <div className="row">
               <div className="col-xl-12">
-                <PaginationData />
+                <PaginationData
+                  pagesCount={pagesCount}
+                  currentPage={currentPage}
+                  changeCurrentPage={changeCurrentPage}
+                />
               </div>
             </div>
           </div>
@@ -206,4 +209,4 @@ const GenresListingArea = () => {
   );
 };
 
-export default GenresListingArea;
+export default SongsListingArea;

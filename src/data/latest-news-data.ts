@@ -2,15 +2,7 @@ import imageOne from "../../public/assets/img/news/news-01.png";
 import imageTwo from "../../public/assets/img/news/news-02.png";
 import imageThree from "../../public/assets/img/news/news-03.png";
 //event-imgae
-import eventImg1 from '../../public/assets/img/news/story.jpg';
-import eventImg2 from '../../public/assets/img/event/event-01.jpg';
-import eventImg3 from '../../public/assets/img/genres/genres-07.jpg';
-import eventImg4 from '../../public/assets/img/genres/genres-01.jpg';
-import eventImg5 from '../../public/assets/img/genres/genres-02.jpg';
-import eventImg6 from '../../public/assets/img/genres/genres-10.jpg';
-import eventImg7 from '../../public/assets/img/event/event-02.jpg';
-import eventImg8 from '../../public/assets/img/event/event-bg-2.png';
-import eventImg9 from '../../public/assets/img/event/event-03.jpg';
+import eventImg1 from '../../public/assets/img/blog/story.jpg';
 //news image 
 import newsImg1 from '../../public/assets/img/news/news-06.jpg';
 import newsImg2 from '../../public/assets/img/news/news-04.jpg';

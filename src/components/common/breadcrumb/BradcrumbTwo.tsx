@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkBgImg from '../../../../public/assets/img/bg/work-bg.jpg';
+import WorkBgImg from '../../../../public/assets/img/bg/main-bg.jpg';
 type TTeam = {
     teamTitle: string;
 }

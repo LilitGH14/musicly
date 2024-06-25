@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import FooterLogo from "../../../public/assets/img/logo/logo.png";
-import FooterStartImg from "../../../public/assets/img/footer/start-01.png";
-import FooterBg from "../../../public/assets/img/bg/work-bg.jpg";
+import FooterBg from "../../../public/assets/img/bg/main-bg.jpg";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
 

@@ -8,3 +8,12 @@ export const fetchStoriesData: () => Promise<ResponseGeneralType> =
     );
     return response;
   };
+
+export const fetchStoryData: (
+  id: number
+) => Promise<ResponseGeneralType> = async (id: number) => {
+  const response: ResponseGeneralType = await HttpClient.get(
+    `/assets/mock/story_data_${id}.json`
+  );
+  return response;
+};

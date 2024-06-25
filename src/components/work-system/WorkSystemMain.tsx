@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "../common/breadcrumb/Breadcrumb";
-import WorkSystemAreaFour from "./WorkSystemAreaFour";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
+import WorkSystemArea from "./WorkSystemArea";
 
 const WorkSystemMain = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});
@@ -16,7 +16,7 @@ const WorkSystemMain = () => {
   return (
     <>
       <Breadcrumb title={dict.How_it_works_title} />
-      <WorkSystemAreaFour  dict={dict}/>
+      <WorkSystemArea dict={dict} />
     </>
   );
 };

@@ -5,11 +5,9 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <div className="ms-all-content ms-all-content-space">
-        <main>
-          <WorkSystemMain />
-        </main>
-      </div>
+      <main className="ms-all-content ms-all-content-space">
+        <WorkSystemMain />
+      </main>
     </Wrapper>
   );
 };

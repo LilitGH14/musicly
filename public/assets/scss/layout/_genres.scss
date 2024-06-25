@@ -149,7 +149,7 @@
   position: absolute;
   inset-inline-end: 0;
   font-size: 20px;
-  color: var(--clr-theme-1);
+  color: #6267b2;
   border: 1px solid var(--clr-border-1);
   border-radius: 50%;
   width: 40px;
@@ -249,8 +249,11 @@
     padding: 0 12px;
     height: 40px;
     line-height: 40px;
-    margin: 0 0 20px;
     border: 1px solid rgb(156, 110, 206);
+    color: white;
+  }
+
+  .ms-singer-couplet{
     color: white;
   }
 

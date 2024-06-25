@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import WorkBgImg from "../../../public/assets/img/bg/work-bg.jpg";
+import WorkBgImg from "../../../public/assets/img/bg/main-bg.jpg";
 import thumb1 from "../../../public/assets/img/work/story.jpg";
 import thumb2 from "../../../public/assets/img/work/generate.jpg";
 import thumb3 from "../../../public/assets/img/work/share.jpg";

@@ -1,6 +1,11 @@
-
 import useGlobalContext from "@/hooks/use-context";
-import React, { useState, useCallback, useRef, KeyboardEvent, MouseEvent } from "react";
+import React, {
+  useState,
+  useCallback,
+  useRef,
+  KeyboardEvent,
+  MouseEvent,
+} from "react";
 import { useClickAway } from "react-use";
 
 interface Option {
@@ -10,7 +15,6 @@ interface Option {
 
 interface NiceSelectProps {
   options: Option[];
-  defaultCurrent: number;
   placeholder?: string;
   className?: string;
   onChange: (item: Option, name: string) => void;
@@ -19,21 +23,21 @@ interface NiceSelectProps {
 
 const NiceSelect: React.FC<NiceSelectProps> = ({
   options,
-  defaultCurrent,
   placeholder,
   className,
   onChange,
   name,
 }) => {
-  const [open, setOpen] = useState(false);
-  const { setNiceSelectData } = useGlobalContext()
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { setNiceSelectData } = useGlobalContext();
+
+  const [open, setOpen] = useState<boolean>(false);
   const [current, setCurrent] = useState<Option>();
+
   const onClose = useCallback(() => {
     setOpen(false);
   }, []);
-
-  const ref = useRef<HTMLDivElement>(null);
-  useClickAway(ref, onClose);
 
   const currentHandler = (item: Option) => {
     setCurrent(item);
@@ -46,15 +50,11 @@ const NiceSelect: React.FC<NiceSelectProps> = ({
     setOpen((prev) => !prev);
   };
 
-  const handleKeyPress = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === "Enter") {
-      setOpen((prev) => !prev);
-    }
-  };
-
   const stopPropagation = (e: MouseEvent | KeyboardEvent) => {
     e.stopPropagation();
   };
+
+  useClickAway(ref, onClose);
 
   return (
     <div
@@ -62,16 +62,22 @@ const NiceSelect: React.FC<NiceSelectProps> = ({
       role="button"
       tabIndex={0}
       onClick={handleClick}
-      onKeyPress={handleKeyPress}
       ref={ref}
     >
       <span className="current">{current?.optionName || placeholder}</span>
-      <ul className="list" role="menubar" onClick={stopPropagation} onKeyPress={stopPropagation}>
+      <ul
+        className="list"
+        role="menubar"
+        onClick={stopPropagation}
+        onKeyPress={stopPropagation}
+      >
         {options?.map((item) => (
           <li
             key={item.id}
             data-value={item.id}
-            className={`option ${item.id === current?.id ? "selected focus" : ""}`}
+            className={`option ${
+              item.id === current?.id ? "selected focus" : ""
+            }`}
             role="menuitem"
             onClick={() => currentHandler(item)}
             onKeyPress={(e: KeyboardEvent<HTMLLIElement>) => {
@@ -87,4 +93,3 @@ const NiceSelect: React.FC<NiceSelectProps> = ({
 };
 
 export default NiceSelect;
-

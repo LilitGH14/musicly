@@ -1,20 +1,15 @@
-import Setting from '@/components/common/setting/Setting';
-import EventDetailsMain from '@/components/event-details/EventDetailsMain';
-import Wrapper from '@/layout/DefaultWrapper';
-import React from 'react';
+import BlogDetailsMain from "@/components/blog-details/BlogDetailsMain";
+import Wrapper from "@/layout/DefaultWrapper";
+import React from "react";
 
 const page = () => {
-    const id = 1;
-    return (
-        <Wrapper>
-            <div className="ms-all-content ms-all-content-space">
-                <main>
-                    <EventDetailsMain id={id} />
-                    <Setting />
-                </main>
-            </div>
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <main className="ms-all-content ms-all-content-space">
+        <BlogDetailsMain />
+      </main>
+    </Wrapper>
+  );
 };
 
 export default page;
