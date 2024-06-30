@@ -14,27 +14,28 @@ import WorkFutureSvgIconThree from "../../../public/assets/img/svg/WorkFutureSvg
 import Link from "next/link";
 import { TWorkFuture } from "@/types/types";
 
-const WorkArea = () => {
+type WorkAreaType = {
+  dict: { [key: string]: string };
+};
+const WorkArea = ({ dict }: WorkAreaType) => {
   const work_future_data: TWorkFuture[] = [
     {
       id: 1,
       icon: <WorkFutureSvgIconOne />,
-      title: "Leave A Piece Of Inspiration",
-      description:
-        "Leave your own story to inspire your favorite band",
+      title: "How_it_works_feature_1_title",
+      description: "How_it_works_feature_1_description",
     },
     {
       id: 2,
       icon: <WorkFutureSvgIconThree />,
-      title: "Craft New Songs Inspired By BTS",
-      description: "Leave a short story, sit back, relax, and watch your song come to life",
+      title: "How_it_works_feature_2_title",
+      description: "How_it_works_feature_2_description",
     },
     {
       id: 3,
       icon: <WorkFutureSvgIconTwo />,
-      title: "Share your art",
-      description:
-        "Share your art with friends and fans",
+      title: "How_it_works_feature_3_title",
+      description: "How_it_works_feature_3_description",
     },
   ];
 
@@ -64,7 +65,7 @@ const WorkArea = () => {
                     width={347}
                     height={456}
                     src={thumb1}
-                    alt="work image"
+                    alt={dict.How_it_works_feature_1_title}
                   />
                 </div>
                 <div className="work__small-thumb">
@@ -76,7 +77,7 @@ const WorkArea = () => {
                       width={264}
                       height={202}
                       src={thumb2}
-                      alt="work image"
+                      alt={dict.How_it_works_feature_2_title}
                     />
                   </div>
                   <div className="work__thumb">
@@ -86,7 +87,7 @@ const WorkArea = () => {
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
                       src={thumb3}
-                      alt="work image"
+                      alt={dict.How_it_works_feature_3_title}
                     />
                   </div>
                 </div>
@@ -96,10 +97,14 @@ const WorkArea = () => {
           <div className="col-xl-6">
             <div className="work__content-wrapper work__content-space mb-70 pl-40">
               <div className="section__title-wrapper mb-50 bd-title-anim">
-                <span className="section__subtitle">How it Works</span>
+                <span className="section__subtitle">
+                  {dict.How_it_works_section_title}
+                </span>
                 <h2 className="section__title two">
-                  Welcome to songs insiration
-                  <span className="animated-underline active">platform</span>
+                  {dict.How_it_works_section_description_1}
+                  <span className="animated-underline active">
+                    {dict.How_it_works_section_description_2}
+                  </span>
                 </h2>
               </div>
               <div className="work__features-inner">
@@ -109,8 +114,8 @@ const WorkArea = () => {
                       <span>{item.icon}</span>
                     </div>
                     <div className="work__features-content">
-                      <h4>{item.title}</h4>
-                      <p>{item.description}</p>
+                      <h4>{dict[item.title]}</h4>
+                      <p>{dict[item.description]}</p>
                     </div>
                   </div>
                 ))}
@@ -121,7 +126,7 @@ const WorkArea = () => {
                         className="unfill__btn feature-unfill_btn"
                         href="/contact"
                       >
-                        Generate song
+                        {dict.Generate_song}
                       </Link>
                     </div>
                     <div className="work__features-btn">
@@ -129,7 +134,7 @@ const WorkArea = () => {
                         className="unfill__btn feature-unfill_btn"
                         href="/contact"
                       >
-                        Leave story
+                        {dict.Leave_story_btn}
                       </Link>
                     </div>
                   </div>
@@ -139,7 +144,7 @@ const WorkArea = () => {
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
                       src={workArrowImg}
-                      alt="image not found"
+                      alt={dict.Alt_arrow}
                     />
                   </div>
                 </div>

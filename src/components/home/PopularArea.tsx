@@ -1,15 +1,17 @@
 "use client";
-import popular_categories from "../../../data/popular-categories-data";
+import popular_categories from "../../data/popular-categories-data";
 import { imageLoader } from "@/hooks/ImageLoader";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-//swiper-slider
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css/bundle";
 
-const PopularAreaOne = () => {
+type PopularAreaType = {
+  dict: { [key: string]: string };
+};
+const PopularArea = ({ dict }: PopularAreaType) => {
   return (
     <section className="ms-popular__area pt-130 pb-100 fix">
       <div className="container-fluid ms-maw-1710">
@@ -17,7 +19,7 @@ const PopularAreaOne = () => {
           <div className="col-xl-6 col-lg-6">
             <div className="section__title-wrapper mb-40 bd-title-anim">
               <h2 className="section__title msg_title">
-                <span className="active">Categories</span>
+                <span className="active">{dict.Categories}</span>
               </h2>
             </div>
           </div>
@@ -35,7 +37,7 @@ const PopularAreaOne = () => {
                     aria-controls="nav-popular-1"
                     aria-selected="true"
                   >
-                    New
+                    {dict.New}
                   </button>
                   <button
                     className="nav-link"
@@ -47,7 +49,7 @@ const PopularAreaOne = () => {
                     aria-controls="nav-popular-2"
                     aria-selected="false"
                   >
-                    BTS
+                    {dict.BTS}
                   </button>
                   <button
                     className="nav-link"
@@ -59,7 +61,7 @@ const PopularAreaOne = () => {
                     aria-controls="nav-popular-3"
                     aria-selected="false"
                   >
-                    Duets
+                    {dict.Duets}
                   </button>
                   <button
                     className="nav-link"
@@ -71,7 +73,7 @@ const PopularAreaOne = () => {
                     aria-controls="nav-popular-4"
                     aria-selected="false"
                   >
-                    Solo
+                    {dict.Solo}
                   </button>
                 </div>
               </nav>
@@ -299,4 +301,4 @@ const PopularAreaOne = () => {
   );
 };
 
-export default PopularAreaOne;
+export default PopularArea;

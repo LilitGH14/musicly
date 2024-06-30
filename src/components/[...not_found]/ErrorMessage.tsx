@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { getDictionary } from "@/dictionaries/dictionaries";
 
 const ErrorMessage = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});

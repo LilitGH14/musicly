@@ -3,13 +3,12 @@ import React from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css/bundle";
-import {
-  text_scroll_data,
-  text_scroll_two,
-} from "../../../data/text-scroll-data";
-import TextScrollBg from "../../../../public/assets/img/bg/text-scroll-bg.png";
+import TextScrollBg from "../../../public/assets/img/bg/text-scroll-bg.png";
 
-const TextScrollArea = () => {
+type RunningLinesType = {
+  dict: { [key: string]: string };
+};
+const RunningLines = ({ dict }: RunningLinesType) => {
   return (
     <section
       className="text__scroll-area include__bg ms-ts-space p-relative fix"
@@ -32,11 +31,15 @@ const TextScrollArea = () => {
                 simulateTouch={false}
                 speed={6000}
               >
-                {text_scroll_data.map((item, index) => (
-                  <SwiperSlide key={index}>
+                {[1, 2, 3, 4].map((idx) => (
+                  <SwiperSlide key={idx}>
                     <h3>
-                      <span className={item.color ? item.color : ""}>
-                        {item.title}
+                      <span
+                        className={
+                          idx % 2 == 0 ? "text-color-1" : "text-color-2"
+                        }
+                      >
+                        {dict.Running_line_one}
                       </span>
                     </h3>
                   </SwiperSlide>
@@ -61,11 +64,11 @@ const TextScrollArea = () => {
                 }}
                 speed={6000}
               >
-                {text_scroll_two.map((item, index) => (
-                  <SwiperSlide key={index}>
+                {[1, 2, 3, 4].map((idx) => (
+                  <SwiperSlide key={idx}>
                     <h3>
-                      <span className={item.color ? item.color : ""}>
-                        {item.title}
+                      <span className={idx % 2 == 0 ? "text-color-2" : ""}>
+                        {dict.Running_line_two}
                       </span>
                     </h3>
                   </SwiperSlide>
@@ -79,4 +82,4 @@ const TextScrollArea = () => {
   );
 };
 
-export default TextScrollArea;
+export default RunningLines;

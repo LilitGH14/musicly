@@ -1,77 +1,17 @@
 "use client";
 import React from "react";
-import imageOne from "../../../../public/assets/img/testimonial/testimonial-01.jpg";
-import imageTwo from "../../../../public/assets/img/testimonial/testimonial-02.jpg";
-import imageThree from "../../../../public/assets/img/testimonial/testimonial-03.jpg";
-import imageFour from "../../../../public/assets/img/testimonial/testimonial-04.jpg";
-import imageFive from "../../../../public/assets/img/testimonial/testimonial-05.png";
-import signatureImage from "../../../../public/assets/img/testimonial/testimonial-signature.png";
-//swiper-slider
 import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css/bundle";
-import Image from "next/image";
-import { imageLoader } from "@/hooks/ImageLoader";
-import testimonial_data from "../../../data/testimonial-data";
-import { TImageData } from "@/types/types";
+import testimonial_data from "../../data/testimonial-data";
 
-const TestimonialSliderOne = () => {
-  const imageData: TImageData[] = [
-    {
-      id: 1,
-      wrapperClass: "ms-tm-img1",
-      image: imageOne,
-    },
-    {
-      id: 2,
-      wrapperClass: "ms-tm-img2",
-      image: imageTwo,
-    },
-    {
-      id: 3,
-      wrapperClass: "ms-tm-img3",
-      image: imageThree,
-    },
-    {
-      id: 4,
-      wrapperClass: "ms-tm-img4",
-      image: imageFour,
-    },
-    {
-      id: 5,
-      wrapperClass: "ms-tm-img5",
-      image: imageTwo,
-    },
-  ];
-
+const Comments = () => {
   return (
-    <>
+    
       <section className="ms-tm-area mt-30  mb-30">
         <div className="container">
           <div className="ms-tm-border">
             <div className="row align-items-center bdFadeUp">
-              {/* <div className="col-xl-5">
-                <div className="ms-tm-img-wrap ms-tm-space p-relative">
-                  <div className="ms-tm-img-main p-relative m-img">
-                    <div className="ms-tm-bg-shape"></div>
-                    <div className="ms-tm-signature">
-                      <Image
-                        style={{ width: "100%", height: "auto" }}
-                        src={signatureImage}
-                        alt="testimonial signature"
-                      />
-                    </div>
-                    <Image
-                      loader={imageLoader}
-                      placeholder="blur"
-                      loading="lazy"
-                      style={{ width: "100%", height: "auto" }}
-                      src={imageFive}
-                      alt="testimonial image"
-                    />
-                  </div>
-                </div>
-              </div> */}
               <div className="col-xl-12">
                 <div className="ms-tm-content-wrap ms-tm-content-space">
                   <div className="ms-tm-quotation text-end">
@@ -127,8 +67,8 @@ const TestimonialSliderOne = () => {
           </div>
         </div>
       </section>
-    </>
+    
   );
 };
 
-export default TestimonialSliderOne;
+export default Comments;

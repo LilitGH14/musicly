@@ -2,11 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import brand_data from "../../../data/brand-data";
+import brand_data from "../../data/brand-data";
 import "swiper/css/bundle";
 import { imageLoader } from "@/hooks/ImageLoader";
 
-const BrandSection = () => {
+type ArtistsAreaType = {
+  dict: { [key: string]: string };
+};
+const ArtistsArea = ({ dict }: ArtistsAreaType) => {
   return (
     <section className="ms-song-area">
       <div className="container-fluid ms-maw-1710 p-0">
@@ -17,8 +20,8 @@ const BrandSection = () => {
               key={item.id}
               style={{ width: `${100 / 11}%`, height: "auto" }}
             >
-              <div className="ms-song-img p-relative">
-                <Link href={`/genres-details/${item.id}`}>
+              <Link href={`/genres-details/${item.id}`}>
+                <div className="ms-song-img p-relative">
                   <Image
                     loader={imageLoader}
                     placeholder="blur"
@@ -27,23 +30,19 @@ const BrandSection = () => {
                     src={item.image}
                     alt="brand-song"
                   />
-                </Link>
-                <span className="ms-song-num">{item.songNum}</span>
-              </div>
-              <div className="ms-song-content">
-                <h3 className="ms-song-title">
-                  <Link href={`/genres-details/${item.id}`}>
-                    {item.songTitle}
-                  </Link>
-                </h3>
-              </div>
+                  <span className="ms-song-num">{item.songNum}</span>
+                </div>
+                <div className="ms-song-content">
+                  <h3 className="ms-song-title">{item.songTitle}</h3>
+                </div>
+              </Link>
             </div>
           ))}
           <div className="ms-song-item">
             <div className="work__features-btn">
-              <a className="unfill__btn feature-unfill_btn" href="/contact">
-                Generate song
-              </a>
+              <Link className="unfill__btn feature-unfill_btn" href="/contact">
+                {dict.Generate_song}
+              </Link>
             </div>
           </div>
         </div>
@@ -52,4 +51,4 @@ const BrandSection = () => {
   );
 };
 
-export default BrandSection;
+export default ArtistsArea;
