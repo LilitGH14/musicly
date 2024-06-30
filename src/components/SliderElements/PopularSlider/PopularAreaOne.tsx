@@ -13,7 +13,7 @@ const PopularAreaOne = () => {
   return (
     <section className="ms-popular__area pt-130 pb-100 fix">
       <div className="container-fluid ms-maw-1710">
-        <div className="row align-items-end mb-25 bdFadeUp">
+        <div className="row align-items-end mb-25 bdFadeUp pl-20 pr-20">
           <div className="col-xl-6 col-lg-6">
             <div className="section__title-wrapper mb-40 bd-title-anim">
               <h2 className="section__title msg_title">
@@ -102,7 +102,7 @@ const PopularAreaOne = () => {
                       observer={true}
                       breakpoints={{
                         1200: {
-                          slidesPerView: 4,
+                          slidesPerView: 7,
                         },
                         992: {
                           slidesPerView: 3,

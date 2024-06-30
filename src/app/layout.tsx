@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
 }
 
 export const metadata = {
-  title: "BeaTSouL",
+  title: "The Beats Beyond",
   description: "Music inspiration for your idols",
 };
 

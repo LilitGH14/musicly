@@ -1,59 +1,37 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
 /* ------------------------------------------ */
 /*  05 - buttons css  */
 /* ------------------------------------------ */
 .unfill__btn {
+  font-weight: 500;
   font-size: 16px;
-  color: var(--clr-common-white);
-  font-weight: var(--bd-fw-medium);
-  // background: var(--clr-gradient-3);
-  background: linear-gradient(142.4deg, rgb(195, 101, 218) 5%, rgb(156, 110, 206) 28.2%, rgb(111, 119, 216) 62.5%, rgb(93, 97, 161) 89.1%);
-
-  padding: 0px 32px;
-  @include inline-flex();
-  align-items: center;
-  height: 60px;
-  @include border-radius(30px);
-  @include transition (.3s);
-  gap: 10px;
-  position: relative;
-  z-index: 5;
-
-  &.feature-unfill_btn {
-    display: inline-block;
-    line-height: 60px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background: var(--clr-gradient-2);
-    top: 0;
-    inset-inline-start: 0;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    @include transition (.5s);
-    @include border-radius(30px);
-  }
-
-  &:visited {
-    color: var(--clr-common-white);
-  }
+  border-radius: 16px;
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 0 16px;
+  color: white;
+  background: linear-gradient(
+    142.4deg,
+    rgb(195, 101, 218) 5%,
+    rgb(156, 110, 206) 28.2%,
+    rgb(111, 119, 216) 62.5%,
+    rgb(93, 97, 161) 89.1%
+  );
 
   &:hover {
-    color: var(--clr-common-white);
-
-    &::before {
-      opacity: 1;
-      visibility: visible;
-    }
+    color: white;
+    background: linear-gradient(
+      142.4deg,
+      rgb(147 75 164) 5%,
+      rgb(109 78 142) 28.2%,
+      rgb(77 83 152) 62.5%,
+      rgb(50 53 90) 89.1%
+    );
   }
 }
-
 
 .input__btn {
   font-size: 16px;
@@ -66,7 +44,7 @@
   gap: 10px;
   height: 55px;
   @include border-radius(30px);
-  @include transition (.3s);
+  @include transition(0.3s);
   position: relative;
   z-index: 5;
 
@@ -75,13 +53,17 @@
     content: "";
     height: 100%;
     width: 100%;
-    background: linear-gradient(90.64deg, var(--clr-theme-1) 0.54%, var(--clr-bg-3) 96.74%);
+    background: linear-gradient(
+      90.64deg,
+      var(--clr-theme-1) 0.54%,
+      var(--clr-bg-3) 96.74%
+    );
     top: 0;
     inset-inline-start: 0;
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-    @include transition (.5s);
+    @include transition(0.5s);
     @include border-radius(30px);
   }
 
@@ -114,7 +96,6 @@
     border-color: var(--clr-common-white);
   }
 }
-
 
 // round play btn border
 .ms-fill-btn {
@@ -181,7 +162,11 @@
   width: 45px;
   height: 45px;
   display: inline-block;
-  background: linear-gradient(101.18deg, var(--clr-bg-3) 7.18%, var(--clr-theme-1) 90.09%);
+  background: linear-gradient(
+    101.18deg,
+    var(--clr-bg-3) 7.18%,
+    var(--clr-theme-1) 90.09%
+  );
   text-align: center;
   border-radius: 50%;
   color: var(--clr-common-white);
@@ -202,7 +187,6 @@
   }
 }
 
-
 .ms-round2-btn {
   width: 76px;
   height: 76px;
@@ -216,10 +200,10 @@
   animation: ms-pulse 2s infinite;
 
   &::before {
-    content: '';
+    content: "";
     background-color: rgba(255, 88, 155, 0.25);
     opacity: 0.25;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -283,12 +267,11 @@
 
     &.nav-link.active,
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
       background: var(--clr-theme-1);
     }
   }
 }
-
 
 .ms-profile-btn {
   width: 60px;
@@ -299,7 +282,7 @@
   text-align: center;
   border-radius: 50%;
   color: var(--clr-text-4);
-  @include transition(.3s);
+  @include transition(0.3s);
 
   &:hover {
     border-color: var(--clr-theme-1);
@@ -308,7 +291,7 @@
   }
 }
 
-// round dots 
+// round dots
 .ms-round-dots {
   ul {
     li {
@@ -322,7 +305,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 6px;
         height: 6px;
@@ -332,7 +315,6 @@
         @include transform(translate(-50%, -50%));
         border-radius: 50%;
         @include transition(0.3s);
-
       }
 
       button {
@@ -344,7 +326,6 @@
 
         &::after {
           background: var(--clr-text-6);
-
         }
       }
     }
@@ -373,7 +354,7 @@
     line-height: 45px;
     text-align: center;
     border-radius: 50%;
-    color: #0D0D0D;
+    color: #0d0d0d;
   }
 
   span {
@@ -384,7 +365,6 @@
     @include transition(0.3s);
   }
 }
-
 
 .ms-audio-play-btn {
   color: var(--clr-common-body-text);
@@ -408,7 +388,6 @@
     list-style: none;
   }
 }
-
 
 .ms-load-btn {
   border: 1px solid var(--clr-border-1);
@@ -445,16 +424,14 @@
   }
 }
 
-
 .ms-submit-btn {
   .unfill__btn {
     padding: 0 42px;
   }
 }
 
-
 .ms-round-icon {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   width: 60px;
   height: 60px;
   line-height: 64px;
@@ -467,7 +444,7 @@
   display: block;
   height: 60px;
   line-height: 60px;
-  background: #1262B6;
+  background: #1262b6;
   border-radius: 30px;
   width: 100%;
   color: var(--clr-common-white);

@@ -13,6 +13,17 @@
   z-index: 99;
 }
 
+.header__logo img {
+  width: 155px;
+  height: 100px;
+  position: relative;
+  right: 20px;
+}
+
+.header__main {
+  height: 90px;
+}
+
 // Sticky header
 .sticky {
   background-color: var(--clr-common-black);
@@ -149,9 +160,9 @@
       .signup {
         font-weight: 500;
         font-size: 16px;
-        border-radius: 30px;
+        border-radius: 16px;
         display: inline-block;
-        padding: 0 12px;
+        padding: 0 20px;
         height: 40px;
         line-height: 40px;
         margin: 0 0 0 16px;
@@ -166,11 +177,25 @@
           rgb(111 119 216) 62.5%,
           rgb(93 97 161) 89.1%
         );
+
+        &:hover {
+          background: linear-gradient(
+            142.4deg,
+            rgb(147 75 164) 5%,
+            rgb(109 78 142) 28.2%,
+            rgb(77 83 152) 62.5%,
+            rgb(50 53 90) 89.1%
+          );
+        }
       }
 
       .signup {
         color: white;
         border: 1px solid rgb(156 110 206);
+
+        &:hover {
+          border: 1px solid rgb(103, 73, 134);
+        }
       }
     }
   }
@@ -555,7 +580,11 @@
   }
 }
 
-.ms-song-active{
+.ms-song-area {
+  padding: 10px 30px;
+}
+
+.ms-song-active {
   display: flex;
   justify-content: space-between;
 }

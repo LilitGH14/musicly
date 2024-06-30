@@ -161,7 +161,7 @@ const Footer = () => {
           <div className="container">
             <div className="ms-footer-bottom-wrap text-center pt-35 pb-20">
               <div className="ms-footer-copy">
-                <p>© BeatSoul 2024, All Rights Reserved</p>
+                <p>© The Beats Beyond 2024, All Rights Reserved</p>
               </div>
             </div>
           </div>

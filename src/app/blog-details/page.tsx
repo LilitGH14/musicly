@@ -5,9 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <main className="ms-all-content ms-all-content-space">
-        <BlogDetailsMain />
-      </main>
+      <BlogDetailsMain />
     </Wrapper>
   );
 };

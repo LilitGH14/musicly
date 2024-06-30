@@ -1,19 +1,5 @@
 @use '../utils' as *;
 
-/* ------------------------------------------ */
-/*  31 - about css  */
-/* ------------------------------------------ */
-
-.ms-about-content {
-    p {
-        @media #{$lg, $md, $sm, $xs} {
-            br {
-                display: none;
-            }
-        }
-    }
-}
-
 .ms-video-img1 {
     position: absolute;
     top: 50%;

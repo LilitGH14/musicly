@@ -1,15 +1,11 @@
-import { getDictionary } from "@/app/dictionaries/dictionaries";
 import { StoryDetailsType } from "@/types/types";
-import React, { useState } from "react";
+import React from "react";
 
-type BlogDetailsSidebarPropsType = { story: StoryDetailsType };
-const BlogDetailsSidebar = ({ story }: BlogDetailsSidebarPropsType) => {
-  const [dict, setDict] = useState<{ [key: string]: string }>({});
-
-  getDictionary("en").then((res) => {
-    setDict(res);
-  });
-
+type BlogDetailsSidebarPropsType = {
+  story: StoryDetailsType;
+  dict: { [key: string]: string };
+};
+const BlogDetailsSidebar = ({ story, dict }: BlogDetailsSidebarPropsType) => {
   return (
     <div className="ms-event-sidebar mb-60">
       <h3 className="ms-event-sidebar-title">{dict.Story_details}</h3>
