@@ -10,7 +10,7 @@ const F0fpage = () => {
 
   useEffect(() => {
     getDictionary("en").then((res) => {
-      setDict(res);
+      setDict(res.ErrorMessage);
     });
   }, []);
 

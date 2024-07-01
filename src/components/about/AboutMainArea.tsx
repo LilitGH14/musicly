@@ -2,18 +2,19 @@
 import React, { useEffect, useState } from "react";
 import ChooseUsArea from "./ChooseUsArea";
 import FaqArea from "./FaqArea";
-import { getDictionary } from "@/dictionaries/dictionaries";
 import PageHeader from "../common/page-header/PageHeader";
 import aboutBgImg from "../../../public/assets/img/about/about.jpg";
+import { useSelector } from "react-redux";
 
 const AboutMainArea = () => {
+  const dictSelector = useSelector((store: any) => store.dictionary);
+
   const [dict, setDict] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
-      setDict(res);
-    });
-  }, []);
+    dictSelector && setDict(dictSelector.About);
+    console.log(dictSelector,'dictSelector')
+  }, [dictSelector]);
 
   return (
     <main className="pt-90">

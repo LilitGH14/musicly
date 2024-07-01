@@ -3,14 +3,10 @@ import {
   combineReducers,
   createStore,
 } from "@reduxjs/toolkit";
-import {
-  persistStore,
-  persistReducer,
-  Persistor,
-} from "redux-persist";
+import { persistStore, persistReducer, Persistor } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import thunk from "redux-thunk";
-import { cartSlice } from "./slices/aboutDataSlice";
+import generalSlice from "./slices/generalSlice";
 
 const storage = createWebStorage("local");
 const persistConfig = {
@@ -22,7 +18,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
-    about: cartSlice.reducer,
+    general: generalSlice.reducer,
   })
 );
 
