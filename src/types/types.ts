@@ -149,7 +149,9 @@ export type ProductsType = {
 };
 
 // newssssssssssssssssssss********************************
-export type DictionaryType = { [key: string]: { [key: string]: string } };
+export type DictionaryType = {
+  [key: string]: { [key: string]: string } | string;
+};
 
 export type ResponseGeneralType = {
   ResponseCode: number;

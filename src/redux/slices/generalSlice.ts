@@ -2,12 +2,12 @@ import { DictionaryType } from "@/types/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface GeneralState {
-  dictionary: DictionaryType;
+  dictionary: DictionaryType | null;
   selectedLang: string;
 }
 
 const initialState: GeneralState = {
-  dictionary: {},
+  dictionary: null,
   selectedLang: "en",
 };
 

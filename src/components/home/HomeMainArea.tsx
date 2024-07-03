@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import WorkArea from "./WorkArea";
 import HomePageBanner from "./HomePageBanner";
 import ArtistsArea from "./ArtistsArea";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 import RunningLines from "./RunningLines";
 import PopularArea from "./PopularArea";
 import SharedSongsSection from "./SharedSongsSection";

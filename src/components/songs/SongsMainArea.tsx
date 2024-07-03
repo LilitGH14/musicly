@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 import SongsAboutArea from "./SongsAboutArea";
 import SongsListingArea from "./SongsListingArea";
 import { fetchSongsData } from "@/services/songs";

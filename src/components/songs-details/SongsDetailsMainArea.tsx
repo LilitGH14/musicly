@@ -5,7 +5,7 @@ import SongLyrics from "./SongLyrics";
 import Sidebar from "./Sidebar";
 import { usePathname } from "next/navigation";
 import { fetchSongDataById } from "@/services/songs";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 
 const SongsDetailsMainArea = () => {
   const pathname = usePathname();

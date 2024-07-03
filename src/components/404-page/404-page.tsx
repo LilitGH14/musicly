@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 
 const F0fpage = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});

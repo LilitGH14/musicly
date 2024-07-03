@@ -15,8 +15,8 @@ const BacktoTop = () => {
     const scrollTop = window.scrollY;
     const windowHeight = window.innerHeight;
     const scrollHeight = document.body.scrollHeight;
-
     const scrollPercentage = (scrollTop / (scrollHeight - windowHeight)) * 100;
+   
     setScrollPercentage(scrollPercentage);
     setShowProgress(scrollTop > 50);
   };

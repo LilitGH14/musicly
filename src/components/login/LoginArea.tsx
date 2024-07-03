@@ -3,7 +3,7 @@ import LoginForm from "@/form/login-form";
 import WorkBg from "../../../public/assets/img/bg/main-bg.jpg";
 import PageHeader from "../common/page-header/PageHeader";
 import { useEffect, useState } from "react";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 
 const LoginArea = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});

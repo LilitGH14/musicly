@@ -4,7 +4,7 @@ import PaginationData from "../common/pagination/pagination-data";
 import { fetchStoriesData } from "@/services/blog";
 import { StoryType } from "@/types/types";
 import PageHeader from "../common/page-header/PageHeader";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 import EventBg from "../../../public/assets/img/event/event-bg-4.jpg";
 import StoryItem from "../common/StoryItem/StoryItem";
 

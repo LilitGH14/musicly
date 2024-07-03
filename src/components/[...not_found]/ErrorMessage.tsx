@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
-import { getDictionary } from "@/dictionaries/dictionaries";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
 import { useTranslation } from "react-i18next";
 
 const ErrorMessage = () => {

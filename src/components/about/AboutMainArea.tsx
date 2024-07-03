@@ -7,13 +7,14 @@ import aboutBgImg from "../../../public/assets/img/about/about.jpg";
 import { useSelector } from "react-redux";
 
 const AboutMainArea = () => {
-  const dictSelector = useSelector((store: any) => store.dictionary);
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary.About
+  );
 
-  const [dict, setDict] = useState<{ [key: string]: string }>({});
+  const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
 
   useEffect(() => {
-    dictSelector && setDict(dictSelector.About);
-    console.log(dictSelector,'dictSelector')
+    dictSelector && setDict(dictSelector);
   }, [dictSelector]);
 
   return (

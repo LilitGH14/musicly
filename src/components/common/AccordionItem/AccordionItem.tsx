@@ -26,7 +26,7 @@ const AccordionItem = ({
           aria-expanded="false"
           aria-controls={collapse_id}
         >
-          {dict[item]}
+          {dict?.[item]}
         </button>
       </h2>
       <div
@@ -35,7 +35,7 @@ const AccordionItem = ({
         aria-labelledby={id}
         data-bs-parent="#accordionExample"
       >
-        <div className="accordion-body">{dict[content]}</div>
+        <div className="accordion-body">{dict?.[content]}</div>
       </div>
     </div>
   );

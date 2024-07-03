@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 const ChooseUsArea = ({ dict }: { dict: any }) => {
   const [chooseData, setChooseData] = useState<ChooseUsDataType[]>([]);
-
+  
   useEffect(() => {
     fetchChooseUsData().then((res) => {
       if (res.ResponseCode == 200) {
@@ -19,9 +19,9 @@ const ChooseUsArea = ({ dict }: { dict: any }) => {
         <div className="col-lg-7">
           <div className="mb-40">
             <h2 className="section__title mb-35 bd-title-anim">
-              {dict.Why_choose_us_title}
+              {dict?.Why_choose_us_title}
             </h2>
-            <p className="section__text">{dict.Why_choose_us_text}</p>
+            <p className="section__text">{dict?.Why_choose_us_text}</p>
           </div>
         </div>
       </div>
@@ -33,9 +33,9 @@ const ChooseUsArea = ({ dict }: { dict: any }) => {
                 <div className="bt-choose-icon d-inline-block p-relative">
                   <i className={item.icon}></i>
                 </div>
-                <h3 className="bt-choose-title">{dict[item.title]}</h3>
+                <h3 className="bt-choose-title">{dict?.[item.title]}</h3>
               </div>
-              <h3 className="bt-choose-text">{dict[item.text]}</h3>
+              <h3 className="bt-choose-text">{dict?.[item.text]}</h3>
             </div>
           </div>
         ))}

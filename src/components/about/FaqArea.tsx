@@ -20,9 +20,9 @@ const FaqArea = ({ dict }: { dict: any }) => {
         <div className="row align-items-center mb-15 bdFadeUp">
           <div className="col-xl-7 col-lg-10 mb-40">
             <h2 className="section__title mb-40 bd-title-anim">
-              {dict.Faq_area_title}
+              {dict?.Faq_area_title}
             </h2>
-            <p>{dict.Faq_area_text}</p>
+            <p>{dict?.Faq_area_text}</p>
           </div>
         </div>
         <div className="row bdFadeUp">

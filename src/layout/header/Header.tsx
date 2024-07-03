@@ -6,7 +6,10 @@ import { imageLoader } from "@/hooks/ImageLoader";
 import headerLogo from "../../../public/assets/img/logo/big-logo.png";
 import menu_data from "@/data/menu-data";
 
-const Header = () => {
+type HeaderType = {
+  dict: { [key: string]: string } | null;
+};
+const Header = ({ dict }: HeaderType) => {
   return (
     <header>
       <div className="header__area header-1 ms-header-fixed ms-bg-body sticky">
@@ -23,7 +26,7 @@ const Header = () => {
                         width={143}
                         height={45}
                         src={headerLogo}
-                        alt="logo not found"
+                        alt={dict?.logo_img as string}
                       />
                     </Link>
                   </div>
@@ -44,12 +47,16 @@ const Header = () => {
                                   } 
                                   ${menu.hasDropdown ? "has-dropdown" : ""}`}
                               >
-                                <Link href={menu.link}> {menu.title}</Link>
+                                <Link href={menu.link}>
+                                  {dict?.[menu.title]}
+                                </Link>
                                 {menu.submenus && (
                                   <ul className="submenu">
                                     {menu?.submenus.map((sub, i) => (
                                       <li key={i}>
-                                        <Link href={sub.link}>{sub.title}</Link>
+                                        <Link href={sub.link}>
+                                          {dict?.[sub.title]}
+                                        </Link>
                                       </li>
                                     ))}
                                   </ul>
@@ -62,13 +69,13 @@ const Header = () => {
                                           href={mega.link}
                                           className="mega-menu-title"
                                         >
-                                          {mega.title}
+                                          {dict?.[mega.title]}
                                         </Link>
                                         <ul>
                                           {mega.submenus.map((sub_mega, i) => (
                                             <li key={i}>
                                               <Link href={sub_mega.link}>
-                                                {sub_mega.title}
+                                                {dict?.[sub_mega.title]}
                                               </Link>
                                             </li>
                                           ))}
@@ -85,10 +92,10 @@ const Header = () => {
                     </div>
                     <div className="auth-btns">
                       <Link href="/login" className="signin">
-                        Sign in
+                        {dict?.Sign_in}
                       </Link>
                       <Link href="/signup" className="signup">
-                        Sign up
+                        {dict?.Sign_up}
                       </Link>
                     </div>
 
