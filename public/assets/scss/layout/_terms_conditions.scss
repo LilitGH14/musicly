@@ -44,7 +44,7 @@
 		@include transition(0.3s);
 
 		&:hover {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 		}
 	}
 
@@ -67,7 +67,7 @@
 	.link {
 		font-size: 16px;
 		font-weight: 500;
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 		line-height: 27px;
 		text-decoration: underline;
 		@include transition(0.3s);
@@ -78,7 +78,7 @@
 	}
 
 	.author_mail {
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 		@include transition(0.3s);
 
 		&:hover {
@@ -113,7 +113,7 @@
 	font-size: 10px;
 	margin-right: 10px;
 	line-height: 1;
-	color: var(--clr-theme-1);
+	color: #a76cd1;
 	transform: translateX(-10px);
 	transition: .3s cubic-bezier(.5, 1, .89, 1);
 }
@@ -125,7 +125,7 @@
 
 .tabs_nav_boxed button:hover,
 .tabs_nav_boxed button.active {
-	color: var(--clr-theme-1);
+	color: #a76cd1;
 }
 
 .terms_conditions_content .icon_list .list_item_text {
@@ -146,7 +146,7 @@
 	transition: all 0.3s ease-out 0s;
 
 	&:hover {
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 	}
 }
 

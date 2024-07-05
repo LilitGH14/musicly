@@ -5,7 +5,7 @@ import SongLyrics from "./SongLyrics";
 import Sidebar from "./Sidebar";
 import { usePathname } from "next/navigation";
 import { fetchSongDataById } from "@/services/songs";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 
 const SongsDetailsMainArea = () => {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ const SongsDetailsMainArea = () => {
   }, [pathname]);
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
+    LanguageProvider.getDictionary().then((res) => {
       setDict(res);
     });
   }, []);
@@ -90,7 +90,7 @@ const SongsDetailsMainArea = () => {
                     aria-labelledby="nav-home-tab"
                     tabIndex={0}
                   >
-                    <SongLyrics  dict={dict} content={song?.lyrics}/>
+                    <SongLyrics dict={dict} content={song?.lyrics} />
                   </div>
                   <div
                     className="tab-pane fade"

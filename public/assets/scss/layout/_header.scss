@@ -158,7 +158,6 @@
   &__right {
     @include flexbox();
     align-items: center;
-    gap: 30px;
 
     .auth-btns {
       .signin,
@@ -222,7 +221,7 @@
     gap: 10px;
 
     .icon {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
 
     .text {
@@ -257,8 +256,8 @@
     @include transition(0.3s);
 
     &:hover {
-      border-color: var(--clr-theme-1);
-      background: var(--clr-theme-1);
+      border-color: #a76cd1;
+      background: #a76cd1;
       color: var(--clr-common-white);
     }
   }
@@ -319,7 +318,7 @@
   @include transition(0.3s);
 
   &:hover {
-    color: var(--clr-theme-1);
+    color: #a76cd1;
   }
 }
 
@@ -544,7 +543,7 @@
     }
 
     &:hover {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
   }
 }

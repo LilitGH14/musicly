@@ -116,7 +116,7 @@
   @include transition(0.3s);
 
   &:hover {
-    color: var(--clr-theme-1);
+    color: #a76cd1;
   }
 }
 
@@ -159,7 +159,7 @@
   top: -10px;
 
   &.active {
-    background: var(--clr-theme-1);
+    background: #a76cd1;
     color: var(--clr-common-white);
 
     i {
@@ -202,7 +202,7 @@
   @include transition(0.3s);
 
   &:hover {
-    background: var(--clr-theme-1);
+    background: #a76cd1;
     color: var(--clr-common-white);
   }
 }
@@ -281,7 +281,7 @@
 .add-enquiry-btn {
   .ms-border-btn {
     i {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
 
     &:hover {
@@ -586,7 +586,7 @@
   @include transition(0.3s);
 
   &:hover {
-    color: var(--clr-theme-1);
+    color: #a76cd1;
   }
 }
 
@@ -652,7 +652,7 @@
     font-size: 19px;
 
     &:hover {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
   }
 }

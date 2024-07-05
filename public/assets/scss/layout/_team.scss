@@ -103,7 +103,7 @@
             inset-inline-start: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(89.88deg, var(--clr-theme-1) 1.23%, var(--clr-bg-3) 100.02%);
+            background: linear-gradient(89.88deg, #a76cd1 1.23%, var(--clr-bg-3) 100.02%);
             opacity: 0;
             visibility: hidden;
             @include transition(0.3s);
@@ -156,10 +156,10 @@
         }
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
 
             &::before {
-                background: var(--clr-theme-1);
+                background: #a76cd1;
             }
         }
 
@@ -316,7 +316,7 @@
         background-color: var(--clr-bg-2);
 
         .progress-bar {
-            background: var(--clr-theme-1);
+            background: #a76cd1;
             position: relative;
             overflow: inherit;
             border-radius: 10px;

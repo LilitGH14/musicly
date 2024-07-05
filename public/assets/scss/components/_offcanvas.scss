@@ -15,7 +15,7 @@
             justify-content: center;
             color: var(--clr-common-white);
             font-size: 18px;
-            background-color: var(--clr-theme-1);
+            background-color: #a76cd1;
             @include border-radius(50%);
             overflow: hidden;
             position: relative;
@@ -28,7 +28,7 @@
 
     &__info {
         background: #191919 none repeat scroll 0 0;
-        border-left: 2px solid var(--clr-theme-1);
+        border-left: 2px solid #a76cd1;
         position: fixed;
         right: 0;
         top: 0;
@@ -106,7 +106,7 @@
         & label {
             width: 100%;
             height: 60px;
-            background-color: var(--clr-theme-1);
+            background-color: #a76cd1;
 
             &:hover {
                 cursor: pointer;
@@ -155,7 +155,7 @@
             color: var(--clr-common-white);
 
             &:hover {
-                color: var(--clr-theme-1);
+                color: #a76cd1;
             }
         }
     }
@@ -184,8 +184,8 @@
                 &:hover {
                     & i {
                         color: var(--clr-common-white);
-                        border-color: var(--clr-theme-1);
-                        background-color: var(--clr-theme-1);
+                        border-color: #a76cd1;
+                        background-color: #a76cd1;
                     }
                 }
             }
@@ -218,7 +218,7 @@
                 @include transition(0.3s);
 
                 &:hover {
-                    color: var(--clr-theme-1);
+                    color: #a76cd1;
                 }
             }
         }
@@ -242,7 +242,7 @@
                     align-items: center;
                     justify-content: center;
                     border: 1px solid var(--clr-border-1);
-                    color: var(--clr-theme-1);
+                    color: #a76cd1;
                     @include border-radius(50%);
                     overflow: hidden;
                     position: relative;
@@ -252,8 +252,8 @@
 
                     &:hover {
                         color: var(--clr-common-white);
-                        border: 1px solid var(--clr-theme-1);
-                        background-color: var(--clr-theme-1);
+                        border: 1px solid #a76cd1;
+                        background-color: #a76cd1;
                     }
                 }
             }
@@ -277,7 +277,7 @@
                     line-height: 22px;
                     font-size: 12px;
                     font-weight: 600;
-                    background-color: var(--clr-theme-1);
+                    background-color: #a76cd1;
                     @include border-radius(50%);
                     color: var(--clr-common-white);
                     text-align: center;
@@ -293,11 +293,11 @@
                 font-size: 14px;
 
                 & .notification-number {
-                    color: var(--clr-theme-1);
+                    color: #a76cd1;
                 }
 
                 & a {
-                    color: var(--clr-theme-1);
+                    color: #a76cd1;
                 }
             }
         }

@@ -27,7 +27,7 @@
 	@include transition(0.3s);
 
 	&:hover {
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 	}
 }
 
@@ -230,7 +230,7 @@
 
 	&:hover {
 		.ms-overlay10 {
-			background: linear-gradient(180deg, rgba(255, 193, 7, 0.24) 0%, var(--clr-theme-1) 100%);
+			background: linear-gradient(180deg, rgba(255, 193, 7, 0.24) 0%, #a76cd1 100%);
 		}
 
 		img {
@@ -303,7 +303,7 @@
 		}
 
 		i {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 			font-size: 40px;
 			display: inline-block;
 			margin-bottom: 25px;
@@ -370,7 +370,7 @@
 		@include transition(0.3s);
 
 		&:hover {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 		}
 	}
 }

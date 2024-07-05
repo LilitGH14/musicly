@@ -5,6 +5,7 @@ import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
 import headerLogo from "../../../public/assets/img/logo/big-logo.png";
 import menu_data from "@/data/menu-data";
+import Language from "@/components/common/Language/Language";
 
 type HeaderType = {
   dict: { [key: string]: string } | null;
@@ -35,55 +36,16 @@ const Header = ({ dict }: HeaderType) => {
                       <div className="main-menu main-menu-ff-space d-none d-lg-inline-block">
                         <nav>
                           <ul>
-                            {menu_data.map((menu, i) => (
+                            {menu_data.map((menu) => (
                               <li
-                                key={i}
-                                className={` 
-                                  ${menu.active ? "active has-dropdown" : ""} 
-                                  ${
-                                    menu.megaMenu
-                                      ? "has-dropdown has-mega-menu"
-                                      : ""
-                                  } 
-                                  ${menu.hasDropdown ? "has-dropdown" : ""}`}
+                                key={menu.id}
+                                className={`${
+                                  menu.active ? "active has-dropdown" : ""
+                                }`}
                               >
                                 <Link href={menu.link}>
                                   {dict?.[menu.title]}
                                 </Link>
-                                {menu.submenus && (
-                                  <ul className="submenu">
-                                    {menu?.submenus.map((sub, i) => (
-                                      <li key={i}>
-                                        <Link href={sub.link}>
-                                          {dict?.[sub.title]}
-                                        </Link>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                                {menu.mega_menus && (
-                                  <ul className="mega-menu">
-                                    {menu.mega_menus.map((mega, i) => (
-                                      <li key={i}>
-                                        <Link
-                                          href={mega.link}
-                                          className="mega-menu-title"
-                                        >
-                                          {dict?.[mega.title]}
-                                        </Link>
-                                        <ul>
-                                          {mega.submenus.map((sub_mega, i) => (
-                                            <li key={i}>
-                                              <Link href={sub_mega.link}>
-                                                {dict?.[sub_mega.title]}
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
                               </li>
                             ))}
                           </ul>
@@ -92,6 +54,7 @@ const Header = ({ dict }: HeaderType) => {
                     </div>
                   </div>
                   <div className="header__right">
+                    <Language />
                     <div className="auth-btns">
                       <Link href="/login" className="signin">
                         {dict?.Sign_in}

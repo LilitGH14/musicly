@@ -6,7 +6,7 @@ import { fetchStoryData } from "@/services/blog";
 import { StoryDetailsType } from "@/types/types";
 import PageHeader from "../common/page-header/PageHeader";
 import EventBg from "../../../public/assets/img/event/event-bg-4.jpg";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 
 const BlogDetailsMain = () => {
   const pathname = usePathname();
@@ -22,7 +22,7 @@ const BlogDetailsMain = () => {
   });
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
+    LanguageProvider.getDictionary().then((res) => {
       setDict(res);
     });
   }, []);

@@ -7,7 +7,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import { useSelector } from "react-redux";
 import { setTranslations } from "@/redux/slices/generalSlice";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 import { useDispatch } from "react-redux";
 
 if (typeof window !== "undefined") {
@@ -22,14 +22,15 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   const dispatch = useDispatch();
 
   const dictSelector = useSelector((store: any) => store.general.dictionary);
+  const selectedLang = useSelector((store: any) => store.general.selectedLang);
 
   const [dict, setDict] = useState<any>({});
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
+    LanguageProvider.getDictionary(selectedLang).then((res: any) => {
       dispatch(setTranslations(res));
     });
-  }, [dispatch]);
+  }, [dispatch, selectedLang]);
 
   useEffect(() => {
     dictSelector && setDict(dictSelector);

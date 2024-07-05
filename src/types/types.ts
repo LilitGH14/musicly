@@ -207,3 +207,14 @@ export type SongType = {
   songName: string;
   username: string;
 };
+
+export type LangItem = {
+  id: string;
+  name: string;
+  src: StaticImageData;
+};
+
+export type Category=  {
+  id: number;
+  name: string;
+};

@@ -3,16 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 import { useTranslation } from "react-i18next";
 
 const ErrorMessage = () => {
-    const { t } = useTranslation();
-
   const [dict, setDict] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
+    LanguageProvider.getDictionary().then((res) => {
       setDict(res.ErrorMessage);
     });
   }, []);

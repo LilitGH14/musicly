@@ -9,11 +9,15 @@ type FooterType = {
   dict: { [key: string]: string } | null;
 };
 const Footer = ({ dict }: FooterType) => {
+  const subscribeNow = () => {
+    //add  subscribe functionality
+  };
+
   return (
     <footer>
       <div
-        className="ms-footer2-top ms-footer-bg ms-br-15 fix ms-footer-overlay 
-                two zindex-1 include__bg pt-130 pb-10 ms-maw-1810 mx-auto"
+        className="ms-footer2-top ms-footer-bg ms-br-15 
+                two zindex-1 include__bg pt-30 pb-10 ms-maw-1810 mx-auto"
         style={{ backgroundImage: `url(${FooterBg.src})` }}
       >
         <div className="container">
@@ -28,7 +32,7 @@ const Footer = ({ dict }: FooterType) => {
                       placeholder="blur"
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
-                      alt="footer logo"
+                      alt={dict?.logo_img as string}
                     />
                   </Link>
                 </div>
@@ -64,7 +68,11 @@ const Footer = ({ dict }: FooterType) => {
                 <div className="ms-subscribe2-form p-relative mb-10 d-none d-sm-block">
                   <i className="flaticon-mail"></i>
                   <input type="text" placeholder="Enter your mail" />
-                  <button type="submit" className="ms-subscribe2-btn">
+                  <button
+                    type="submit"
+                    className="ms-subscribe2-btn"
+                    onClick={() => subscribeNow()}
+                  >
                     {dict?.Subscribe_now}
                     <i className="fa-sharp fa-solid fa-paper-plane"></i>
                   </button>
@@ -80,7 +88,7 @@ const Footer = ({ dict }: FooterType) => {
                   <ul>
                     <li>
                       <i className="flaticon-pin"></i>
-                      <Link href="#">{dict?.Address}</Link>
+                      {dict?.Address}
                     </li>
                     <li>
                       <i className="flaticon-mail"></i>
@@ -131,15 +139,9 @@ const Footer = ({ dict }: FooterType) => {
               <div className="ms-footer2-widget mb-50">
                 <h3 className="ms-footer2-title">{dict?.Country_we_serve}</h3>
                 <ul>
-                  <li>
-                    <Link href="/contact">{dict?.US}</Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">{dict?.Canada}</Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">{dict?.South_Korea}</Link>
-                  </li>
+                  <li>{dict?.US}</li>
+                  <li>{dict?.Canada}</li>
+                  <li>{dict?.South_Korea}</li>
                 </ul>
               </div>
             </div>

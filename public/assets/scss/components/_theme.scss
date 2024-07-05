@@ -194,19 +194,19 @@ input[type="color"] {
 }
 
 *::-moz-selection {
-	background: var(--clr-theme-1);
+	background: #a76cd1;
 	color: var(--clr-common-white);
 	text-shadow: none;
 }
 
 ::-moz-selection {
-	background: var(--clr-theme-1);
+	background: #a76cd1;
 	color: var(--clr-common-white);
 	text-shadow: none;
 }
 
 ::selection {
-	background: var(--clr-theme-1);
+	background: #a76cd1;
 	color: var(--clr-common-white);
 	text-shadow: none;
 }
@@ -453,7 +453,7 @@ a {
 						color: var(--clr-border-1);
 						inset-block-start: 0;
 						inset-inline-start: 0;
-						background: linear-gradient(180deg, var(--clr-theme-1) 0%, var(--clr-bg-3) 100%);
+						background: linear-gradient(180deg, #a76cd1 0%, var(--clr-bg-3) 100%);
 						border-color: transparent;
 						color: var(--clr-common-white);
 						content: '';
@@ -476,7 +476,7 @@ a {
 				}
 
 				.current {
-					background: linear-gradient(180deg, var(--clr-theme-1) 0%, var(--clr-bg-3) 100%);
+					background: linear-gradient(180deg, #a76cd1 0%, var(--clr-bg-3) 100%);
 					border-color: transparent;
 					color: var(--clr-common-white);
 					font-weight: 600;
@@ -559,7 +559,7 @@ html .ui-button.ui-state-disabled:active {
 	@include transition(0.3s);
 
 	&:hover {
-		background: var(--clr-theme-1);
+		background: #a76cd1;
 		color: var(--clr-common-white);
 	}
 }
@@ -688,7 +688,7 @@ a:visited.ui-button,
 
 	.react-datepicker__day:hover {
 		border-radius: 0.3rem;
-		background-color: var(--clr-theme-1);
+		background-color: #a76cd1;
 		color: var(--clr-common-white);
 	}
 

@@ -55,7 +55,7 @@
     width: 100%;
     background: linear-gradient(
       90.64deg,
-      var(--clr-theme-1) 0.54%,
+      #a76cd1 0.54%,
       var(--clr-bg-3) 96.74%
     );
     top: 0;
@@ -103,7 +103,7 @@
   font-size: 16px;
   display: inline-block;
   color: var(--clr-common-white);
-  background: var(--clr-theme-1);
+  background: #a76cd1;
   border-radius: 30px;
   height: 60px;
   line-height: 60px;
@@ -137,7 +137,7 @@
 
 .ms-white-bg {
   background-color: var(--clr-common-white);
-  color: var(--clr-theme-1);
+  color: #a76cd1;
   font-weight: 600;
   height: 55px;
   line-height: 55px;
@@ -153,7 +153,7 @@
   }
 
   &:hover {
-    background: var(--clr-theme-1);
+    background: #a76cd1;
     color: var(--clr-common-white);
   }
 }
@@ -165,7 +165,7 @@
   background: linear-gradient(
     101.18deg,
     var(--clr-bg-3) 7.18%,
-    var(--clr-theme-1) 90.09%
+    #a76cd1 90.09%
   );
   text-align: center;
   border-radius: 50%;
@@ -190,7 +190,7 @@
 .ms-round2-btn {
   width: 76px;
   height: 76px;
-  background-color: var(--clr-theme-1);
+  background-color: #a76cd1;
   border-radius: 50%;
   line-height: 76px;
   color: var(--clr-common-white);
@@ -215,11 +215,11 @@
   }
 
   &:hover {
-    background-color: var(--clr-theme-1);
+    background-color: #a76cd1;
     color: var(--clr-common-white);
 
     &::before {
-      border-color: var(--clr-theme-1);
+      border-color: #a76cd1;
     }
   }
 }
@@ -243,9 +243,9 @@
   }
 
   &:hover {
-    background-color: var(--clr-theme-1);
+    background-color: #a76cd1;
     color: var(--clr-common-white);
-    border-color: var(--clr-theme-1);
+    border-color: #a76cd1;
 
     i {
       color: var(--clr-common-white);
@@ -268,7 +268,7 @@
     &.nav-link.active,
     &:hover {
       color: #ffffff;
-      background: var(--clr-theme-1);
+      background: #a76cd1;
     }
   }
 }
@@ -285,8 +285,8 @@
   @include transition(0.3s);
 
   &:hover {
-    border-color: var(--clr-theme-1);
-    background: var(--clr-theme-1);
+    border-color: #a76cd1;
+    background: #a76cd1;
     color: var(--clr-common-white);
   }
 }
@@ -400,9 +400,9 @@
   text-transform: capitalize;
 
   &:hover {
-    background-color: var(--clr-theme-1);
+    background-color: #a76cd1;
     color: var(--clr-common-white);
-    border-color: var(--clr-theme-1);
+    border-color: #a76cd1;
     @include transform(translateY(-2px));
   }
 }

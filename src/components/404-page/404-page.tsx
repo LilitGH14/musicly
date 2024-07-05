@@ -3,14 +3,16 @@ import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 
 const F0fpage = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
-      setDict(res.ErrorMessage);
+    LanguageProvider.getDictionary().then((res) => {
+      if (res.ResponseCode == 200) {
+        setDict(res.ErrorMessage);
+      }
     });
   }, []);
 

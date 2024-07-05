@@ -23,7 +23,7 @@
 }
 
 .ms-banner__bg-title {
-  font-size: 150px;
+  font-size: 90px;
   line-height: 1;
   font-family: var(--bd-ff-subtitle);
   font-weight: var(--bd-fw-regular);
@@ -32,11 +32,11 @@
   display: inline-block;
 
   @media #{$lg, $md, $sm, $xs} {
-    font-size: 150px;
+    font-size: 90px;
   }
 
   @media #{$xs} {
-    font-size: 90px;
+    font-size: 70px;
   }
 }
 
@@ -311,7 +311,7 @@
 
   &:hover {
     span {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
   }
 }
@@ -481,7 +481,7 @@
 
 /* update-code */
 .ms-banner-area {
-  padding: 0 20px 20px;
+  padding: 20px;
   .m-nice-select {
     .nice-select {
       border: none;

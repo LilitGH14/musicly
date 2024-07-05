@@ -15,6 +15,7 @@
     "Sign_up": "Sign up"
   },
   "Footer": {
+    "logo_img": "Logo",
     "IN": "IN",
     "TW": "TW",
     "FB": "FB",
@@ -65,17 +66,17 @@
     "Faq_answer_2": "While we can’t guarantee that your favorite bands will see your rewritten lyrics, many artists do engage with the The Beats Beyond community. Your story could potentially inspire them, especially if it gains significant attention within our platform."
   },
   "HomePage": {
-    "Generate_song_btn": "Generate song",
-    "Leave_story_btn": "Leave story",
+    "Generate_song_btn": "Generate a song",
+    "Leave_story_btn": "Leave a story",
     "Home_page_title": "The Beats Beyond",
     "Home_page_description": "Unleash your creativity and craft new songs inspired by BTS and their incredible journey.",
     "Running_line_one": "Share your story with us",
     "Running_line_two": "Let your favorite band make a song for you using AI",
     "Categories": "Categories",
     "New": "New",
-    "BTS": "BTS",
+    "Groups": "Groups",
     "Duets": "Duets",
-    "Solo": "Solo",
+    "Solos": "Solos",
     "How_it_works_feature_1_title": "Leave A Piece Of Inspiration",
     "How_it_works_feature_1_description": "Leave your own story to inspire your favorite band",
     "How_it_works_feature_2_title": "Craft New Songs Inspired By BTS",
@@ -88,7 +89,13 @@
     "Alt_arrow": "Arrow",
     "Inspired_songs_titile": "Inspired Songs",
     "Inspired_songs_description": "Popular inspired songs",
-    "Avatar": "Avatar"
+    "Avatar": "Avatar",
+    "CategoryImage":"Category Image"
+  },
+  "Langauages": {
+    "en": "EN",
+    "ko": "KO",
+    "flag":"Flag"
   },
   "Generate_song_btn": "Generate song",
   "Leave_story_btn": "Leave story",

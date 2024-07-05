@@ -34,7 +34,7 @@ const HomePageBanner = ({ dict }: HomePageBannerType) => {
                     <div className="ms-banner_btns_wrapper">
                       <Link
                         className="unfill__btn feature-unfill_btn"
-                        href="/contact"
+                        href="/songs"
                       >
                         {dict?.Generate_song_btn}
                       </Link>
@@ -48,7 +48,7 @@ const HomePageBanner = ({ dict }: HomePageBannerType) => {
                       />
                       <Link
                         className="unfill__btn feature-unfill_btn"
-                        href="/contact"
+                        href="/blog"
                       >
                         {dict?.Leave_story_btn}
                       </Link>

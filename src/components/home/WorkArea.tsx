@@ -41,7 +41,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
 
   return (
     <section
-      className="work__area work-overlay pt-125 pb-60 include__bg"
+      className="work__area work-overlay pt-50 pb-30 include__bg"
       style={{ backgroundImage: `url(${WorkBgImg.src})` }}
     >
       <Image
@@ -57,7 +57,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
           <div className="col-xl-6">
             <div className="work__thumb-wrapper d-inline-block p-relative mb-60">
               <div className="work__thumb-inner">
-                <div className="work__thumb">
+                <div className="work__thumb left">
                   <Image
                     loader={imageLoader}
                     placeholder="blur"

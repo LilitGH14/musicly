@@ -24,7 +24,7 @@
 					@include transition(0.3s);
 
 					&:hover {
-						color: var(--clr-theme-1);
+						color: #a76cd1;
 					}
 				}
 			}
@@ -104,7 +104,7 @@
 						}
 
 						&:hover {
-							color: var(--clr-theme-1);
+							color: #a76cd1;
 						}
 					}
 				}
@@ -148,9 +148,9 @@
 
 					&.mean-expand {
 						&.mean-clicked {
-							background: var(--clr-theme-1);
+							background: #a76cd1;
 							color: var(--clr-common-white);
-							border-color: var(--clr-theme-1) !important;
+							border-color: #a76cd1 !important;
 						}
 					}
 				}
@@ -161,7 +161,7 @@
 
 .mean-container .mean-nav ul li.dropdown-opened>a,
 .mean-container .mean-nav ul li.dropdown-opened>span {
-	color: var(--clr-theme-1);
+	color: #a76cd1;
 }
 
 // btn-style

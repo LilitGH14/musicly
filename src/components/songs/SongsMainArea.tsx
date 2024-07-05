@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 import SongsAboutArea from "./SongsAboutArea";
 import SongsListingArea from "./SongsListingArea";
 import { fetchSongsData } from "@/services/songs";
@@ -24,7 +24,7 @@ const SongsMainArea = () => {
   };
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
+    LanguageProvider.getDictionary().then((res) => {
       setDict(res);
     });
 

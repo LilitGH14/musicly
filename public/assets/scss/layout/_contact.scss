@@ -130,7 +130,7 @@
         @include transition(0.3s);
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 
@@ -420,7 +420,7 @@
         inset-inline-end: 30px;
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 }
@@ -582,7 +582,7 @@
         color: var(--clr-bg-1);
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 }
@@ -595,7 +595,7 @@
         @include transition(0.3s);
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 }
@@ -622,7 +622,7 @@
         white-space: nowrap;
 
         &.active {
-            background: var(--clr-theme-1);
+            background: #a76cd1;
         }
     }
 

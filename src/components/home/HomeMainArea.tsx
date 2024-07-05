@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 const HomeMainArea = () => {
   const dictSelector = useSelector(
-    (store: any) => store.general.dictionary.HomePage
+    (store: any) => store.general.dictionary?.HomePage
   );
 
   const [dict, setDict] = useState<{ [key: string]: string } | null>(null);

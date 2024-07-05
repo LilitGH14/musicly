@@ -54,7 +54,7 @@
     @include transition(0.3s);
 
     &:hover {
-      color: var(--clr-theme-1);
+      color: #a76cd1;
     }
   }
 }
@@ -114,23 +114,23 @@
     linear,
     left top,
     right top,
-    from(var(--clr-theme-1)),
-    to(var(--clr-theme-1))
+    from(#a76cd1),
+    to(#a76cd1)
   );
   background-image: -webkit-linear-gradient(
     left,
-    var(--clr-theme-1) 0%,
-    var(--clr-theme-1) 100%
+    #a76cd1 0%,
+    #a76cd1 100%
   );
   background-image: -o-linear-gradient(
     left,
-    var(--clr-theme-1) 0%,
-    var(--clr-theme-1) 100%
+    #a76cd1 0%,
+    #a76cd1 100%
   );
   background-image: linear-gradient(
     to right,
-    var(--clr-theme-1) 0%,
-    var(--clr-theme-1) 100%
+    #a76cd1 0%,
+    #a76cd1 100%
   );
   background-size: 0px 2px;
   background-position: 0px 95%;
