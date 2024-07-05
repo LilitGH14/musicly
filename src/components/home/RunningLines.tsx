@@ -6,7 +6,7 @@ import "swiper/css/bundle";
 import TextScrollBg from "../../../public/assets/img/bg/text-scroll-bg.png";
 
 type RunningLinesType = {
-  dict: { [key: string]: string };
+  dict: { [key: string]: string }|null;
 };
 const RunningLines = ({ dict }: RunningLinesType) => {
   return (
@@ -39,7 +39,7 @@ const RunningLines = ({ dict }: RunningLinesType) => {
                           idx % 2 == 0 ? "text-color-1" : "text-color-2"
                         }
                       >
-                        {dict.Running_line_one}
+                        {dict?.Running_line_one}
                       </span>
                     </h3>
                   </SwiperSlide>
@@ -68,7 +68,7 @@ const RunningLines = ({ dict }: RunningLinesType) => {
                   <SwiperSlide key={idx}>
                     <h3>
                       <span className={idx % 2 == 0 ? "text-color-2" : ""}>
-                        {dict.Running_line_two}
+                        {dict?.Running_line_two}
                       </span>
                     </h3>
                   </SwiperSlide>

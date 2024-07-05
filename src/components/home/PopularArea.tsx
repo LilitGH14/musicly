@@ -9,7 +9,7 @@ import { Autoplay } from "swiper";
 import "swiper/css/bundle";
 
 type PopularAreaType = {
-  dict: { [key: string]: string };
+  dict: { [key: string]: string }|null;
 };
 const PopularArea = ({ dict }: PopularAreaType) => {
   return (
@@ -19,7 +19,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
           <div className="col-xl-6 col-lg-6">
             <div className="section__title-wrapper mb-40 bd-title-anim">
               <h2 className="section__title msg_title">
-                <span className="active">{dict.Categories}</span>
+                <span className="active">{dict?.Categories}</span>
               </h2>
             </div>
           </div>
@@ -37,7 +37,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     aria-controls="nav-popular-1"
                     aria-selected="true"
                   >
-                    {dict.New}
+                    {dict?.New}
                   </button>
                   <button
                     className="nav-link"
@@ -49,7 +49,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     aria-controls="nav-popular-2"
                     aria-selected="false"
                   >
-                    {dict.BTS}
+                    {dict?.BTS}
                   </button>
                   <button
                     className="nav-link"
@@ -61,7 +61,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     aria-controls="nav-popular-3"
                     aria-selected="false"
                   >
-                    {dict.Duets}
+                    {dict?.Duets}
                   </button>
                   <button
                     className="nav-link"
@@ -73,7 +73,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     aria-controls="nav-popular-4"
                     aria-selected="false"
                   >
-                    {dict.Solo}
+                    {dict?.Solo}
                   </button>
                 </div>
               </nav>

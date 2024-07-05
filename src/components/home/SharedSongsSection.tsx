@@ -7,7 +7,7 @@ import React from "react";
 import Ratting from "./Rating";
 
 type SharedSongsSectionType = {
-  dict: { [key: string]: string };
+  dict: { [key: string]: string }|null;
 };
 const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
   return (
@@ -17,10 +17,10 @@ const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
           <div className="col-xl-7">
             <div className="section__title-wrapper mb-65 text-center bd-title-anim">
               <span className="section__subtitle">
-                {dict.Inspired_songs_titile}
+                {dict?.Inspired_songs_titile}
               </span>
               <h2 className="section__title">
-                {dict.Inspired_songs_description}
+                {dict?.Inspired_songs_description}
               </h2>
             </div>
           </div>
@@ -37,7 +37,7 @@ const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
                       src={item.image}
-                      alt={dict.Avatar}
+                      alt={dict?.Avatar??""}
                     />
                   </div>
                   <div className="ms-fun-brand-content">

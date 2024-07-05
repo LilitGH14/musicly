@@ -2,25 +2,25 @@
 import React, { useEffect, useState } from "react";
 import WorkArea from "./WorkArea";
 import HomePageBanner from "./HomePageBanner";
-import ArtistsArea from "./ArtistsArea";
-import { getDictionary } from "@/app/dictionaries/dictionaries";
 import RunningLines from "./RunningLines";
 import PopularArea from "./PopularArea";
 import SharedSongsSection from "./SharedSongsSection";
 import Comments from "./Comments";
+import { useSelector } from "react-redux";
 
 const HomeMainArea = () => {
-  const [dict, setDict] = useState<{ [key: string]: string }>({});
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary.HomePage
+  );
+
+  const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
 
   useEffect(() => {
-    getDictionary("en").then((res) => {
-      setDict(res);
-    });
-  }, []);
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
 
   return (
     <main className="mt-90">
-      <ArtistsArea dict={dict} />
       <HomePageBanner dict={dict} />
       <RunningLines dict={dict} />
       <PopularArea dict={dict} />

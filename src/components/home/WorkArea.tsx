@@ -15,7 +15,7 @@ import Link from "next/link";
 import { TWorkFuture } from "@/types/types";
 
 type WorkAreaType = {
-  dict: { [key: string]: string };
+  dict: { [key: string]: string } | null;
 };
 const WorkArea = ({ dict }: WorkAreaType) => {
   const work_future_data: TWorkFuture[] = [
@@ -65,7 +65,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                     width={347}
                     height={456}
                     src={thumb1}
-                    alt={dict.How_it_works_feature_1_title}
+                    alt={dict?.How_it_works_feature_1_title ?? ""}
                   />
                 </div>
                 <div className="work__small-thumb">
@@ -77,7 +77,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                       width={264}
                       height={202}
                       src={thumb2}
-                      alt={dict.How_it_works_feature_2_title}
+                      alt={dict?.How_it_works_feature_2_title ?? ""}
                     />
                   </div>
                   <div className="work__thumb">
@@ -87,7 +87,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
                       src={thumb3}
-                      alt={dict.How_it_works_feature_3_title}
+                      alt={dict?.How_it_works_feature_3_title ?? ""}
                     />
                   </div>
                 </div>
@@ -98,12 +98,12 @@ const WorkArea = ({ dict }: WorkAreaType) => {
             <div className="work__content-wrapper work__content-space mb-70 pl-40">
               <div className="section__title-wrapper mb-50 bd-title-anim">
                 <span className="section__subtitle">
-                  {dict.How_it_works_section_title}
+                  {dict?.How_it_works_section_title}
                 </span>
                 <h2 className="section__title two">
-                  {dict.How_it_works_section_description_1}
+                  {dict?.How_it_works_section_description_1}
                   <span className="animated-underline active">
-                    {dict.How_it_works_section_description_2}
+                    {dict?.How_it_works_section_description_2}
                   </span>
                 </h2>
               </div>
@@ -114,8 +114,8 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                       <span>{item.icon}</span>
                     </div>
                     <div className="work__features-content">
-                      <h4>{dict[item.title]}</h4>
-                      <p>{dict[item.description]}</p>
+                      <h4>{dict?.[item.title]}</h4>
+                      <p>{dict?.[item.description]}</p>
                     </div>
                   </div>
                 ))}
@@ -126,7 +126,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                         className="unfill__btn feature-unfill_btn"
                         href="/contact"
                       >
-                        {dict.Generate_song}
+                        {dict?.Generate_song_btn}
                       </Link>
                     </div>
                     <div className="work__features-btn">
@@ -134,7 +134,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                         className="unfill__btn feature-unfill_btn"
                         href="/contact"
                       >
-                        {dict.Leave_story_btn}
+                        {dict?.Leave_story_btn}
                       </Link>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                       loading="lazy"
                       style={{ width: "100%", height: "auto" }}
                       src={workArrowImg}
-                      alt={dict.Alt_arrow}
+                      alt={dict?.Alt_arrow ?? ""}
                     />
                   </div>
                 </div>

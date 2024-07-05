@@ -18,19 +18,19 @@ const Header = ({ dict }: HeaderType) => {
             <div className="col-12">
               <div className="mega__menu-wrapper p-relative">
                 <div className="header__main d-flex align-items-center justify-content-between">
-                  <div className="header__logo pt-25 pb-25">
-                    <Link href="/">
-                      <Image
-                        loader={imageLoader}
-                        priority
-                        width={143}
-                        height={45}
-                        src={headerLogo}
-                        alt={dict?.logo_img as string}
-                      />
-                    </Link>
-                  </div>
-                  <div className="header__right">
+                  <div className="header__left">
+                    <div className="header__logo pt-25 pb-25">
+                      <Link href="/">
+                        <Image
+                          loader={imageLoader}
+                          priority
+                          width={143}
+                          height={45}
+                          src={headerLogo}
+                          alt={dict?.logo_img as string}
+                        />
+                      </Link>
+                    </div>
                     <div className="mean__menu-wrapper">
                       <div className="main-menu main-menu-ff-space d-none d-lg-inline-block">
                         <nav>
@@ -90,6 +90,8 @@ const Header = ({ dict }: HeaderType) => {
                         </nav>
                       </div>
                     </div>
+                  </div>
+                  <div className="header__right">
                     <div className="auth-btns">
                       <Link href="/login" className="signin">
                         {dict?.Sign_in}

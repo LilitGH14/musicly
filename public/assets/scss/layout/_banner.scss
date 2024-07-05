@@ -10,6 +10,16 @@
   @media #{$sm,$xs} {
     padding-bottom: 80px;
   }
+
+  img{
+    width: auto;
+    height: 100px;
+  }
+
+  .ms-banner_btns_wrapper{
+    position: relative;
+    bottom: -100px;
+  }
 }
 
 .ms-banner__bg-title {
