@@ -26,7 +26,7 @@ const HomeMainArea = () => {
       <PopularArea dict={dict} />
       <WorkArea dict={dict} />
       <SharedSongsSection dict={dict} />
-      <Comments />
+      <Comments dict={dict} />
     </main>
   );
 };

@@ -8,37 +8,14 @@ import vectorShape from "../../../public/assets/img/work/vactoe-shape.png";
 import workArrowImg from "../../../public/assets/img/work/arrow.png";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
-import WorkFutureSvgIconOne from "../../../public/assets/img/svg/WorkFutureIconOne";
-import WorkFutureSvgIconTwo from "../../../public/assets/img/svg/WorkFutureSvgIconTwo";
-import WorkFutureSvgIconThree from "../../../public/assets/img/svg/WorkFutureSvgIconThree";
 import Link from "next/link";
 import { TWorkFuture } from "@/types/types";
+import { WORFEATURES } from "@/constants/constants";
 
 type WorkAreaType = {
   dict: { [key: string]: string } | null;
 };
 const WorkArea = ({ dict }: WorkAreaType) => {
-  const work_future_data: TWorkFuture[] = [
-    {
-      id: 1,
-      icon: <WorkFutureSvgIconOne />,
-      title: "How_it_works_feature_1_title",
-      description: "How_it_works_feature_1_description",
-    },
-    {
-      id: 2,
-      icon: <WorkFutureSvgIconThree />,
-      title: "How_it_works_feature_2_title",
-      description: "How_it_works_feature_2_description",
-    },
-    {
-      id: 3,
-      icon: <WorkFutureSvgIconTwo />,
-      title: "How_it_works_feature_3_title",
-      description: "How_it_works_feature_3_description",
-    },
-  ];
-
   return (
     <section
       className="work__area work-overlay pt-50 pb-30 include__bg"
@@ -108,7 +85,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                 </h2>
               </div>
               <div className="work__features-inner">
-                {work_future_data.map((item) => (
+                {WORFEATURES.map((item: TWorkFuture) => (
                   <div className="work__features-item" key={item.id}>
                     <div className="work__features-icon">
                       <span>{item.icon}</span>

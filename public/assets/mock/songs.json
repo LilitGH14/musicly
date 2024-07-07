@@ -9,7 +9,9 @@
       "isGenerated": false,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 2,
@@ -20,7 +22,9 @@
       "isGenerated": false,
       "songName": "RM",
       "username": "User 001",
-      "category": "Solo"
+      "category": "Solo",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 3,
@@ -30,7 +34,9 @@
       "isGenerated": false,
       "songName": "Suga",
       "username": "User 001",
-      "category": "New"
+      "category": "New",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 4,
@@ -40,7 +46,9 @@
       "isGenerated": false,
       "songName": "Jin",
       "username": "User 001",
-      "category": "Popular"
+      "category": "Popular",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 5,
@@ -50,7 +58,9 @@
       "isGenerated": false,
       "songName": "Jimin",
       "username": "User 001",
-      "category": "Band/Group"
+      "category": "Band/Group",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 6,
@@ -60,7 +70,9 @@
       "isGenerated": false,
       "songName": "Jimin",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 7,
@@ -70,7 +82,9 @@
       "isGenerated": true,
       "songName": "Suga",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 8,
@@ -80,7 +94,9 @@
       "isGenerated": false,
       "songName": "RM",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 9,
@@ -90,7 +106,9 @@
       "isGenerated": true,
       "songName": "RM",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 10,
@@ -100,7 +118,9 @@
       "isGenerated": true,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 11,
@@ -110,7 +130,9 @@
       "isGenerated": false,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 12,
@@ -120,7 +142,9 @@
       "isGenerated": false,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 13,
@@ -130,7 +154,9 @@
       "isGenerated": false,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     },
     {
       "id": 14,
@@ -140,7 +166,9 @@
       "isGenerated": false,
       "songName": "Snooze",
       "username": "User 001",
-      "category": "Duet"
+      "category": "Duet",
+      "rating": 5,
+      "isShared": true
     }
   ]
 }

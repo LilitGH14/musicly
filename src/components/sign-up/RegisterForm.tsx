@@ -3,44 +3,53 @@ import { register_schema } from "@/utils/validation-schema";
 import { useFormik } from "formik";
 import React from "react";
 import { toast } from "react-toastify";
-import ErrorMsg from "./error-msg";
+import ErrorMsg from "../../form/error-msg";
 import Link from "next/link";
+import { registerUser } from "@/services/auth";
 
-const RegisterForm = () => {
+type SignUpFormType = {
+  dict: { [key: string]: string } | null;
+};
+const RegisterForm = ({ dict }: SignUpFormType) => {
   const { handleSubmit, handleBlur, handleChange, values, errors, touched } =
     useFormik({
       initialValues: {
-        name: "",
+        role: "",
         email: "",
         password: "",
-        confirmPass: "",
+        confirmPassword: "",
       },
       validationSchema: register_schema,
       onSubmit: (values, { resetForm }) => {
-        console.log(values);
-        toast.success("Register successfully");
-        resetForm();
+        registerUser(values).then((res) => {
+          if (res.ResponseCode === 200) {
+            toast.success(dict?.Register_successfully);
+            resetForm();
+          }
+        });
       },
     });
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="ms-input2-box mb-25">
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={values.name}
+        <select
+          name="role"
+          value={values.role}
           onBlur={handleBlur}
           onChange={handleChange}
           required
-        />
-        {touched.name && <ErrorMsg error={errors.name} />}
+        >
+          <option value="" disabled selected>{dict?.SelectRole}</option>
+          <option value="fan">{dict?.Fan}</option>
+          <option value="songWriter">{dict?.SongWriter}</option>
+        </select>
+        {touched.role && <ErrorMsg error={errors.role} />}
       </div>
       <div className="ms-input2-box mb-25">
         <input
           type="email"
-          placeholder="Email"
+          placeholder={dict?.Email}
           name="email"
           value={values.email}
           onBlur={handleBlur}
@@ -52,7 +61,7 @@ const RegisterForm = () => {
       <div className="ms-input2-box mb-25">
         <input
           type="password"
-          placeholder="Password"
+          placeholder={dict?.Password}
           name="password"
           value={values.password}
           onBlur={handleBlur}
@@ -64,23 +73,23 @@ const RegisterForm = () => {
       <div className="ms-input2-box mb-50">
         <input
           type="password"
-          placeholder="Confirm Password"
+          placeholder={dict?.Confirm_password}
           name="confirmPass"
-          value={values.confirmPass}
+          value={values.confirmPassword}
           onBlur={handleBlur}
           onChange={handleChange}
           required
         />
-        {touched.confirmPass && <ErrorMsg error={errors.confirmPass} />}
+        {touched.confirmPassword && <ErrorMsg error={errors.confirmPassword} />}
       </div>
       <div className="ms-submit-btn mb-40 text-center">
         <button className="unfill__btn d-block w-100" type="submit">
-          Create Account
+          {dict?.Create_account}
         </button>
       </div>
       <div className="ms-not-account mb-35 text-center">
         <p>
-          Already have an account? <Link href="/login">Log in</Link>
+          {dict?.Have_account} <Link href="/login">{dict?.Login}</Link>
         </p>
       </div>
     </form>

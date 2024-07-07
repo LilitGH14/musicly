@@ -1,4 +1,4 @@
-import SignupMainArea from "@/components/sign-up/SignupMainArea";
+import ForgetPasswordMainArea from "@/components/forget-password/ForgetPasswordMainArea";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
 
@@ -6,7 +6,7 @@ const page = () => {
   return (
     <Wrapper>
       <main className="ms-all-content">
-        <SignupMainArea />
+        <ForgetPasswordMainArea />
       </main>
     </Wrapper>
   );

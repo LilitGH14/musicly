@@ -1,11 +1,13 @@
-import BlogMainArea from "@/components/Blog/BlogMainArea";
+import StoriesMainArea from "@/components/stories/StoriesMainArea";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
 
 const page = () => {
   return (
     <Wrapper>
-      <BlogMainArea />
+      <main className="ms-all-content">
+        <StoriesMainArea />
+      </main>
     </Wrapper>
   );
 };

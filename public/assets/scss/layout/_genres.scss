@@ -96,7 +96,7 @@
 .ms-genres-flex {
   display: grid;
   align-items: center;
-  grid-template-columns: 38% auto;
+  grid-template-columns: 30% auto;
   gap: 30px 20px;
 
   @media #{$xl} {
@@ -644,6 +644,10 @@
       @include transform(scale(1.05));
     }
   }
+}
+
+.ms-title4{
+  color:white
 }
 
 .ms-ideas-item {

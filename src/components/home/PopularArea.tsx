@@ -7,8 +7,8 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css/bundle";
 import { CATEGORIES } from "@/constants/constants";
-import { Category } from "@/types/types";
-import { fetchSongsCategoriesData } from "@/services/songs";
+import { Category, PopularCategory } from "@/types/types";
+import { fetchSongsByCategory } from "@/services/songs";
 import image4 from "../../../public/assets/img/genres/4.jpg";
 
 type PopularAreaType = {
@@ -16,14 +16,14 @@ type PopularAreaType = {
 };
 const PopularArea = ({ dict }: PopularAreaType) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("New");
-  const [songs, setsSongs] = useState<any[]>([]);
+  const [songs, setsSongs] = useState<PopularCategory[]>([]);
 
   const changeCategory = (category: string) => {
     setSelectedCategory(category);
   };
 
   useEffect(() => {
-    fetchSongsCategoriesData(selectedCategory).then((res) => {
+    fetchSongsByCategory(selectedCategory).then((res) => {
       if (res.ResponseCode == 200) {
         setsSongs(res.ResponseData);
       }
@@ -85,37 +85,39 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     tabIndex={0}
                   >
                     <div className="ms-popular-active fix">
-                      <div>
-                        <Swiper
-                          modules={[Autoplay]}
-                          loop={false}
-                          spaceBetween={25}
-                          autoplay={{
-                            delay: 0,
-                          }}
-                          speed={6000}
-                          observeParents={true}
-                          observer={true}
-                          breakpoints={{
-                            1200: {
-                              slidesPerView: 7,
-                            },
-                            992: {
-                              slidesPerView: 3,
-                            },
-                            768: {
-                              slidesPerView: 2,
-                            },
-                            576: {
-                              slidesPerView: 2,
-                            },
-                            0: {
-                              slidesPerView: 1,
-                            },
-                          }}
-                        >
-                          {songs.map((item) => (
-                            <SwiperSlide key={item.id}>
+                      <Swiper
+                        modules={[Autoplay]}
+                        loop={false}
+                        spaceBetween={25}
+                        autoplay={{
+                          delay: 0,
+                        }}
+                        speed={6000}
+                        observeParents={true}
+                        observer={true}
+                        breakpoints={{
+                          1200: {
+                            slidesPerView: 7,
+                          },
+                          992: {
+                            slidesPerView: 3,
+                          },
+                          768: {
+                            slidesPerView: 2,
+                          },
+                          576: {
+                            slidesPerView: 2,
+                          },
+                          0: {
+                            slidesPerView: 1,
+                          },
+                        }}
+                      >
+                        {songs.map((song: PopularCategory) => (
+                          <SwiperSlide key={song.id}>
+                            <Link
+                              href={`/songs?category=${song.category?.toLowerCase()}`}
+                            >
                               <div className="ms-popular__item p-relative mb-30">
                                 <div className="ms-popular__thumb">
                                   <Image
@@ -128,17 +130,13 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                                   />
                                 </div>
                                 <h4 className="ms-popular__title">
-                                  <Link
-                                    href={`/songs?category=${item.category?.toLowerCase()}`}
-                                  >
-                                    {item.title}
-                                  </Link>
+                                  {song.title}
                                 </h4>
                               </div>
-                            </SwiperSlide>
-                          ))}
-                        </Swiper>
-                      </div>
+                            </Link>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     </div>
                   </div>
                 );

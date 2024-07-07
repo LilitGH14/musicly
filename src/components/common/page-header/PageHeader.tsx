@@ -25,10 +25,10 @@ const PageHeader = ({
           <div className="row justify-content-center">
             <div className="col-xl-10 col-lg-10">
               <div className="bt-content text-center">
-                <h2 className="bt-title mb-30">{dict?.[title]}</h2>
+                <h2 className="bt-title mb-30">{dict?.[title] ?? title}</h2>
                 {description && (
                   <p className="bt-description capitalize mb-65">
-                    {dict?.[description]}
+                    {dict?.[description] ?? description}
                   </p>
                 )}
                 {button && (

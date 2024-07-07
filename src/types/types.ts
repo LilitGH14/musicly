@@ -206,6 +206,9 @@ export type SongType = {
   isGenerated: boolean;
   songName: string;
   username: string;
+  category: string;
+  rating: number;
+  isShared: boolean;
 };
 
 export type LangItem = {
@@ -214,7 +217,37 @@ export type LangItem = {
   src: StaticImageData;
 };
 
-export type Category=  {
+export type Category = {
   id: number;
   name: string;
+};
+
+export type PopularCategory = {
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+};
+
+export type CommentItem = {
+  id: number;
+  description: string;
+  authorName: string;
+  title: string;
+};
+
+export type Filters = {
+  generatedSong: string;
+  originalSong: string;
+  searchValue: string;
+};
+
+export type OptionType = {
+  id: number;
+  optionName: string;
+};
+
+export type Avatar = {
+  id: string;
+  src: StaticImageData;
 };

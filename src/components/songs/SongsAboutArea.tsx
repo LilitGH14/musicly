@@ -3,15 +3,21 @@ import React from "react";
 import NiceSelect from "../common/NiceSelect";
 import { bannerFormSelect } from "../../data/nice-select-data";
 import bg from "../../../public/assets/img/bg/main-bg.jpg";
+import { Filters } from "@/types/types";
 
 type SongsAboutAreaProps = {
+  filters: Filters;
   dict: { [key: string]: string };
   selectHandler: (
     ev: any,
-    field: "generatedSong" | "originalSong" | "search"
+    field: "generatedSong" | "originalSong" | "searchValue"
   ) => void;
 };
-const SongsAboutArea = ({ dict, selectHandler }: SongsAboutAreaProps) => {
+const SongsAboutArea = ({
+  filters,
+  dict,
+  selectHandler,
+}: SongsAboutAreaProps) => {
   return (
     <section className="ms-genres-area">
       <div
@@ -33,6 +39,7 @@ const SongsAboutArea = ({ dict, selectHandler }: SongsAboutAreaProps) => {
                       <div className="ms-banner__from-inner two ms-bg-2 wrapper-nice-select">
                         <div className="ms-banner__form-select m-nice-select-2">
                           <NiceSelect
+                            value={filters.generatedSong}
                             options={bannerFormSelect}
                             onChange={(ev) =>
                               selectHandler(ev, "generatedSong")
@@ -43,6 +50,7 @@ const SongsAboutArea = ({ dict, selectHandler }: SongsAboutAreaProps) => {
                         </div>
                         <div className="ms-banner__form-select m-nice-select-2">
                           <NiceSelect
+                            value={filters.originalSong}
                             options={bannerFormSelect}
                             onChange={(ev) => selectHandler(ev, "originalSong")}
                             name="originalSong"
@@ -54,7 +62,8 @@ const SongsAboutArea = ({ dict, selectHandler }: SongsAboutAreaProps) => {
                         <div className="banner__form-button">
                           <i className="flaticon-loupe"></i>
                           <input
-                            onChange={(ev) => selectHandler(ev, "search")}
+                            defaultValue={filters?.searchValue ?? ""}
+                            onChange={(ev) => selectHandler(ev, "searchValue")}
                             name="search"
                             placeholder={dict.Search_song_username_placeholder}
                           />

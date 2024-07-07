@@ -5,7 +5,7 @@ type PaginationPropstype = {
   currentPage: number;
   changeCurrentPage: (currentPage: number) => void;
 };
-const PaginationData = ({
+const Pagination = ({
   pagesCount,
   currentPage,
   changeCurrentPage,
@@ -43,4 +43,4 @@ const PaginationData = ({
   );
 };
 
-export default PaginationData;
+export default Pagination;

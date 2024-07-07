@@ -1,17 +1,18 @@
 import { imageLoader } from "@/hooks/ImageLoader";
 import Link from "next/link";
 import Image from "next/image";
-import blogBgImage from "../../../../public/assets/img/blog/story.jpg";
+import blogBgImage from "../../../public/assets/img/blog/story.jpg";
 
 type StoryItemType = {
+  dict: { [key: string]: string };
   id: string;
   date: string;
   username: string;
   title: string;
 };
-const StoryItem = ({ id, date, username, title }: StoryItemType) => {
+const StoryItem = ({ dict, id, date, username, title }: StoryItemType) => {
   return (
-    <Link href={`/blog-details/${id}`}>
+    <Link href={`/story-details/${id}`}>
       <div className="ms-event3-item mb-25">
         <div className="ms-event3-img ms-overlay10 fix ms-br-15 p-relative zindex-10">
           <Image
@@ -19,7 +20,7 @@ const StoryItem = ({ id, date, username, title }: StoryItemType) => {
             loader={imageLoader}
             placeholder="blur"
             loading="lazy"
-            alt="event image"
+            alt={dict?.Story_img}
           />
           <span className="ms-event3-date">{date}</span>
           <div className="ms-event3-content">

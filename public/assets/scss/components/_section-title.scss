@@ -24,6 +24,28 @@
     @media #{$xxs} {
       font-size: 28px;
     }
+
+    &-wrapper-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        border: 1px solid rgb(156, 110, 206);
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 16px;
+        display: inline-block;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+
+        &:hover {
+          border: 1px solid rgb(103, 73, 134);
+        }
+      }
+    }
   }
 
   &__text {
@@ -32,6 +54,50 @@
     text-transform: capitalize;
     display: inline-block;
     color: $secondaryTitleColor;
+  }
+}
+
+.comment-modal-content {
+  display: flex;
+  padding: 20px 0 0;
+
+  textarea{
+    width: 100%;
+    border-radius: 16px;
+    font-size: 5px 12px;
+    line-height: 12px;
+    height: 40px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  button {
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 16px;
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0 0 16px;
+    color: white;
+    background: linear-gradient(
+      142.4deg,
+      rgb(195, 101, 218) 5%,
+      rgb(156, 110, 206) 28.2%,
+      rgb(111, 119, 216) 62.5%,
+      rgb(93, 97, 161) 89.1%
+    );
+
+    &:hover {
+      background: linear-gradient(
+        142.4deg,
+        rgb(147, 75, 164) 5%,
+        rgb(109, 78, 142) 28.2%,
+        rgb(77, 83, 152) 62.5%,
+        rgb(50, 53, 90) 89.1%
+      );
+    }
   }
 }
 
@@ -117,21 +183,9 @@
     from(#a76cd1),
     to(#a76cd1)
   );
-  background-image: -webkit-linear-gradient(
-    left,
-    #a76cd1 0%,
-    #a76cd1 100%
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #a76cd1 0%,
-    #a76cd1 100%
-  );
-  background-image: linear-gradient(
-    to right,
-    #a76cd1 0%,
-    #a76cd1 100%
-  );
+  background-image: -webkit-linear-gradient(left, #a76cd1 0%, #a76cd1 100%);
+  background-image: -o-linear-gradient(left, #a76cd1 0%, #a76cd1 100%);
+  background-image: linear-gradient(to right, #a76cd1 0%, #a76cd1 100%);
   background-size: 0px 2px;
   background-position: 0px 95%;
   -webkit-transition: background-size 0.5s

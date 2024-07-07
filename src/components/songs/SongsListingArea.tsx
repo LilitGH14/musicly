@@ -3,7 +3,7 @@ import { imageLoader } from "@/hooks/ImageLoader";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import PaginationData from "../common/pagination/pagination-data";
+import Pagination from "../common/pagination/pagination-data";
 import { SongType } from "@/types/types";
 import eventImg1 from "../../../public/assets/img/blog/story.jpg";
 
@@ -28,12 +28,12 @@ const SongsListingArea = ({
   return (
     <div className="ms-genres-listing pb-110 ">
       <div className="container">
-        <div className="ms-border2 pb-30 mb-65">
+        <div className="ms-border2 pb-30 mb-20">
           <div className="row">
             <div className="col-sm-8">
               <div className="ms-genres-filter ms-genres-select ms-genres-nice-select">
                 <span className="ms-genres-text">
-                  {dict.Results}({resultCount})
+                  {dict?.Results}({resultCount})
                 </span>
               </div>
             </div>
@@ -95,13 +95,13 @@ const SongsListingArea = ({
                 <div className="col-xl-6" key={item.id}>
                   <Link href={`/song-details/${item.id}`}>
                     <div className="ms-genres-item ms-genres-flex mb-25">
-                      <div className="ms-genres-img ms-br-15 fix w-img genres-img-214">
+                      <div className="ms-genres-img ms-br-15">
                         <Image
                           src={eventImg1}
                           loader={imageLoader}
                           placeholder="blur"
                           loading="lazy"
-                          style={{ width: "100%", height: "auto" }}
+                          style={{ width: "auto", height: "155px" }}
                           alt="genres img"
                         />
                         {item.videoUrl && (
@@ -114,16 +114,15 @@ const SongsListingArea = ({
                         )}
                       </div>
                       <div className="ms-genres-content p-relative">
-                        <span className={`ms-genres-star`}>
-                          <i className="fa-light fa-star"></i>
-                        </span>
                         <h4 className="ms-genres-title">
                           {item.songGivenName}
                         </h4>
                         <p className="mb-30">{item.description}</p>
                         <div className="ms-fun-brand-bottom ms-genres-rating">
                           <div className="ms-fun-brand-rating">
-                            <span>{dict.Votes}: 20</span>
+                            <span>
+                              {dict.Votes}: {item.rating}
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -134,7 +133,7 @@ const SongsListingArea = ({
             </div>
             <div className="row">
               <div className="col-xl-12">
-                <PaginationData
+                <Pagination
                   pagesCount={pagesCount}
                   currentPage={currentPage}
                   changeCurrentPage={changeCurrentPage}
@@ -174,9 +173,6 @@ const SongsListingArea = ({
                       )}
                     </div>
                     <div className="ms-genres-content p-relative">
-                      <span className={`ms-genres-star`}>
-                        <i className="fa-light fa-star"></i>
-                      </span>
                       <h4 className="ms-genres-title">
                         <Link href={`/genres-details/${item.id}`}>
                           {item.songGivenName}
@@ -185,7 +181,9 @@ const SongsListingArea = ({
                       <p className="mb-30">{item.description}</p>
                       <div className="ms-fun-brand-bottom ms-genres-rating">
                         <div className="ms-fun-brand-rating">
-                          <span>{dict.Votes}: 45</span>
+                          <span>
+                            {dict.Votes}: {item.rating}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -195,7 +193,7 @@ const SongsListingArea = ({
             </div>
             <div className="row">
               <div className="col-xl-12">
-                <PaginationData
+                <Pagination
                   pagesCount={pagesCount}
                   currentPage={currentPage}
                   changeCurrentPage={changeCurrentPage}

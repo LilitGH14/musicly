@@ -1,11 +1,11 @@
 import { StoryDetailsType } from "@/types/types";
 import React from "react";
 
-type BlogDetailsSidebarPropsType = {
+type StoryDetailsSidebarType = {
   story: StoryDetailsType;
   dict: { [key: string]: string };
 };
-const BlogDetailsSidebar = ({ story, dict }: BlogDetailsSidebarPropsType) => {
+const StoryDetailsSidebar = ({ story, dict }: StoryDetailsSidebarType) => {
   return (
     <div className="ms-event-sidebar mb-60">
       <h3 className="ms-event-sidebar-title">{dict.Story_details}</h3>
@@ -29,4 +29,4 @@ const BlogDetailsSidebar = ({ story, dict }: BlogDetailsSidebarPropsType) => {
   );
 };
 
-export default BlogDetailsSidebar;
+export default StoryDetailsSidebar;

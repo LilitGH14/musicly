@@ -375,14 +375,15 @@
     }
 
     input,
+    select,
     textarea {
         width: 100%;
         background: var(--clr-bg-4);
         border: 1px solid var(--clr-border-3);
-        border-radius: 32.5px;
+        border-radius: 16px;
         height: 65px;
         color: var(--clr-text-8);
-        padding: 0 30px;
+        padding: 0 12px;
         @include transition(0.3s);
         resize: none;
 

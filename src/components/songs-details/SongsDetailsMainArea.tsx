@@ -5,13 +5,18 @@ import SongLyrics from "./SongLyrics";
 import Sidebar from "./Sidebar";
 import { usePathname } from "next/navigation";
 import { fetchSongDataById } from "@/services/songs";
-import { LanguageProvider } from "@/app/dictionaries/dictionaries";
+import { useSelector } from "react-redux";
+import { SongType } from "@/types/types";
 
 const SongsDetailsMainArea = () => {
   const pathname = usePathname();
 
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary.SongsPage
+  );
+
   const [dict, setDict] = useState<{ [key: string]: string }>({});
-  const [song, setSong] = useState<any>();
+  const [song, setSong] = useState<SongType>();
 
   useEffect(() => {
     const id = +pathname.split("/")[pathname.split("/").length - 1];
@@ -24,10 +29,8 @@ const SongsDetailsMainArea = () => {
   }, [pathname]);
 
   useEffect(() => {
-    LanguageProvider.getDictionary().then((res) => {
-      setDict(res);
-    });
-  }, []);
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
 
   return (
     <section className="ms-genres-area pb-70">

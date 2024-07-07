@@ -31,8 +31,8 @@ const menu_data: TMenuItem[] = [
   },
   {
     id: 2,
-    title: "Blog",
-    link: "/blog",
+    title: "Stories",
+    link: "/stories",
     hasDropdown: false,
   },
   {

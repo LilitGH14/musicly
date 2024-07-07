@@ -1,15 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import BlogDetailsSidebar from "./BlogDetailsSidebar";
 import { usePathname } from "next/navigation";
 import { fetchStoryData } from "@/services/blog";
 import { StoryDetailsType } from "@/types/types";
 import PageHeader from "../common/page-header/PageHeader";
 import EventBg from "../../../public/assets/img/event/event-bg-4.jpg";
-import { LanguageProvider } from "@/app/dictionaries/dictionaries";
+import StoryDetailsSidebar from "./StoryDetailsSidebar";
+import { useSelector } from "react-redux";
 
-const BlogDetailsMain = () => {
+const StoryDetailsMain = () => {
   const pathname = usePathname();
+
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary.StoriesPage
+  );
 
   const [dict, setDict] = useState<{ [key: string]: string }>({});
   const [story, setStory] = useState<StoryDetailsType>({
@@ -22,10 +26,8 @@ const BlogDetailsMain = () => {
   });
 
   useEffect(() => {
-    LanguageProvider.getDictionary().then((res) => {
-      setDict(res);
-    });
-  }, []);
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
 
   useEffect(() => {
     const id = +pathname
@@ -41,8 +43,8 @@ const BlogDetailsMain = () => {
 
   return (
     <main className="pt-90">
-      <PageHeader dict={dict} imageSrc={EventBg.src} title={story?.title} />
-      <section className="ms-event-details-area pt-70 pb-70">
+      <PageHeader imageSrc={EventBg.src} title={story?.title} dict={dict} />
+      <section className="ms-event-details-area pt-70 pb-30">
         <div className="container">
           <div className="row">
             <div className="col-xl-9 col-lg-12">
@@ -51,7 +53,7 @@ const BlogDetailsMain = () => {
               </div>
             </div>
             <div className="col-xl-3 col-lg-8">
-              <BlogDetailsSidebar dict={dict} story={story} />
+              <StoryDetailsSidebar dict={dict} story={story} />
             </div>
           </div>
         </div>
@@ -60,4 +62,4 @@ const BlogDetailsMain = () => {
   );
 };
 
-export default BlogDetailsMain;
+export default StoryDetailsMain;

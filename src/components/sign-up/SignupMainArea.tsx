@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
-import LoginForm from "./LoginForm";
+import React, { useEffect, useState } from "react";
+import RegisterForm from "./RegisterForm";
 import { useSelector } from "react-redux";
 
-const LoginArea = () => {
+const SignupMainArea = () => {
   const dictSelector = useSelector(
-    (store: any) => store.general.dictionary?.Login
+    (store: any) => store.general.dictionary?.Registration
   );
 
   const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
@@ -21,9 +21,9 @@ const LoginArea = () => {
           <div className="ms-maxw-510 mx-auto">
             <div className="ms-login-wrap  ms-login-space ms-bg-2">
               <h3 className="ms-title4 mb-50 text-center">
-                {dict?.Login_description}
+                {dict?.Signup_description}
               </h3>
-              <LoginForm dict={dict} />
+              <RegisterForm dict={dict} />
             </div>
           </div>
         </div>
@@ -32,4 +32,4 @@ const LoginArea = () => {
   );
 };
 
-export default LoginArea;
+export default SignupMainArea;
