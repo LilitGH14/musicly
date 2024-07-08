@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Pagination from "../common/pagination/pagination-data";
-import { fetchStoriesData } from "@/services/blog";
 import { StoryType } from "@/types/types";
 import PageHeader from "../common/page-header/PageHeader";
 import EventBg from "../../../public/assets/img/event/event-bg-4.jpg";
 import StoryItem from "./StoryItem";
 import { useSelector } from "react-redux";
+import { fetchStoriesData } from "@/services/stories";
 
 const StoriesMainArea = () => {
   const dictSelector = useSelector(

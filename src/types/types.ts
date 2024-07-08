@@ -175,16 +175,16 @@ export type FaqItemType = {
 
 export type StoryType = {
   id: number;
-  category: string;
   username: string;
   title: string;
   description: string;
   date: string;
+  votedCount: number;
 };
 
 export type StoryDetailsType = {
   id: number;
-  category: string[];
+  tags: string[];
   username: string;
   title: string;
   description: string;

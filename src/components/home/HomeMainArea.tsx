@@ -5,7 +5,6 @@ import HomePageBanner from "./HomePageBanner";
 import RunningLines from "./RunningLines";
 import PopularArea from "./PopularArea";
 import SharedSongsSection from "./SharedSongsSection";
-import Comments from "./Comments";
 import { useSelector } from "react-redux";
 
 const HomeMainArea = () => {
@@ -26,7 +25,7 @@ const HomeMainArea = () => {
       <PopularArea dict={dict} />
       <WorkArea dict={dict} />
       <SharedSongsSection dict={dict} />
-      <Comments dict={dict} />
+      {/* <Comments dict={dict} /> */}
     </main>
   );
 };

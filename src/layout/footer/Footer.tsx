@@ -1,26 +1,24 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import FooterLogo from "../../../public/assets/img/logo/logo.png";
 import FooterBg from "../../../public/assets/img/bg/main-bg.jpg";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
-import { subscribeToNews } from "@/services/mails";
-import { emailRegex } from "@/utils/validation-schema";
 
 type FooterType = {
   dict: { [key: string]: string } | null;
 };
 const Footer = ({ dict }: FooterType) => {
-  const [email, setEmail] = useState<string>("");
-  const [emailErr, setEmailErr] = useState<string>("");
+  // const [email, setEmail] = useState<string>("");
+  // const [emailErr, setEmailErr] = useState<string>("");
 
-  const subscribeNow = () => {
-    if (email.match(emailRegex)) {
-      subscribeToNews(email);
-    } else {
-      setEmailErr(dict?.Email_is_not_valid as string);
-    }
-  };
+  // const subscribeNow = () => {
+  //   if (email.match(emailRegex)) {
+  //     subscribeToNews(email);
+  //   } else {
+  //     setEmailErr(dict?.Email_is_not_valid as string);
+  //   }
+  // };
 
   return (
     <footer>
@@ -46,7 +44,7 @@ const Footer = ({ dict }: FooterType) => {
                   </Link>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-3 col-md-6">
+              <div className="col-xl-10 col-lg-9 col-md-8">
                 <div className="ms-social-border two p-relative">
                   <div className="ms-footer-social mb-15">
                     <Link
@@ -73,7 +71,7 @@ const Footer = ({ dict }: FooterType) => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6 col-lg-6 col-md-12">
+              {/* <div className="col-xl-6 col-lg-6 col-md-12">
                 <div className="ms-subscribe2-form p-relative mb-10 d-none d-sm-block">
                   <i className={`flaticon-mail ${emailErr ? "error" : ""}`}></i>
                   <input
@@ -92,7 +90,7 @@ const Footer = ({ dict }: FooterType) => {
                     <i className="fa-sharp fa-solid fa-paper-plane"></i>
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="row">

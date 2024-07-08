@@ -10,3 +10,11 @@ export const subscribeToNews: (
   );
   return response;
 };
+
+export const addComment: (feedback: {
+  title: string;
+  description: string;
+}) => Promise<ResponseGeneralType> = async (feedback) => {
+  const response: ResponseGeneralType = await HttpClient.post(``, feedback);
+  return response;
+};

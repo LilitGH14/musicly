@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { fetchStoryData } from "@/services/blog";
 import { StoryDetailsType } from "@/types/types";
 import PageHeader from "../common/page-header/PageHeader";
 import EventBg from "../../../public/assets/img/event/event-bg-4.jpg";
 import StoryDetailsSidebar from "./StoryDetailsSidebar";
 import { useSelector } from "react-redux";
+import { fetchStoryById } from "@/services/stories";
 
 const StoryDetailsMain = () => {
   const pathname = usePathname();
@@ -21,7 +21,7 @@ const StoryDetailsMain = () => {
     title: "",
     username: "",
     date: "",
-    category: [],
+    tags: [],
     description: "",
   });
 
@@ -34,7 +34,7 @@ const StoryDetailsMain = () => {
       .split("/")
       [pathname.split("/").length - 1].replace("story_", "");
 
-    fetchStoryData(id).then((res) => {
+      fetchStoryById(id).then((res) => {
       if (res.ResponseCode == 200) {
         setStory(res.ResponseData);
       }

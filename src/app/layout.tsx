@@ -5,6 +5,7 @@ import ReduxProvider from "@/redux/provider";
 import { ToastContainer } from "react-toastify";
 import UseMousePointer from "@/utils/MouseCursorUtilis";
 import { DirectionProvider } from "@/hooks/useDirection";
+import Alert from "@/components/common/Alert/Alert";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -47,6 +48,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             pauseOnHover
             theme="light"
           />
+          <Alert />
         </ReduxProvider>
       </body>
     </html>

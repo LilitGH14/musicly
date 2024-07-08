@@ -3,138 +3,123 @@
   "ResponseData": [
     {
       "id": 1,
-      "category": "Story",
       "title": "The Last Goodbye",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Feb 15, 2023",
       "username": "User 01",
-      "comment": 14
+      "votedCount": 14
     },
     {
       "id": 2,
-      "category": "Story",
       "username": "User 01",
       "title": "A Mother's Love",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Mar 20, 2023",
-      "comment": 3
+      "votedCount": 3
     },
     {
       "id": 3,
-      "category": "Story",
       "username": "User 01",
       "title": "Finding Hope in the Darkness",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Jan 10, 2023",
-      "comment": 10
+      "votedCount": 10
     },
     {
       "id": 4,
-      "category": "DJ Party Event",
       "username": "User 01",
       "title": "more, our live music To The guaran tee means that",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Feb 15, 2023",
-      "comment": 14
+      "votedCount": 14
     },
     {
       "id": 5,
-      "category": "Wedding Party",
       "username": "User 01",
       "title": "The first dance as a married couple has become",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Mar 20, 2023",
-      "comment": 3
+      "votedCount": 3
     },
     {
       "id": 6,
-      "category": "Event",
       "username": "User 01",
       "title": "Our exclusive ange of live bands for hire have experience",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Jan 10, 2023",
-      "comment": 10
+      "votedCount": 10
     },
     {
       "id": 7,
-      "category": "DJ Party Event",
       "username": "User 01",
       "title": "more, our live music To The guaran tee means that",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Feb 15, 2023",
-      "comment": 14
+      "votedCount": 14
     },
     {
       "id": 8,
-      "category": "Wedding Party",
       "username": "User 01",
       "title": "The first dance as a married couple has become",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Mar 20, 2023",
-      "comment": 3
+      "votedCount": 3
     },
     {
       "id": 9,
-      "category": "Event",
       "username": "User 01",
       "title": "Our exclusive ange of live bands for hire have experience",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Jan 10, 2023",
-      "comment": 10
+      "votedCount": 10
     },
     {
       "id": 10,
-      "category": "DJ Party Event",
       "username": "User 01",
       "title": "more, our live music To The guaran tee means that",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Feb 15, 2023",
-      "comment": 14
+      "votedCount": 14
     },
     {
       "id": 11,
-      "category": "Wedding Party",
       "username": "User 01",
       "title": "The first dance as a married couple has become",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Mar 20, 2023",
-      "comment": 3
+      "votedCount": 3
     },
     {
       "id": 12,
-      "category": "Event",
       "username": "User 01",
       "title": "Our exclusive ange of live bands for hire have experience",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Jan 10, 2023",
-      "comment": 10
+      "votedCount": 10
     },
     {
       "id": 13,
-      "category": "DJ Party Event",
       "username": "User 01",
       "title": "more, our live music To The guaran tee means that",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Feb 15, 2023",
-      "comment": 14
+      "votedCount": 14
     },
     {
       "id": 14,
-      "category": "Wedding Party",
       "username": "User 02",
       "title": "The first dance as a married couple has become",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Mar 20, 2023",
-      "comment": 3
+      "votedCount": 3
     },
     {
       "id": 15,
-      "category": "Event",
       "username": "User 03",
       "title": "Our exclusive ange of live bands for hire have experience",
       "description": "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
       "date": "Jan 10, 2023",
-      "comment": 10
+      "votedCount": 10
     }
   ]
 }

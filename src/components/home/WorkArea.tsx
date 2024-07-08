@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
 import WorkBgImg from "../../../public/assets/img/bg/main-bg.jpg";
-import thumb1 from "../../../public/assets/img/work/story.jpg";
-import thumb2 from "../../../public/assets/img/work/generate.jpg";
-import thumb3 from "../../../public/assets/img/work/share.jpg";
-import vectorShape from "../../../public/assets/img/work/vactoe-shape.png";
 import workArrowImg from "../../../public/assets/img/work/arrow.png";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
@@ -18,60 +14,12 @@ type WorkAreaType = {
 const WorkArea = ({ dict }: WorkAreaType) => {
   return (
     <section
-      className="work__area work-overlay pt-50 pb-30 include__bg"
+      className="work__area work-overlay pt-50 include__bg"
       style={{ backgroundImage: `url(${WorkBgImg.src})` }}
     >
-      <Image
-        className="work__vactor-shape d-none d-xl-block"
-        loader={imageLoader}
-        loading="lazy"
-        style={{ width: "auto", height: "auto" }}
-        src={vectorShape}
-        alt="vactoe-shape.png"
-      />
       <div className="container">
         <div className="row align-items-center bdFadeUp">
-          <div className="col-xl-6">
-            <div className="work__thumb-wrapper d-inline-block p-relative mb-60">
-              <div className="work__thumb-inner">
-                <div className="work__thumb left">
-                  <Image
-                    loader={imageLoader}
-                    placeholder="blur"
-                    loading="lazy"
-                    width={347}
-                    height={456}
-                    src={thumb1}
-                    alt={dict?.How_it_works_feature_1_title ?? ""}
-                  />
-                </div>
-                <div className="work__small-thumb">
-                  <div className="work__thumb">
-                    <Image
-                      loader={imageLoader}
-                      placeholder="blur"
-                      loading="lazy"
-                      width={264}
-                      height={202}
-                      src={thumb2}
-                      alt={dict?.How_it_works_feature_2_title ?? ""}
-                    />
-                  </div>
-                  <div className="work__thumb">
-                    <Image
-                      loader={imageLoader}
-                      placeholder="blur"
-                      loading="lazy"
-                      style={{ width: "100%", height: "auto" }}
-                      src={thumb3}
-                      alt={dict?.How_it_works_feature_3_title ?? ""}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-6">
+          <div className="col-xl-12">
             <div className="work__content-wrapper work__content-space mb-70 pl-40">
               <div className="section__title-wrapper mb-50 bd-title-anim">
                 <span className="section__subtitle">
@@ -84,19 +32,23 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                   </span>
                 </h2>
               </div>
-              <div className="work__features-inner">
-                {WORFEATURES.map((item: TWorkFuture) => (
-                  <div className="work__features-item" key={item.id}>
-                    <div className="work__features-icon">
-                      <span>{item.icon}</span>
-                    </div>
-                    <div className="work__features-content">
-                      <h4>{dict?.[item.title]}</h4>
-                      <p>{dict?.[item.description]}</p>
-                    </div>
+              <div className="work__features-inner row">
+                <div className="col-12">
+                  <div className="row">
+                    {WORFEATURES.map((item: TWorkFuture) => (
+                      <div className="work__features-item col-4" key={item.id}>
+                        <div className="work__features-icon">
+                          <span>{item.icon}</span>
+                        </div>
+                        <div className="work__features-content">
+                          <h4>{dict?.[item.title]}</h4>
+                          <p>{dict?.[item.description]}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-                <div className="work__features-bottom">
+                </div>
+                <div className="work__features-bottom col-12">
                   <div className="work__features-action">
                     <div className="work__features-btn">
                       <Link
@@ -119,7 +71,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                     <Image
                       loader={imageLoader}
                       loading="lazy"
-                      style={{ width: "100%", height: "auto" }}
+                      style={{ width: "90px" }}
                       src={workArrowImg}
                       alt={dict?.Alt_arrow ?? ""}
                     />

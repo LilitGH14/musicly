@@ -9,7 +9,7 @@ export const fetchStoriesData: () => Promise<ResponseGeneralType> =
     return response;
   };
 
-export const fetchStoryData: (
+export const fetchStoryById: (
   id: number
 ) => Promise<ResponseGeneralType> = async (id: number) => {
   const response: ResponseGeneralType = await HttpClient.get(

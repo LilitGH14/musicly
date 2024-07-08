@@ -120,11 +120,11 @@
     "Duets": "Duet",
     "Solos": "Solo",
     "How_it_works_feature_1_title": "Leave A Piece Of Inspiration",
-    "How_it_works_feature_1_description": "Leave your own story to inspire your favorite band",
-    "How_it_works_feature_2_title": "Craft New Songs Inspired By BTS",
+    "How_it_works_feature_1_description": "Leave your own story to inspire your favorite band/singer",
+    "How_it_works_feature_2_title": "Craft Inspired New Songs",
     "How_it_works_feature_2_description": "Leave a short story, sit back, relax, and watch your song come to life",
     "How_it_works_feature_3_title": "Share your art",
-    "How_it_works_feature_3_description": "Share your art with friends and fans",
+    "How_it_works_feature_3_description": "Share your art with your friends and fans alover the world",
     "How_it_works_section_title": "How it Works",
     "How_it_works_section_description_1": "Welcome to songs inspiration",
     "How_it_works_section_description_2": "platform",
@@ -138,7 +138,10 @@
     "Comments": "Comments",
     "Leave_feedback_btn": "Leave a feedback",
     "Leave_comment": "Leave a comment",
-    "Add": "Add"
+    "Add": "Add",
+    "Comment_Title": "Add a title",
+    "Comment_Description": "Add a description",
+    "Need_login": "You need to login"
   },
   "StoriesPage": {
     "Stories_title": "Stories",

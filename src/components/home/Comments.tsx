@@ -6,17 +6,67 @@ import "swiper/css/bundle";
 import { fetchComments } from "@/services/songs";
 import { CommentItem } from "@/types/types";
 import Modal from "../common/modal/Modal";
+import ErrorMsg from "@/form/error-msg";
+import { useFormik } from "formik";
+import { comment_schema } from "@/utils/validation-schema";
+import { addComment } from "@/services/mails";
+import { useSelector } from "react-redux";
+import { alertService } from "@/services/alert";
 
 type HomePageCommentsType = {
   dict: { [key: string]: string } | null;
 };
 const Comments = ({ dict }: HomePageCommentsType) => {
+  const { user } = useSelector((store: any) => store.auth);
+
   const [comments, setComments] = useState<CommentItem[]>([]);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [comment, setComment] = useState<Partial<CommentItem>>({});
 
-  const toggleModal = () => {
-    setIsOpen((prev) => !prev);
+  const {
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    resetForm,
+    values,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: {
+      title: "",
+      description: "",
+    },
+    validationSchema: comment_schema,
+    onSubmit: (values, { resetForm }) => {
+      addComment(values).then((res) => {
+        if (res.ResponseCode === 200) {
+          resetForm();
+
+          fetchComments().then((res) => {
+            if (res.ResponseCode == 200) {
+              setComments(res.ResponseData);
+            }
+
+            closeModal();
+          });
+        }
+      });
+    },
+  });
+
+  const openModal = () => {
+    if (user) {
+      setIsOpen(true);
+    } else {
+      alertService.success(dict?.Need_login as string, {
+        autoClose: false,
+        keepAfterRouteChange: false,
+      });
+    }
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    resetForm();
   };
 
   useEffect(() => {
@@ -25,7 +75,11 @@ const Comments = ({ dict }: HomePageCommentsType) => {
         setComments(res.ResponseData);
       }
     });
-  }, []);
+
+    return () => {
+      resetForm();
+    };
+  }, [resetForm]);
 
   return (
     <>
@@ -40,7 +94,7 @@ const Comments = ({ dict }: HomePageCommentsType) => {
                       <span className="section__subtitle">
                         {dict?.Clients_Feedback}
                       </span>
-                      <button onClick={() => toggleModal()}>
+                      <button onClick={() => openModal()}>
                         {dict?.Leave_feedback_btn}
                       </button>
                     </div>
@@ -94,14 +148,41 @@ const Comments = ({ dict }: HomePageCommentsType) => {
       </section>
       <Modal
         open={modalIsOpen}
-        close={toggleModal}
+        close={closeModal}
         title={dict?.Leave_comment as string}
       >
         <div className="comment-modal-content">
-          {/* need formik */}
-          <textarea value={comment.title} />
-          <textarea value={comment.description} />
-          <button>{dict?.Add}</button>
+          <form onSubmit={handleSubmit}>
+            <div className="ms-input2-box mb-25">
+              <input
+                id="comment_title"
+                type="text"
+                name="title"
+                value={values.title}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                placeholder={dict?.Comment_Title}
+                required
+              />
+              {touched.title && <ErrorMsg error={errors.title} />}
+            </div>
+            <div className="ms-input2-box mb-50">
+              <input
+                id="comment_description"
+                name="description"
+                value={values.description}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                type="text"
+                placeholder={dict?.Comment_Description}
+                required
+              />
+              {touched.description && <ErrorMsg error={errors.description} />}
+            </div>
+            <div className="ms-submit-btn mb-40">
+              <button type="submit">{dict?.Add}</button>
+            </div>
+          </form>
         </div>
       </Modal>
     </>

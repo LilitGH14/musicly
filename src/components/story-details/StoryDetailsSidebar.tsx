@@ -21,7 +21,7 @@ const StoryDetailsSidebar = ({ story, dict }: StoryDetailsSidebarType) => {
         <div className="ms-event-sidebar-inner">
           <h4 className="ms-event-title2">{dict.Category}</h4>
           <span className="ms-event-stext">
-            {story?.category.map((m: string) => m)}
+            {story?.tags.map((m: string) => m)}
           </span>
         </div>
       </div>

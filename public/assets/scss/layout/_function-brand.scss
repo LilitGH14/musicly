@@ -4,6 +4,9 @@
 /*  24 - function-brand css  */
 /* ------------------------------------------ */
 
+.ms-fun-brand-content{
+  width: 140px;
+}
 .ms-fun-brand-thumb {
   width: 70px;
   height: 70px;
@@ -25,6 +28,7 @@
   font-weight: 500;
   color: var(--clr-text-3);
   font-size: 14px;
+  height: 35px;
   @include transition(0.3s);
 
   &:hover {
@@ -37,9 +41,9 @@
   font-size: 12px;
 }
 
-.ms-fun-brand-rating {
+.ms-fun-brand-bottom{
   i {
-    color: var(--clr-bg-3);
+    color: #c7b91b;
     font-size: 12px;
     margin: 0 2px;
 
@@ -51,10 +55,12 @@
 
 .ms-fun-brand-bottom {
   display: inline-flex;
-  justify-content: space-between;
   @include border-radius(30px);
-  padding: 8px 0;
   min-width: 100%;
+
+  i{
+    margin-right: 5px;
+  }
 
   @media #{$lg, $xxs} {
     flex-direction: column;
@@ -111,7 +117,6 @@
 
 .ms-fun-brand-item {
   padding: 12px;
-  width: 250px;
   margin: 0 6px;
 
   @include transition(0.3s);

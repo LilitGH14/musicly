@@ -30,7 +30,7 @@ const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
   }, []);
 
   return (
-    <section className="ms-fun-brand ms-bg-2 pb-40 pt-20">
+    <section className="ms-fun-brand ms-bg-2 pb-40 pt-40">
       <div className="container">
         <div className="row justify-content-center bdFadeUp">
           <div className="col-xl-7">
@@ -49,7 +49,7 @@ const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
             {sharedSongs.slice(...slicedIndex).map((item) => (
               <div className="ms-fun-brand-item ms-fun-border" key={item.id}>
                 <Link href={`/song-details/${item.id}`}>
-                  <div className="ms-fun-brand-top mb-10">
+                  <div className="ms-fun-brand-top">
                     <div className="ms-fun-brand-thumb">
                       <Image
                         loader={imageLoader}
@@ -67,10 +67,10 @@ const SharedSongsSection = ({ dict }: SharedSongsSectionType) => {
                       <span className="ms-fun-brand-subtitle">
                         {item.category}
                       </span>
+                      <div className="ms-fun-brand-bottom">
+                        <Ratting averageRating={item.rating} />
+                      </div>
                     </div>
-                  </div>
-                  <div className="ms-fun-brand-bottom">
-                    <Ratting averageRating={item.rating} />
                   </div>
                 </Link>
               </div>
