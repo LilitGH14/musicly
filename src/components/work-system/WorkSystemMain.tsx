@@ -1,21 +1,23 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Breadcrumb from "../common/breadcrumb/Breadcrumb";
-import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 import WorkSystemArea from "./WorkSystemArea";
+import { useSelector } from "react-redux";
 
 const WorkSystemMain = () => {
-  const [dict, setDict] = useState<{ [key: string]: string }>({});
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary?.HowItWorksPage
+  );
+
+  const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
 
   useEffect(() => {
-    LanguageProvider.getDictionary().then((res) => {
-      setDict(res);
-    });
-  }, []);
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
 
   return (
     <>
-      <Breadcrumb title={dict.How_it_works_title??"How it works"} />
+      <Breadcrumb title={dict?.How_it_works_title ?? "How it works"} />
       <WorkSystemArea dict={dict} />
     </>
   );
