@@ -40,7 +40,7 @@ const StoriesMainArea = () => {
         dict={dict}
         imageSrc={EventBg.src}
         title="Stories_title"
-        button={{ link: "/new-forum", title: dict["Stories_btn"] }}
+        button={{ link: "/new-story", title: dict["Stories_btn"] }}
       />
       <section className="ms-event3-area pt-30 pb-115">
         <div className="container">

@@ -11,12 +11,12 @@
     padding-bottom: 80px;
   }
 
-  img{
+  img {
     width: auto;
     height: 100px;
   }
 
-  .ms-banner_btns_wrapper{
+  .ms-banner_btns_wrapper {
     position: relative;
     bottom: -100px;
   }
@@ -71,6 +71,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px 30px;
+
+  .nice-select {
+    border: none !important;
+    background-color: transparent!important;
+  }
 
   @include rtl {
     padding: 5px 25px 5px 5px;
@@ -151,12 +156,12 @@
 
   &.nice-select {
     .list {
-      background-color: var(--clr-common-white);
+      background-color: #1b1b1b;
 
       .option:hover,
       .option.focus,
       .option.selected.focus {
-        background-color: #e6e6e6;
+        opacity: 0.8;
       }
     }
 
@@ -485,10 +490,8 @@
   padding: 20px;
   .m-nice-select {
     .nice-select {
-      border: none;
-
       .list {
-        background-color: white;
+        background-color: #1b1b1b;
       }
     }
   }
@@ -505,8 +508,7 @@
     width: 320px;
 
     .nice-select {
-      border: none;
-      background-color: var(--clr-bg-2);
+      background-color: #1b1b1b;
 
       .list {
         background-color: var(--clr-border-1);
@@ -516,8 +518,7 @@
 }
 
 .nice-select {
-  border: none;
-  height: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }

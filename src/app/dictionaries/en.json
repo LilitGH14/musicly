@@ -150,7 +150,29 @@
     "Author": "Author",
     "Date": "Date",
     "Category": "Category",
-    "Story_img": "Story"
+    "Story_img": "Story",
+    "New_story_title": "Leave your story as a piece of inspiration",
+    "Add_new_story": "Add new story",
+    "Story_title": "Add title",
+    "Story_description": "Add description",
+    "Select_story_tags_placeholder": "Select story mood",
+    "Story_title_label": "Story title",
+    "Story_description_label": "Story description",
+    "Story_tags_label": "Story tags(mood)",
+    "Story_is_added_successfully": "Story is added successfully",
+    "afraid": "afraid",
+    "scared": "scared",
+    "angry": "angry",
+    "bad": "bad",
+    "confused": "confused",
+    "excited": "excited",
+    "fine": "fine",
+    "happy": "happy",
+    "inLove": "in love",
+    "hurt": "hurt",
+    "sad": "sad",
+    "upset": "upset",
+    "worried": "worried"
   },
   "SongsPage": {
     "Songs_title": "Welcome to the ultimate music playground where your creativity takes center stage",
@@ -159,7 +181,41 @@
     "Select_original_song_type_placeholder": "Select original song type",
     "Search_song_username_placeholder": "Song | user name",
     "Results": "Results",
-    "Votes": "Votes"
+    "Votes": "Votes",
+    "Lyrics": "Lyrics",
+    "Listen": "Listen",
+    "See_translations": "See translations"
+  },
+  "ContactPage": {
+    "Success_message": "Your message is send succesfully!",
+    "Name": "Name",
+    "Email": "Email",
+    "Subject": "Subject",
+    "Phone_number": "Phone number",
+    "Message": "Write Message . . .",
+    "Send_message": "Send Message"
+  },
+  "PrivacyTermsPage": {
+    "Privacy_Policy": "Privacy & Policy",
+    "Terms_Conditions": "Terms & Conditions",
+    "Privacy_Policy_title1": "Privacy Policy Agreement",
+    "Privacy_Policy_description1": "Companies or websites that handle customer information are required by law and third parties to publish their Privacy Policies on their business websites. If you own a website, web app, mobile app or that collects or processes user data, you most certainly will have to post a Privacy Policy on your website.",
+    "Privacy_Policy_title2": "Here are some of the main reasons",
+    "Privacy_Policy_description2": {
+      "list_item1": "Performance and Speed",
+      "list_item1_dec": ": React and Next.js utilize server-side rendering (SSR) and client-side rendering (CSR) techniques, leading to faster load times and improved user experiences. This is crucial for a film production  website that often includes media-rich content like videos and images.",
+      "list_item2": "SEO Benefits",
+      "list_item2_dec": ": Client-side rendering (CSR) techniques, leading to faster load times and improved user experiences. This is crucial for a film production  website that often includes media-rich content like videos and images."
+    },
+    "Terms_title1": "Terms & Conditions",
+    "Terms_description1": "Companies or websites that handle customer information are required by law and third parties to publish their Privacy Policies on their business websites. If you own a website, web app, mobile app or that collects or processes user data, you most certainly will have to post a Privacy Policy on your website.",
+    "Terms_title2": "Here are some of the main reasons",
+    "Terms_description2": {
+      "list_item1": "Performance and Speed",
+      "list_item1_dec": ": React and Next.js utilize server-side rendering (SSR) and client-side rendering (CSR) techniques, leading to faster load times and improved user experiences. This is crucial for a film production  website that often includes media-rich content like videos and images.",
+      "list_item2": "SEO Benefits",
+      "list_item2_dec": ": Client-side rendering (CSR) techniques, leading to faster load times and improved user experiences. This is crucial for a film production  website that often includes media-rich content like videos and images."
+    }
   },
   "Leave_story_btn": "Leave story",
   "Generate_song_btn": "Generate song",

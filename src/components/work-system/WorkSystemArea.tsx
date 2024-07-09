@@ -38,8 +38,8 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
                   <span>{work_future_icons[item.icon]}</span>
                 </div>
                 <div className="work__features-content">
-                  <h4>{dict[item.title]}</h4>
-                  <p>{dict[item.description]}</p>
+                  <h4>{dict[item.title]??item.title}</h4>
+                  <p>{dict[item.description]??item.description}</p>
                 </div>
               </div>
             ))}
@@ -55,7 +55,7 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
                         className="unfill__btn feature-unfill_btn"
                         href="/songs"
                       >
-                        {dict.Generate_song_btn}
+                        {dict.Generate_song_btn??"Generate a song"}
                       </Link>
                     </div>
                     <div className="work__features-btn">
@@ -63,7 +63,7 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
                         className="unfill__btn feature-unfill_btn"
                         href="/forum"
                       >
-                        {dict.Leave_story_btn}
+                        {dict.Leave_story_btn??"Leave a story"}
                       </Link>
                     </div>
                   </div>

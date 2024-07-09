@@ -15,7 +15,7 @@ const WorkSystemMain = () => {
 
   return (
     <>
-      <Breadcrumb title={dict.How_it_works_title} />
+      <Breadcrumb title={dict.How_it_works_title??"How it works"} />
       <WorkSystemArea dict={dict} />
     </>
   );

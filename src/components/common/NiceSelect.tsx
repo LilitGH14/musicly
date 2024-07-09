@@ -16,7 +16,7 @@ type NiceSelectProps = {
   className?: string;
   onChange: (item: OptionType, name: string) => void;
   name: string;
-  value: string;
+  value: string | string[];
 };
 
 const NiceSelect: React.FC<NiceSelectProps> = ({

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 type SongLyricsType = {
   dict: { [key: string]: string };
-  content: { [key: string]: { [key: string]: string[] } };
+  content: { [key: string]: { [key: string]: string[] } } | undefined;
 };
 const SongLyrics = ({ dict, content }: SongLyricsType) => {
   const [lyrics, setLyrics] = useState<{ [key: string]: string[] }>({});
@@ -14,7 +14,7 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
     let version: "default" | "en" =
       selectedVersion === "default" ? "en" : "default";
 
-    setLyrics(content[version]);
+    content && setLyrics(content[version]);
     setSelectedVersion(version);
   };
 

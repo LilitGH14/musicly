@@ -1,5 +1,5 @@
 import HttpClient from "@/services/HttpClient";
-import { ResponseGeneralType } from "@/types/types";
+import { ResponseGeneralType, StoryType } from "@/types/types";
 
 export const fetchStoriesData: () => Promise<ResponseGeneralType> =
   async () => {
@@ -15,5 +15,12 @@ export const fetchStoryById: (
   const response: ResponseGeneralType = await HttpClient.get(
     `/assets/mock/story_data_${id}.json`
   );
+  return response;
+};
+
+export const addStory: (
+  story: Partial<StoryType>
+) => Promise<ResponseGeneralType> = async (story) => {
+  const response: ResponseGeneralType = await HttpClient.post(``, story);
   return response;
 };

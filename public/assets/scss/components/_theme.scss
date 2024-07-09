@@ -573,9 +573,7 @@ a:visited.ui-button,
 }
 
 .nice-select {
-  padding-inset-inline-start: 0;
-  padding-right: 0;
-  padding-inline-start: 0;
+  padding-inline-start: 5px;
   padding-inline-end: 24px;
 
   .current {
@@ -584,12 +582,6 @@ a:visited.ui-button,
 
   @include rtl {
     text-align: right !important;
-  }
-
-  &::after {
-    inset-inline-start: unset;
-    right: unset;
-    inset-inline-end: 0;
   }
 
   .list {

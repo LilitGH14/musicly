@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "../common/modal/Modal";
 import song_playlist from "@/data/song-playlist-data";
 import AudioPlayer from "react-h5-audio-player";
+import Link from "next/link";
 
 const Sidebar = ({}: any) => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -60,6 +61,15 @@ const Sidebar = ({}: any) => {
                 <div className="ms-genres-info-list">
                   <h6> RM – Wild Flower</h6>
                   <p>Duet</p>
+                </div>
+                <div className="row">
+                  <div className="col-lg-4">
+                    <div className="ms-social2-wrap mb-20 d-flex justify-content-lg-end">
+                      <span className="ms-social-text mr-20">
+                        <i className="flaticon-share"></i> Share
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

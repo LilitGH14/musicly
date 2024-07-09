@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { fetchSongDataById } from "@/services/songs";
 import { useSelector } from "react-redux";
 import { SongType } from "@/types/types";
+import Link from "next/link";
 
 const SongsDetailsMainArea = () => {
   const pathname = usePathname();

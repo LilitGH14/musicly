@@ -95,3 +95,19 @@ export const AVATARS: Avatar[] = [
     src: avatar7,
   },
 ];
+
+export const TAG_OPTIONS = [
+  { id: 1, optionName: "afraid" },
+  { id: 2, optionName: "scared" },
+  { id: 3, optionName: "angry" },
+  { id: 4, optionName: "bad" },
+  { id: 5, optionName: "confused" },
+  { id: 6, optionName: "excited" },
+  { id: 7, optionName: "fine" },
+  { id: 8, optionName: "happy" },
+  { id: 9, optionName: "inlove" },
+  { id: 10, optionName: "hurt" },
+  { id: 11, optionName: "sad" },
+  { id: 12, optionName: "upset" },
+  { id: 13, optionName: "worried" },
+];

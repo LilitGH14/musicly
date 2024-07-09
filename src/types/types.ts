@@ -209,6 +209,8 @@ export type SongType = {
   category: string;
   rating: number;
   isShared: boolean;
+  tags: string[];
+  lyrics: { [key: string]: { [key: string]: string[] } };
 };
 
 export type LangItem = {
@@ -250,4 +252,12 @@ export type OptionType = {
 export type Avatar = {
   id: string;
   src: StaticImageData;
+};
+
+export type ContactMail = {
+  name: string;
+  email: string;
+  number: string;
+  subject: string;
+  massage: string;
 };
