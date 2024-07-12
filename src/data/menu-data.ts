@@ -53,6 +53,12 @@ const menu_data: TMenuItem[] = [
     title: "About_us",
     link: "/about",
   },
+  {
+    id: 7,
+    hasDropdown: false,
+    title: "Contact_us",
+    link: "/contact",
+  },
 ];
 
 export default menu_data;

@@ -38,7 +38,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
 
   return (
     <>
-      <Header dict={dict?.Header} />
+      <Header dict={dict} />
       <UseGsapAnimation>{children}</UseGsapAnimation>
       <Footer dict={dict?.Footer} />
       <BacktoTop />

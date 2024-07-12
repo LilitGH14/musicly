@@ -9,6 +9,7 @@
     "songName": "Snooze",
     "username": "User 001",
     "category": "Duet",
+    "duration":"2*60",
     "lyrics": {
       "default": {
         "Intro: youjeen": ["순이 피어, 숨이 내쉬어", "바람이 불어"],

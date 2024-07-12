@@ -245,14 +245,16 @@
 
 .user__acount {
   span {
-    width: 50px;
-    height: 50px;
-    border: 1px solid var(--clr-border-1);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #9c6ece;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-size: 18px;
+    transition: all 0.3s ease-out 0s;
+    margin: 0 0 0 10px;
     @include transition(0.3s);
 
     &:hover {

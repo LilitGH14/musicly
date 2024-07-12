@@ -5,10 +5,11 @@ import "./styles.scss";
 type ModalType = {
   open: boolean;
   close: () => void;
-  children: JSX.Element;
+  children: JSX.Element[] | JSX.Element;
   title: string;
+  className?: string;
 };
-const Modal = ({ open, close, children, title }: ModalType) => {
+const Modal = ({ open, close, children, title, className = "" }: ModalType) => {
   useEffect(() => {
     open && document.body.setAttribute("style", "overflow:hidden");
 
@@ -19,7 +20,7 @@ const Modal = ({ open, close, children, title }: ModalType) => {
 
   if (open) {
     return (
-      <div className="modal">
+      <div className={`modal ${className}`}>
         <div className="modal-content ms-bg-2">
           <div className="modal-header">
             <h3>{title}</h3>

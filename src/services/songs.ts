@@ -43,3 +43,17 @@ export const fetchComments: () => Promise<ResponseGeneralType> = async () => {
   );
   return response;
 };
+
+export const generateNewSong: (
+  lyrics: any
+) => Promise<ResponseGeneralType> = async (lyrics) => {
+  const response: ResponseGeneralType = await HttpClient.post(``, lyrics);
+  return response;
+};
+
+export const saveNewSong: (song: any) => Promise<ResponseGeneralType> = async (
+  song
+) => {
+  const response: ResponseGeneralType = await HttpClient.post(``, song);
+  return response;
+};

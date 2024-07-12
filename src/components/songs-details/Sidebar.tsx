@@ -1,74 +1,40 @@
-import React, { useState } from "react";
-import Modal from "../common/modal/Modal";
-import song_playlist from "@/data/song-playlist-data";
-import AudioPlayer from "react-h5-audio-player";
-import Link from "next/link";
+import { SongType } from "@/types/types";
+import React from "react";
 
-const Sidebar = ({}: any) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const currentSong = song_playlist[0];
-
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
-
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
-
+type SidebarType = {
+  dict: { [key: string]: string } | null;
+  song: SongType;
+};
+const Sidebar = ({ dict, song }: SidebarType) => {
   return (
-    <>
-      <div className="col-xxl-4 col-xl-5">
-        <div className="ms-genres-right-wrap mb-40">
-          <div className="ms-genres-btn-box mb-20">
-            <div className="d-flex justify-content-xl-end flex-wrap">
-              <div className="ms-enquire-btn mb-20">
-                <button
-                  onClick={openModal}
-                  className="unfill__btn feature-unfill_btn uppercase"
-                >
-                  Generate Now
-                </button>
+    <div className="col-xxl-4 col-xl-5">
+      <div className="ms-genres-right-wrap mb-40">
+        <div className="ms-genres-info-wrap d-inline-block p-relative mb-50 ms-br-15 fix">
+          <div className="ms-genres-info">
+            <div className="ms-overlay ms-overlay7 zindex--1 p-absolute"></div>
+            <h5 className="ms-genres-info-title ms-title3 white-text">
+              {dict?.Performance_info}
+            </h5>
+            <div className="ms-genres-info-list-wrap">
+              <div className="ms-genres-info-list">
+                <h6>{song?.songName}</h6>
+                <p>{song?.category}</p>
               </div>
-            </div>
-          </div>
-          <div className="ms-genres-info-wrap d-inline-block p-relative mb-50 ms-br-15 fix">
-            <div className="ms-genres-info">
-              <div className="ms-overlay ms-overlay7 zindex--1 p-absolute"></div>
-              <h5 className="ms-genres-info-title ms-title3 white-text">
-                Performance info
-              </h5>
-              <div className="ms-genres-info-list-wrap">
-                <div className="ms-genres-info-list">
-                  <h6>Line-up</h6>
-                  <p>Male vocals/keyboards; drums /vocals; bass; guitar</p>
-                </div>
-                <div className="ms-genres-info-list">
-                  <h6>Event duration</h6>
-                  <p>2 x 60 minute sets</p>
-                </div>
-                <div className="ms-genres-info-list">
-                  <h6> RM – Wild Flower</h6>
-                  <p>Duet</p>
-                </div>
-                <div className="row">
-                  <div className="col-lg-4">
-                    <div className="ms-social2-wrap mb-20 d-flex justify-content-lg-end">
-                      <span className="ms-social-text mr-20">
-                        <i className="flaticon-share"></i> Share
-                      </span>
-                    </div>
+              <div className="ms-genres-info-list d-flex">
+                <p>{song?.description}</p>
+              </div>
+              <div className="ms-genres-info-list">
+                <h6>{dict?.Event_duration}</h6>
+                <p>
+                  {song?.duration} {dict?.Minute_sets}
+                </p>
+              </div>
+              <div className="row">
+                <div className="col-lg-4">
+                  <div className="ms-social2-wrap mb-20 d-flex justify-content-lg-end">
+                    <span className="ms-social-text mr-20">
+                      <i className="flaticon-share"></i> {dict?.Share}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -76,27 +42,7 @@ const Sidebar = ({}: any) => {
           </div>
         </div>
       </div>
-      <Modal open={modalIsOpen} close={closeModal} title="Created song">
-        <>
-          <AudioPlayer
-            className="audio_player"
-            src={currentSong ? currentSong.mp3 : ""}
-            autoPlayAfterSrcChange={true}
-            onPlaying={handlePlay}
-            onPause={handlePause}
-          />
-          <div className="d-flex align-items-center mt-20">
-            <span className="ms-social-text mr-30 mb-20">
-              <i className="flaticon-share"></i> Share on
-            </span>
-            <div className="ms-social mb-20">
-              <button className="public-btn">Public</button>
-              <button className="private-btn">Private</button>
-            </div>
-          </div>
-        </>
-      </Modal>
-    </>
+    </div>
   );
 };
 

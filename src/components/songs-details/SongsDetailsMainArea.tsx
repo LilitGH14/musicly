@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { fetchSongDataById } from "@/services/songs";
 import { useSelector } from "react-redux";
 import { SongType } from "@/types/types";
-import Link from "next/link";
 
 const SongsDetailsMainArea = () => {
   const pathname = usePathname();
@@ -35,18 +34,6 @@ const SongsDetailsMainArea = () => {
 
   return (
     <section className="ms-genres-area pb-70">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-xl-7">
-            <div className="ms-genres-top text-center mb-50">
-              <h2 className="ms-title2 white-text mb-20">
-                {song?.songGivenName}
-              </h2>
-              <p className="ms-text2">{song?.description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-7">
@@ -109,7 +96,7 @@ const SongsDetailsMainArea = () => {
               </div>
             </div>
           </div>
-          <Sidebar />
+          <Sidebar dict={dict} song={song as SongType} />
         </div>
       </div>
     </section>

@@ -12,7 +12,8 @@
     "About_us": "About us",
     "logo_img": "Logo",
     "Sign_in": "Sign in",
-    "Sign_up": "Sign up"
+    "Sign_up": "Sign up",
+    "Contact_us": "Contact us"
   },
   "Footer": {
     "logo_img": "Logo",
@@ -184,7 +185,21 @@
     "Votes": "Votes",
     "Lyrics": "Lyrics",
     "Listen": "Listen",
-    "See_translations": "See translations"
+    "See_translations": "See translations",
+    "Change_lyrics": "Change lyrics",
+    "Generate_now": "Generate new song",
+    "Public": "Public",
+    "Private": "Private",
+    "Share": "Share",
+    "Share_on": "Share on",
+    "Created_song": "Created song",
+    "SongGivenName": "Enter song name",
+    "Description": "Enter song description",
+    "Save": "Save",
+    "Make_Public": "Make Public",
+    "Performance_info": "Performance info",
+    "Event_duration": "Event duration",
+    "Minute_sets": "minute sets"
   },
   "ContactPage": {
     "Success_message": "Your message is send succesfully!",
@@ -226,6 +241,19 @@
     "How_it_works_feature3_description": "Tell us what inspired your version of the song. Your story can be as brief or as detailed as you like.",
     "How_it_works_feature4_title": "Publish and Inspire",
     "How_it_works_feature4_description": "Once you're happy with your lyrics and story, share your work with friends."
+  },
+  "UserSettings": {
+    "Title": "User Settings",
+    "Personal_info": "Personal info",
+    "Payments": "Payments",
+    "Name_on_card": "Name On Card",
+    "Credit_card_number": "Credit card number",
+    "Exp_month": "Exp. month",
+    "Exp_year": "Exp. year",
+    "CVV": "CVV",
+    "Save": "Save",
+    "Payment_default_alt": "Payment default logo",
+    "Cards": "Cards accepted"
   },
   "Leave_story_btn": "Leave story",
   "Generate_song_btn": "Generate song",

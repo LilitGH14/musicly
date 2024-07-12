@@ -66,7 +66,7 @@ const Alert = () => {
       {alerts.map((alert, index) => (
         <div key={index} className={`alert-${alert.type.toLowerCase()}`}>
           <div className="modal">
-            <div className="modal-content ms-bg-2">
+            <div className="alert-content ms-bg-2">
               <div className="modal-header">
                 <i
                   className="fa fa-times"

@@ -238,19 +238,44 @@
 }
 
 .ms-genres-tab2-text {
-  .translation-btn {
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 30px;
-    display: inline-block;
-    padding: 0 12px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid rgb(156, 110, 206);
-    color: white;
+  .btns-wrapper {
+  :nth-child(2){
+    margin-left: 10px;
   }
 
-  .ms-singer-couplet{
+    .translation-btn {
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 30px;
+      display: inline-block;
+      padding: 0 12px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid rgb(156, 110, 206);
+      color: white;
+    }
+
+    .generate-btn {
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: 30px;
+      display: inline-block;
+      padding: 0 12px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid rgb(156, 110, 206);
+      color: white;
+      background: linear-gradient(
+        142.4deg,
+        rgb(195, 101, 218) 5%,
+        rgb(156, 110, 206) 28.2%,
+        rgb(111, 119, 216) 62.5%,
+        rgb(93, 97, 161) 89.1%
+      );
+    }
+  }
+
+  .ms-singer-couplet {
     color: white;
   }
 
@@ -480,7 +505,13 @@
   .public-btn,
   .private-btn {
     color: white;
-    background: linear-gradient(142.4deg, rgb(195, 101, 218) 5%, rgb(156, 110, 206) 28.2%, rgb(111, 119, 216) 62.5%, rgb(93, 97, 161) 89.1%);
+    background: linear-gradient(
+      142.4deg,
+      rgb(195, 101, 218) 5%,
+      rgb(156, 110, 206) 28.2%,
+      rgb(111, 119, 216) 62.5%,
+      rgb(93, 97, 161) 89.1%
+    );
     font-weight: 500;
     font-size: 16px;
     border-radius: 30px;
@@ -643,8 +674,8 @@
   }
 }
 
-.ms-title4{
-  color:white
+.ms-title4 {
+  color: white;
 }
 
 .ms-ideas-item {

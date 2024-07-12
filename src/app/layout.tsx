@@ -27,7 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </head>
 
       <body suppressHydrationWarning={true}>

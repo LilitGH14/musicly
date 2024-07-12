@@ -210,6 +210,7 @@ export type SongType = {
   rating: number;
   isShared: boolean;
   tags: string[];
+  duration:string;
   lyrics: { [key: string]: { [key: string]: string[] } };
 };
 
