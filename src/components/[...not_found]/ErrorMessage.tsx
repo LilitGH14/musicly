@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import errorImg from "../../../public/assets/img/error/404.png";
 import { LanguageProvider } from "@/app/dictionaries/dictionaries";
-import { useTranslation } from "react-i18next";
 
 const ErrorMessage = () => {
   const [dict, setDict] = useState<{ [key: string]: string }>({});
