@@ -56,12 +56,12 @@
             a {
                 i {
                     font-size: 30px;
-                    color: var(--clr-theme-1);
+                    color: #a76cd1;
                 }
 
                 &.cart i {
                     font-size: 32px;
-                    background: linear-gradient(1deg, var(--clr-theme-1) 0.9%, var(--clr-bg-3) 109.64%);
+                    background: linear-gradient(1deg, #a76cd1 0.9%, var(--clr-bg-3) 109.64%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -125,7 +125,7 @@
     }
 
     &:hover {
-        color: var(--clr-theme-1);
+        color: #a76cd1;
     }
 }
 
@@ -178,7 +178,7 @@
     @include transition(0.3s);
 
     &:hover {
-        color: var(--clr-theme-1);
+        color: #a76cd1;
     }
 }
 
@@ -212,7 +212,7 @@
         line-height: 66px;
         background: var(--clr-bg-4);
         @include border-radius(50%);
-        color: var(--clr-theme-1);
+        color: #a76cd1;
         position: relative;
         overflow: hidden;
 
@@ -223,7 +223,7 @@
             inset-inline-start: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, var(--clr-bg-3) 0%, var(--clr-theme-1) 100%);
+            background: linear-gradient(180deg, var(--clr-bg-3) 0%, #a76cd1 100%);
             opacity: 0;
             visibility: hidden;
             @include transition(0.3s);
@@ -401,7 +401,7 @@
     @include transition(0.3s);
 
     &:hover {
-        color: var(--clr-theme-1);
+        color: #a76cd1;
     }
 }
 
@@ -446,7 +446,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--clr-bg-2), var(--clr-bg-2)), radial-gradient(circle at top left, var(--clr-bg-3), var(--clr-theme-1));
+    background-image: linear-gradient(var(--clr-bg-2), var(--clr-bg-2)), radial-gradient(circle at top left, var(--clr-bg-3), #a76cd1);
     background-origin: border-box;
     background-clip: content-box, border-box;
 
@@ -487,8 +487,8 @@
     }
 
     &:hover {
-        background-color: var(--clr-theme-1);
-        border-color: var(--clr-theme-1);
+        background-color: #a76cd1;
+        border-color: #a76cd1;
         color: var(--clr-common-white);
     }
 }
@@ -535,7 +535,7 @@
     @include transition(0.3s);
 
     &:hover {
-        color: var(--clr-theme-1);
+        color: #a76cd1;
     }
 }
 
@@ -601,7 +601,7 @@
         @include transition(0.3s);
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 
@@ -692,7 +692,7 @@
         @include transition(0.3s);
 
         &:hover {
-            color: var(--clr-theme-1);
+            color: #a76cd1;
         }
     }
 
@@ -780,7 +780,7 @@
         }
 
         &:hover {
-            background-color: var(--clr-theme-1);
+            background-color: #a76cd1;
             color: var(--clr-common-white);
         }
     }

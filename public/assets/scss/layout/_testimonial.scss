@@ -6,8 +6,6 @@
 .ms-tm-border {
 	border: 2px solid var(--clr-border-1);
 	border-radius: 15px;
-	padding-top: 130px;
-	padding-bottom: 70px;
 
 	@media #{$md, $xs, $sm} {
 		padding-top: 80px;
@@ -17,7 +15,7 @@
 }
 
 .ms-tm-quotation i {
-	font-size: 65px;
+	font-size: 30px;
 	text-align: right;
 }
 
@@ -112,7 +110,7 @@
 		font-family: var(--bd-ff-heading);
 		line-height: 1.6;
 		font-weight: 500;
-		margin-bottom: 45px;
+		margin-bottom: 5px;
 	}
 }
 
@@ -135,8 +133,7 @@
 
 
 .ms-tm-content-space {
-	padding-inline-end: 60px;
-	padding-inline-start: 107px;
+padding: 20px;
 
 	@media #{$xl, $lg, $md} {
 		padding-inline-start: 60px;

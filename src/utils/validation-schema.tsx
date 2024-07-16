@@ -1,5 +1,4 @@
-import * as Yup from 'yup';
-
+import * as Yup from "yup";
 
 // contact_schema
 export const contact_schema = Yup.object().shape({
@@ -17,7 +16,10 @@ export const register_schema = Yup.object().shape({
   password: Yup.string().required().min(6).label("Password"),
   confirmPass: Yup.string()
     .required()
-    .oneOf([Yup.ref('password'), undefined as unknown as string], 'Passwords must match')
+    .oneOf(
+      [Yup.ref("password"), undefined as unknown as string],
+      "Passwords must match"
+    )
     .label("Confirm Password"),
 });
 
@@ -27,19 +29,19 @@ export const login_schema = Yup.object().shape({
 });
 //forgot schema
 export const forgotten_schema = Yup.object().shape({
-  email: Yup.string().required().email().label("Email")
+  email: Yup.string().required().email().label("Email"),
 });
 //blog schema
 export const blogSchema = Yup.object().shape({
   name: Yup.string().required().label("Name"),
   email: Yup.string().required().email().label("Email"),
-  comment: Yup.string().required().min(20).label("Comment")
+  comment: Yup.string().required().min(20).label("Comment"),
 });
 //team schema
 export const teamContact = Yup.object().shape({
   name: Yup.string().required().label("Name"),
   email: Yup.string().required().email().label("Email"),
-  massage: Yup.string().required().min(20).label("Massage")
+  massage: Yup.string().required().min(20).label("Massage"),
 });
 //team schema
 export const enquireForm = Yup.object().shape({
@@ -49,14 +51,14 @@ export const enquireForm = Yup.object().shape({
   number: Yup.string().required().min(11).label("Phone"),
   eventType: Yup.string().required().label("Event Type"),
   eventLocation: Yup.string().required().label("Event Location"),
-  writeSomething: Yup.string().required().label("Write Something")
+  writeSomething: Yup.string().required().label("Write Something"),
 });
 //Comment schema
 export const commentForm = Yup.object().shape({
   name: Yup.string().required().label("Name"),
   email: Yup.string().required().email().label("Email"),
   website: Yup.string().required().url().label("Website"),
-  comment: Yup.string().required().min(20).label("Comment")
+  comment: Yup.string().required().min(20).label("Comment"),
 });
 
 //Comment schema
@@ -70,7 +72,7 @@ export const joinInformationForm = Yup.object().shape({
   teamMember: Yup.string().required().label("Team Member"),
   location: Yup.string().required().label("Location"),
   aboutAgency: Yup.string().required().label("About Agency"),
-  selectedFile: Yup.mixed().required("Please attach a cover photo.")
+  selectedFile: Yup.mixed().required("Please attach a cover photo."),
 });
 
 //Refund schema
@@ -88,5 +90,12 @@ export const refundSchema = Yup.object().shape({
 //subscribe schema
 export const subscribeSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
+});
 
+export const emailRegex =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+export const comment_schema = Yup.object().shape({
+  title: Yup.string().required().min(6).label("Title"),
+  description: Yup.string().required().min(20).label("Description"),
 });

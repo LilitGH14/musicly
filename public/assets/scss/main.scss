@@ -14,6 +14,7 @@
 @forward 'components/settings';
 @forward 'components/meanmenu';
 @forward 'components/menu';
+@forward 'components/user_settings';
 @forward 'layout/header';
 @forward 'layout/song';
 @forward 'layout/banner';
@@ -31,7 +32,6 @@
 @forward 'layout/about';
 @forward 'layout/choose';
 @forward 'layout/team';
-@forward 'layout/faq';
 @forward 'layout/genres';
 @forward 'layout/booking';
 @forward 'layout/shop';
@@ -41,3 +41,5 @@
 @forward 'layout/404';
 @forward 'layout/terms_conditions';
 @forward 'layout/shipping-step';
+@forward 'layout/page-header';
+@forward 'layout/accordion';

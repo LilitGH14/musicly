@@ -12,19 +12,19 @@ export const DirectionProvider = ({ children }: { children: React.ReactNode }) =
   const [direction, setDirection] = useState('ltr');
 
   useEffect(() => {
-    const storedDirection = localStorage.getItem('direction');
+    const storedDirection = localStorage?.getItem('direction');
     if (storedDirection) {
       setDirection(storedDirection);
       document.documentElement.setAttribute('dir', storedDirection);
     } else {
-      localStorage.setItem('direction', 'ltr'); 
+      localStorage?.setItem('direction', 'ltr'); 
     }
   }, [setDirection]);
 
   const toggleDirection = () => {
     const newDirection = direction === 'ltr' ? 'rtl' : 'ltr';
     setDirection(newDirection);
-    localStorage.setItem('direction', newDirection);
+    localStorage?.setItem('direction', newDirection);
     document.documentElement.setAttribute('dir', newDirection);
   };
 

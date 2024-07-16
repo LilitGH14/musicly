@@ -1,16 +1,26 @@
-import React from 'react';
-import Breadcrumb from '../common/breadcrumb/Breadcrumb';
-import WorkSystemAreaFour from './WorkSystemAreaFour';
-import PartnerAreaMain from '../common/PartnerArea/PartnerAreaMain';
+"use client";
+import React, { useEffect, useState } from "react";
+import Breadcrumb from "../common/breadcrumb/Breadcrumb";
+import WorkSystemArea from "./WorkSystemArea";
+import { useSelector } from "react-redux";
 
 const WorkSystemMain = () => {
-    return (
-        <>
-            <Breadcrumb title='How It Works' />
-            <WorkSystemAreaFour />
-            <PartnerAreaMain borderWrapperClass='ms-border5' spacingClass='pt-130' />
-        </>
-    );
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary?.HowItWorksPage
+  );
+
+  const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
+
+  useEffect(() => {
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
+
+  return (
+    <>
+      <Breadcrumb title={dict?.How_it_works_title ?? "How it works"} />
+      <WorkSystemArea dict={dict} />
+    </>
+  );
 };
 
 export default WorkSystemMain;

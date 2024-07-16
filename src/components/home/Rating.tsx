@@ -1,0 +1,35 @@
+import React from "react";
+
+type RattingType = {
+  averageRating: number;
+};
+const Ratting = ({ averageRating }: RattingType) => {
+  const getRating = (ratingsNum: number) => {
+    console.log(ratingsNum,'ratingsNum')
+    const roundedRatings = Math.floor(ratingsNum);
+    const isHalfStar = ratingsNum % 1 !== 0;
+
+    const emptyRatingCount = 5 - roundedRatings - (isHalfStar ? 1 : 0);
+    const ratings = [];
+
+    console.log(emptyRatingCount,'emptyRatingCount')
+
+    for (let i = 0; i < roundedRatings; i++) {
+      ratings.push(<i className="flaticon-star" key={`l-${i}`}></i>);
+    }
+
+    if (isHalfStar) {
+      ratings.push(<i className="fas fa-star-half-alt" key="half-star"></i>);
+    }
+
+    for (let i = 0; i < emptyRatingCount; i++) {
+      ratings.push(<i className="flaticon-star unrate" key={`p-${i}`}></i>);
+    }
+
+    return ratings;
+  };
+
+  return getRating(averageRating);
+};
+
+export default Ratting;

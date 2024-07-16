@@ -23,7 +23,6 @@ const testimonial_data: TTestimonialData[] = [
         authorName: "David Camerun",
         title: "Media Public Manager"
     },
-    //home two testimonial data
     {
         id: 4,
         signatureImg: testimonialSignatureImg,
@@ -48,7 +47,6 @@ const testimonial_data: TTestimonialData[] = [
         authorName: "Sophia Cadence",
         designation: "CEO - Crescendo Enterprises"
     },
-    //home three testimonial data
     {
         id: 7,
         signatureImg: testimonialSignatureImg,

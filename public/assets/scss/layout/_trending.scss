@@ -5,7 +5,7 @@
 /* ------------------------------------------ */
 
 .trending-round-bg-1 {
-	background: linear-gradient(180deg, var(--clr-bg-3) 0%, var(--clr-theme-1) 100%, var(--clr-theme-1) 100%);
+	background: linear-gradient(180deg, var(--clr-bg-3) 0%, #a76cd1 100%, #a76cd1 100%);
 	opacity: 0.5;
 	filter: blur(250px);
 	position: absolute;
@@ -19,7 +19,7 @@
 	position: absolute;
 	width: 682px;
 	height: 682px;
-	background: linear-gradient(180deg, var(--clr-bg-1) 0%, var(--clr-theme-1) 100%, #2690FF 100%);
+	background: linear-gradient(180deg, var(--clr-bg-1) 0%, #a76cd1 100%, #2690FF 100%);
 	opacity: 0.7;
 	filter: blur(250px);
 	bottom: 270px;
@@ -145,7 +145,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 		font-weight: var(--bd-fw-sbold);
 		font-size: 20px;
 	}
@@ -266,7 +266,7 @@
 		@include transition(0.3s);
 
 		&:hover {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 		}
 	}
 
@@ -402,7 +402,7 @@
 		@include transition(0.3s);
 
 		&:hover {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 		}
 	}
 

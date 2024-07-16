@@ -2,15 +2,7 @@ import imageOne from "../../public/assets/img/news/news-01.png";
 import imageTwo from "../../public/assets/img/news/news-02.png";
 import imageThree from "../../public/assets/img/news/news-03.png";
 //event-imgae
-import eventImg1 from '../../public/assets/img/genres/genres-08.jpg';
-import eventImg2 from '../../public/assets/img/event/event-01.jpg';
-import eventImg3 from '../../public/assets/img/genres/genres-07.jpg';
-import eventImg4 from '../../public/assets/img/genres/genres-01.jpg';
-import eventImg5 from '../../public/assets/img/genres/genres-02.jpg';
-import eventImg6 from '../../public/assets/img/genres/genres-10.jpg';
-import eventImg7 from '../../public/assets/img/event/event-02.jpg';
-import eventImg8 from '../../public/assets/img/event/event-bg-2.png';
-import eventImg9 from '../../public/assets/img/event/event-03.jpg';
+import eventImg1 from '../../public/assets/img/blog/story.jpg';
 //news image 
 import newsImg1 from '../../public/assets/img/news/news-06.jpg';
 import newsImg2 from '../../public/assets/img/news/news-04.jpg';
@@ -177,7 +169,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 17,
         category: "Wedding Party",
-        image: eventImg2,
+        image: eventImg1,
         month: "MAR",
         title: " We are a group of artists, musicians, producers, DJ's, inventors, engineers, activists",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -188,7 +180,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 18,
         category: "Event",
-        image: eventImg3,
+        image: eventImg1,
         month: "MAR",
         title: "abilities to perform, create, design, organize, track and manage different details along the way",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -199,7 +191,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 19,
         category: "Wedding Party",
-        image: eventImg4,
+        image: eventImg1,
         month: "MAR",
         title: "Justin Ancheta, the founder of  Soul Graffiti is a musician, activist, teacher, environmentalist",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -210,7 +202,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 20,
         category: "DJ Party Event",
-        image: eventImg5,
+        image: eventImg1,
         month: "MAR",
         title: "spent much of his life committed to weaving together and connecting communities in the bay",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -221,7 +213,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 21,
         category: "Wedding Party",
-        image: eventImg6,
+        image: eventImg1,
         month: "Mar",
         title: "There are too many other people to name who have inspired and breathe life into supporting",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -232,7 +224,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 22,
         category: "DJ Party Event",
-        image: eventImg7,
+        image: eventImg1,
         month: "May",
         title: " If you would like to hear more, please feel free to give us a call... or better yet, hire.",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -243,7 +235,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 23,
         category: "Wedding Party",
-        image: eventImg8,
+        image: eventImg1,
         month: "Jun",
         title: "ourselves a lucky group of people, to share this experience together",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",
@@ -254,7 +246,7 @@ const latest_news_data: TLetestNews[] = [
     {
         id: 24,
         category: "Event",
-        image: eventImg9,
+        image: eventImg1,
         month: "Jan",
         title: "rapport and access to skill, knowledge and raw talent that exists here. We hope to share.",
         description: "Our hand-picked acts will guarantee you fantastic wedding entertainment for each part. We'll provide help.",

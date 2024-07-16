@@ -1,39 +1,46 @@
-import React from "react";
-import Link from 'next/link';
+import React, { useEffect, useState } from "react";
 
-const PaginationData = () => {
+type PaginationPropstype = {
+  pagesCount: number;
+  currentPage: number;
+  changeCurrentPage: (currentPage: number) => void;
+};
+const Pagination = ({
+  pagesCount,
+  currentPage,
+  changeCurrentPage,
+}: PaginationPropstype) => {
+  const [currentPageArr, setCurrentPageArr] = useState<number[]>([]);
+
+  const setPagesArr = (pages: number) => {
+    let _pages: number[] = [];
+
+    for (let i = 1; i < pages + 1; i++) {
+      _pages.push(i);
+    }
+
+    setCurrentPageArr(_pages.slice(0, 5));
+  };
+
+  useEffect(() => {
+    pagesCount && setPagesArr(pagesCount);
+  }, [pagesCount]);
+
   return (
-    <>
-      <div className="basic-pagination">
-        <nav>
-          <ul>
-            <li>
-              <Link href="#">
-                <i className="fas fa-long-arrow-left"></i>
-              </Link>
-            </li>
-            <li>
-              <Link href="#">01</Link>
-            </li>
-            <li>
-              <span className="current">02</span>
-            </li>
-            <li>
-              <Link href="#">03</Link>
-            </li>
-            <li>
-              <Link href="#">...</Link>
-            </li>
-            <li>
-              <Link href="#">
-                <i className="fas fa-long-arrow-right"></i>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </>
+    <div className="basic-pagination">
+      <ul>
+        {currentPageArr.map((count: number) => (
+          <li key={count + "story"}>
+            <button onClick={() => changeCurrentPage(count)}>
+              <span className={currentPage === count ? "current" : ""}>
+                {count}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default PaginationData;
+export default Pagination;

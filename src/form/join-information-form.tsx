@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { ChangeEvent, useState } from 'react';
 import GenresImg from '../../public/assets/img/genres/genres-01.jpg';
 import NiceSelect from '@/components/common/NiceSelect';
-import { locationSelect, serviceCategory, serviceSelectData, startingSelect, totalTeamSelect } from '@/data/nice-select-data';
+import { locationSelect, serviceCategory, serviceSelectData, startingSelect, totalTeamSelect } from '../data/nice-select-data';
 import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import { joinInformationForm } from '@/utils/validation-schema';

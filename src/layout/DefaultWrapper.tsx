@@ -1,54 +1,47 @@
 //@refresh
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BacktoTop from "@/components/common/backToTop/BacktoTop";
+import UseGsapAnimation from "@/hooks/use-gsap-animation";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
+import { useSelector } from "react-redux";
+import { setTranslations } from "@/redux/slices/generalSlice";
+import { LanguageProvider } from "@/app/dictionaries/dictionaries";
+import { useDispatch } from "react-redux";
+
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
-import { usePathname } from "next/navigation";
-import HeaderOne from "./header/HeaderOne";
-import FooterOne from "./footer/FooterOne";
-import HeaderTwo from "./header/HeaderTwo";
-import FooterTwo from "./footer/FooterTwo";
-import HeaderThree from "./header/HeaderThree";
-import FooterThree from "./footer/FooterThree";
-import UseGsapAnimation from "@/hooks/use-gsap-animation";
-
-
 
 interface WrapperProps {
   children: React.ReactNode;
 }
 
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
-  const pathName = usePathname();
+  const dispatch = useDispatch();
+
+  const dictSelector = useSelector((store: any) => store.general.dictionary);
+  const selectedLang = useSelector((store: any) => store.general.selectedLang);
+
+  const [dict, setDict] = useState<any>({});
+
+  useEffect(() => {
+    LanguageProvider.getDictionary(selectedLang).then((res: any) => {
+      dispatch(setTranslations(res));
+    });
+  }, [dispatch, selectedLang]);
+
+  useEffect(() => {
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
 
   return (
     <>
-      <BacktoTop />
-      {(() => {
-        switch (pathName) {
-          case '/home-2':
-            return <HeaderTwo />
-          case '/home-3':
-            return <HeaderThree />
-          default:
-            return <HeaderOne />
-
-        }
-      })()}
+      <Header dict={dict} />
       <UseGsapAnimation>{children}</UseGsapAnimation>
-
-      {(() => {
-        switch (pathName) {
-          case "/":
-            return <FooterOne />
-          case "/home-2":
-            return <FooterTwo />
-          default:
-            return <FooterThree />
-        }
-      })()}
+      <Footer dict={dict?.Footer} />
+      <BacktoTop />
     </>
   );
 };

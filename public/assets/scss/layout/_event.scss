@@ -27,7 +27,7 @@
 	@include transition(0.3s);
 
 	&:hover {
-		color: var(--clr-theme-1);
+		color: #a76cd1;
 	}
 }
 
@@ -230,7 +230,7 @@
 
 	&:hover {
 		.ms-overlay10 {
-			background: linear-gradient(180deg, rgba(255, 193, 7, 0.24) 0%, var(--clr-theme-1) 100%);
+			background: linear-gradient(180deg, rgba(255, 193, 7, 0.24) 0%, #a76cd1 100%);
 		}
 
 		img {
@@ -303,7 +303,7 @@
 		}
 
 		i {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 			font-size: 40px;
 			display: inline-block;
 			margin-bottom: 25px;
@@ -333,13 +333,13 @@
 .ms-event-sidebar {
 	border: 1px solid var(--clr-border-1);
 	border-radius: 15px;
-	padding: 60px 30px 25px 30px;
+	padding: 30px 25px;
 }
 
 .ms-event-sidebar-title {
 	color: var(--clr-bg-1);
 	font-size: 24px;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 
 .ms-event-title2 {
@@ -349,7 +349,7 @@
 }
 
 .ms-event-sidebar-inner {
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .ms-event-sidebar-item {
@@ -370,7 +370,7 @@
 		@include transition(0.3s);
 
 		&:hover {
-			color: var(--clr-theme-1);
+			color: #a76cd1;
 		}
 	}
 }

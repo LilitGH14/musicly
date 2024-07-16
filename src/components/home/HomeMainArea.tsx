@@ -1,34 +1,33 @@
-import React from 'react';
-import BrandSectionOne from '../SliderElements/BrandSlider/BrandSectionOne';
-import HeroOne from './HeroOne';
-import TextScrollArea from '../SliderElements/TextScrollSlider/TextScrollArea';
-import PopularAreaOne from '../SliderElements/PopularSlider/PopularAreaOne';
-import WorkArea from './WorkArea';
-import TrendingareaOne from './TrendingareaOne';
-import FunctionBandsSectionOne from './FunctionBandsSectionOne';
-import TestimonialSliderOne from '../SliderElements/TestimonialSlider/TestimonialSliderOne';
-import LatestNewsOne from './LatestNewsOne';
-import PartnerAreaSliderOne from '../SliderElements/PartnerAreaSlider/PartnerAreaSliderOne';
-import CtaArea from './CtaArea';
-import SpecialEventSliderOne from '../SliderElements/SpecialEventSlider/SpecialEventSliderOne';
+"use client";
+import React, { useEffect, useState } from "react";
+import WorkArea from "./WorkArea";
+import HomePageBanner from "./HomePageBanner";
+import RunningLines from "./RunningLines";
+import PopularArea from "./PopularArea";
+import SharedSongsSection from "./SharedSongsSection";
+import { useSelector } from "react-redux";
 
 const HomeMainArea = () => {
-    return (
-        <>
-            <BrandSectionOne />
-            <HeroOne />
-            <TextScrollArea />
-            <PopularAreaOne />
-            <WorkArea />
-            <TrendingareaOne />
-            <FunctionBandsSectionOne />
-            <SpecialEventSliderOne />
-            <TestimonialSliderOne />
-            <LatestNewsOne />
-            <PartnerAreaSliderOne />
-            <CtaArea />
-        </>
-    );
+  const dictSelector = useSelector(
+    (store: any) => store.general.dictionary?.HomePage
+  );
+
+  const [dict, setDict] = useState<{ [key: string]: string } | null>(null);
+
+  useEffect(() => {
+    dictSelector && setDict(dictSelector);
+  }, [dictSelector]);
+
+  return (
+    <main className="mt-90">
+      <HomePageBanner dict={dict} />
+      <RunningLines dict={dict} />
+      <PopularArea dict={dict} />
+      <WorkArea dict={dict} />
+      <SharedSongsSection dict={dict} />
+      {/* <Comments dict={dict} /> */}
+    </main>
+  );
 };
 
 export default HomeMainArea;
