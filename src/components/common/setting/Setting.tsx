@@ -10,7 +10,7 @@ const Setting = () => {
     useEffect(() => {
         // Function to set color scheme
         const setColorScheme = (color: string) => {
-            localStorage.setItem('ms_color_scheme', color);
+            localStorage?.setItem('ms_color_scheme', color);
             document.documentElement.style.setProperty('--clr-theme-1', color);
             setSelectedColor(color);
         };
@@ -20,7 +20,7 @@ const Setting = () => {
             const defaultColorBtn = document.querySelector('.bd-color-settings-btn');
             if (defaultColorBtn) {
                 const defaultColor = defaultColorBtn.getAttribute('data-color-default');
-                const setColor = localStorage.getItem('ms_color_scheme') || defaultColor;
+                const setColor = localStorage?.getItem('ms_color_scheme') || defaultColor;
 
                 if (setColor) {
                     setColorScheme(setColor);
@@ -35,7 +35,7 @@ const Setting = () => {
     // Handle color button click
     const handleColorButtonClick = (color: string) => {
         setSelectedColor(color);
-        localStorage.setItem('ms_color_scheme', color);
+        localStorage?.setItem('ms_color_scheme', color);
         document.documentElement.style.setProperty('--clr-theme-1', color);
     };
 
@@ -43,7 +43,7 @@ const Setting = () => {
     const handleCustomColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const color = event.target.value;
         setSelectedColor(color);
-        localStorage.setItem('ms_color_scheme', color);
+        localStorage?.setItem('ms_color_scheme', color);
         document.documentElement.style.setProperty('--clr-theme-1', color);
     };
 
