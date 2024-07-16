@@ -8,9 +8,7 @@ interface GeneralState {
 
 const initialState: GeneralState = {
   dictionary: null,
-  selectedLang: localStorage?.getItem("selectedLang")
-    ? JSON.parse(localStorage?.getItem("selectedLang") as string)
-    : "en",
+  selectedLang: "en",
 };
 
 const generalSlice = createSlice({
@@ -22,7 +20,7 @@ const generalSlice = createSlice({
     },
     setSelectedLanguage(state, action: PayloadAction<string>) {
       state.selectedLang = action.payload;
-      localStorage.setItem("selectedLang", JSON.stringify(action.payload));
+      localStorage?.setItem("selectedLang", JSON.stringify(action.payload));
     },
   },
 });
