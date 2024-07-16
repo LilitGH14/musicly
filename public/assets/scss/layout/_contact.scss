@@ -98,7 +98,7 @@
       background-color: var(--clr-common-body);
       width: 100%;
       border: 1px solid var(--clr-border-1);
-      padding: 0,5px;
+      padding: 0, 5px;
     }
 
     .option:hover,
@@ -385,6 +385,14 @@
 
   p {
     position: absolute;
+  }
+
+  &.editable {
+    input {
+      height: 25px;
+      margin-bottom: 12px;
+      width: 350px;
+    }
   }
 
   input,

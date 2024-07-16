@@ -28,6 +28,7 @@
     "next-translate": "^2.6.2",
     "next-translate-plugin": "^2.6.2",
     "react": "^18",
+    "react-audio-voice-recorder": "^2.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-datepicker": "^6.1.0",
     "react-dom": "^18",
@@ -46,6 +47,7 @@
     "sass": "^1.63.4",
     "sharp": "^0.33.2",
     "swiper": "^9.4.1",
+    "tone": "^15.0.4",
     "yup": "^1.2.0"
   },
   "devDependencies": {
