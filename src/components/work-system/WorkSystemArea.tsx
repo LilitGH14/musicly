@@ -30,7 +30,7 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
   }, []);
 
   return (
-    <section className="ms-work-system-area pt-130">
+    <section className="ms-work-system-area pt-50">
       <div className="container">
         <div className="ms-work-system-wrap">
           <div className="ms-work-system-grid mb-10">
