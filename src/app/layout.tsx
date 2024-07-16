@@ -4,7 +4,6 @@ import AppProvider from "@/contextApi/AppProvider";
 import ReduxProvider from "@/redux/provider";
 import { ToastContainer } from "react-toastify";
 import UseMousePointer from "@/utils/MouseCursorUtilis";
-import { DirectionProvider } from "@/hooks/useDirection";
 import Alert from "@/components/common/Alert/Alert";
 
 if (typeof window !== "undefined") {
@@ -33,9 +32,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body suppressHydrationWarning={true}>
         <UseMousePointer />
         <ReduxProvider>
-          <AppProvider>
-            <DirectionProvider>{children}</DirectionProvider>
-          </AppProvider>
+          <AppProvider>{children}</AppProvider>
           <ToastContainer
             position="top-left"
             autoClose={1000}

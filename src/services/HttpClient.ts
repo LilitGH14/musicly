@@ -9,7 +9,7 @@ export const instance = axios.create({});
 
 const onFulfilled = (response: any): any => response?.data;
 
-const token = JSON.parse(localStorage?.getItem("user") as string)?.token || "";
+const token = "";
 
 const setHeaders = (needToken: boolean): void => {
   if (token && needToken) {
