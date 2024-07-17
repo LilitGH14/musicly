@@ -33,7 +33,7 @@ const SongsDetailsMainArea = () => {
   }, [dictSelector]);
 
   return (
-    <section className="ms-genres-area pb-70">
+    <section className="ms-genres-area pb-70 mt-30">
       <div className="container">
         <div className="row">
           <div className="col-xxl-8 col-xl-7">

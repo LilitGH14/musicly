@@ -15,12 +15,12 @@ const HomePageBanner = ({ dict }: HomePageBannerType) => {
       <div className="container-fluid ms-maw-1710">
         <div
           className="mx-auto include__bg z-index-1 ms-overlay-1 ms-br-30"
-          style={{ backgroundImage: `url(${bannerBg.src})`, height: "710px" }}
+          style={{ backgroundImage: `url(${bannerBg.src})`, height: "560px" }}
         >
           <div className="container ms-br-30">
             <div
               className="row justify-content-center align-items-center"
-              style={{ height: "710px" }}
+              style={{ height: "460px" }}
             >
               <div className="col-xl-11">
                 <div className="ms-banner__main-wrapper">

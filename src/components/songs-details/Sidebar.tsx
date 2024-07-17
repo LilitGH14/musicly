@@ -29,13 +29,11 @@ const Sidebar = ({ dict, song }: SidebarType) => {
                   {song?.duration} {dict?.Minute_sets}
                 </p>
               </div>
-              <div className="row">
-                <div className="col-lg-4">
-                  <div className="ms-social2-wrap mb-20 d-flex justify-content-lg-end">
-                    <span className="ms-social-text mr-20">
-                      <i className="flaticon-share"></i> {dict?.Share}
-                    </span>
-                  </div>
+              <div className="ms-genres-info-list">
+                <div className="ms-social2-wrap">
+                  <span className="ms-social-text mr-20">
+                    <i className="flaticon-share"></i> {dict?.Share}
+                  </span>
                 </div>
               </div>
             </div>

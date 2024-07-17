@@ -31,7 +31,7 @@ const StoriesMainArea = () => {
   }, []);
 
   useEffect(() => {
-    setSlicedIndex([(currentPage - 1) * 6, currentPage * 6]);
+    setSlicedIndex([(currentPage - 1) * 10, currentPage * 10]);
   }, [currentPage]);
 
   return (
@@ -47,7 +47,7 @@ const StoriesMainArea = () => {
           <div className="ms-border2 pb-40">
             <div className="row ms-event3-wrap">
               {storiesData.slice(...slicedIndex).map((item: StoryType) => (
-                <div className="col-xl-4 col-md-6" key={item.id}>
+                <div className="col-xl-3 col-md-6" key={item.id}>
                   <StoryItem
                     id={"story_" + item.id}
                     dict={dict}

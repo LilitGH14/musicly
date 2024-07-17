@@ -9,7 +9,7 @@ import "swiper/css/bundle";
 import { CATEGORIES } from "@/constants/constants";
 import { Category, PopularCategory } from "@/types/types";
 import { fetchSongsByCategory } from "@/services/songs";
-import image4 from "../../../public/assets/img/genres/4.jpg";
+import image4 from "../../../public/assets/img/popular/popular-01.png";
 
 type PopularAreaType = {
   dict: { [key: string]: string } | null;

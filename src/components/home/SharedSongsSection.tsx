@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import Ratting from "./Rating";
 import { SongType } from "@/types/types";
 import { fetchSongsData } from "@/services/songs";
-import image1 from "../../../public/assets/img/avatars/suga.jpg";
+import image1 from "../../../public/assets/img/popular/popular-01.png";
 import Pagination from "../common/pagination/pagination-data";
 
 type SharedSongsSectionType = {

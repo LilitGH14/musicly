@@ -147,10 +147,15 @@
 
 // Event 3 css 
 
+.ms-event-item{
+	width: 300px;
+	margin: 20px;
+}
+
 .ms-event3-img {
 	img {
 		transform: scale(1.03);
-		min-height: 496px;
+		height: auto;
 		width: 100%;
 		@include transition(0.3s);
 		object-fit: cover;

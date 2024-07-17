@@ -4,6 +4,7 @@ import song_playlist from "@/data/song-playlist-data";
 import AudioPlayer from "react-h5-audio-player";
 import { generateNewSong } from "@/services/songs";
 import NewSongForm from "./NewSongForm";
+import { useFormik } from "formik";
 
 type SongLyricsType = {
   dict: { [key: string]: string };
@@ -19,8 +20,25 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
     "default"
   );
 
-  const generateSong = () => {
-    generateNewSong(lyrics).then((res) => {
+  const {
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    values,
+    errors,
+    touched,
+    setFieldValue,
+  } = useFormik({
+    initialValues: {},
+    onSubmit: (values, { resetForm }) => {
+      //check validation, set scheme
+      generateSong(values);
+      resetForm();
+    },
+  });
+
+  const generateSong = (_lyrics: any) => {
+    generateNewSong(_lyrics).then((res) => {
       if (res.ResponseCode === 200) {
         setIsOpen(true);
       }
@@ -46,15 +64,27 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
   useEffect(() => {
     if (content) {
       setLyrics(content.default);
+
+      Object.keys(content.default).map((m: any, i: number) => {
+        if (m.includes("editable")) {
+          content.default[m].map((row, i) => {
+            setFieldValue(m.toLowerCase().replaceAll(" ", "") + i, row);
+          });
+        }
+      });
+
       setSelectedVersion("default");
     }
-  }, [content]);
+  }, [content, setFieldValue]);
 
   return (
     <>
-      <div className="ms-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15">
+      <form
+        onSubmit={handleSubmit}
+        className="ms-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15"
+      >
         <div>
-          {Object.keys(lyrics).map((m: any, i: number) => {
+          {Object.keys(lyrics).map((m: string, i: number) => {
             return (
               <div key={i}>
                 <div className="mt-10 mb-10">
@@ -71,7 +101,17 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
                         </span>
                       ) : (
                         <div className="ms-input2-box editable">
-                          <input style={{ minHeight: "40px" }} value={row} />
+                          <input
+                            style={{ minHeight: "40px" }}
+                            value={
+                              (values as any)[
+                                m.toLowerCase().replaceAll(" ", "") + j
+                              ]
+                            }
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                            name={m.toLowerCase().replaceAll(" ", "") + j}
+                          />
                         </div>
                       )
                     ) : (
@@ -92,14 +132,21 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
           >
             {dict.See_translations}
           </button>
-          <button
-            className="generate-btn mt-30 mb-30"
-            onClick={!lyricsIsChanged ? () => changeLyrics() : generateSong}
-          >
-            {!lyricsIsChanged ? dict?.Change_lyrics : dict?.Generate_now}
-          </button>
+          {lyricsIsChanged ? (
+            <button className="generate-btn mt-30 mb-30" type="submit">
+              {dict?.Generate_now}
+            </button>
+          ) : (
+            <button
+              className="generate-btn mt-30 mb-30"
+              type="submit"
+              onClick={() => changeLyrics()}
+            >
+              {dict?.Change_lyrics}
+            </button>
+          )}
         </div>
-      </div>
+      </form>
       <Modal open={modalIsOpen} close={closeModal} title={dict?.Created_song}>
         <AudioPlayer
           className="audio_player"
