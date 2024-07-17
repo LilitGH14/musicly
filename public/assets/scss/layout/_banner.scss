@@ -7,7 +7,22 @@
   padding-bottom: 0;
 
   @media #{$sm,$xs} {
-    padding-bottom: 80px;
+    padding: 30px 0 80px;
+
+    img {
+      display: none;
+    }
+
+    .ms-banner_btns_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      justify-content: center;
+      
+      a{
+        margin: 10px;
+      }
+    }
   }
 
   img {
@@ -30,12 +45,12 @@
   margin-bottom: 50px;
   display: inline-block;
 
-  @media #{$lg, $md, $sm, $xs} {
+  @media #{$lg, $md} {
     font-size: 90px;
   }
 
-  @media #{$xs} {
-    font-size: 70px;
+  @media #{$xs,$sm,} {
+    font-size: 55px;
   }
 }
 
@@ -53,12 +68,13 @@
     font-size: 50px;
   }
 
-  @media #{$md, $sm, $xs} {
+  @media #{$md} {
     font-size: 40px;
   }
 
-  @media #{$xxs} {
-    font-size: 34px;
+  @media #{$xxs, $sm, $xs} {
+    font-size: 25px;
+    line-height: 35px;
   }
 }
 
@@ -73,7 +89,7 @@
 
   .nice-select {
     border: none !important;
-    background-color: transparent!important;
+    background-color: transparent !important;
   }
 
   @include rtl {

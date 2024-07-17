@@ -7,7 +7,11 @@
 .work-overlay {
   position: relative;
   z-index: 11;
-height: 480px;
+  height: 480px;
+
+  @media #{$xxs} {
+    height: auto;
+  }
 
   &:before {
     position: absolute;
@@ -85,6 +89,10 @@ height: 480px;
     text-transform: capitalize;
     margin-bottom: 0;
   }
+
+  @media #{$xxs} {
+    text-align: center;
+  }
 }
 
 .work__features-icon {
@@ -111,6 +119,7 @@ height: 480px;
 
   @media #{$xxs} {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &:hover {
@@ -132,6 +141,11 @@ height: 480px;
   display: flex;
   justify-content: center;
   width: 100%;
+
+  @media #{$xxs} {
+   display: none;
+  }
+
   @include rtl {
     transform: rotateY(180deg);
   }

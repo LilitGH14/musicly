@@ -62,9 +62,11 @@
     margin-right: 5px;
   }
 
-  @media #{$lg, $xxs} {
+  @media #{$lg} {
     flex-direction: column;
     flex-wrap: wrap;
+
+
     @include border-radius(15px);
 
     .ms-fun-brand-rating {
@@ -112,6 +114,12 @@
   .inner-container {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
+
+    @media #{$xxs} {
+      display: flex;
+      flex-direction: column;
+      padding:  0 20px;
+    }
   }
 }
 
@@ -123,6 +131,7 @@
 
   @media #{$xxs} {
     padding: 20px;
+    margin:  0 0 12px;
   }
 
   &:hover {

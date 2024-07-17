@@ -11,6 +11,16 @@
   }
 }
 
+
+.ms-popular__area {
+  padding: 100px auto 30px;
+
+
+  @media #{$sm, $xs} {
+    padding: 50px 0;
+  }
+}
+
 .ms-popular__title {
   color: white;
   font-weight: 500;

@@ -36,7 +36,7 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
           <div className="ms-work-system-grid mb-10">
             {instructions.map((item: InstructionType) => (
               <div className="work__features-item" key={item.id}>
-                <div className="work__features-icon">
+                <div className="features-icon">
                   <span>{work_future_icons[item.icon]}</span>
                 </div>
                 <div className="work__features-content">

@@ -27,7 +27,7 @@ const Pagination = ({
   }, [pagesCount]);
 
   return (
-    <div className="basic-pagination">
+    <div className="basic-pagination d-flex justify-content-center">
       <ul>
         {currentPageArr.map((count: number) => (
           <li key={count + "story"}>

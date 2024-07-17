@@ -36,7 +36,7 @@ const WorkArea = ({ dict }: WorkAreaType) => {
                 <div className="col-12">
                   <div className="row">
                     {WORFEATURES.map((item: TWorkFuture) => (
-                      <div className="work__features-item col-4" key={item.id}>
+                      <div className="work__features-item col-lg-4 col-sm-12" key={item.id}>
                         <div className="work__features-icon">
                           <span>{item.icon}</span>
                         </div>
