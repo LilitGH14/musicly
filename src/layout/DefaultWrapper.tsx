@@ -40,21 +40,11 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     dictSelector && setDict(dictSelector);
   }, [dictSelector]);
 
-  if (isMobile) {
-    <>
-      <MobileHeader dict={dict} />
-      <UseGsapAnimation>{children}</UseGsapAnimation>
-      <MobileFooter dict={dict?.Footer} />
-      <MobileMenu />
-      <BacktoTop />
-    </>;
-  }
-
   return (
     <>
-      <Header dict={dict} />
+      {isMobile ? <MobileHeader dict={dict} /> : <Header dict={dict} />}
       <UseGsapAnimation>{children}</UseGsapAnimation>
-      <Footer dict={dict?.Footer} />
+      {isMobile ? <MobileFooter dict={dict?.Footer} /> : <Footer dict={dict?.Footer} />}
       <BacktoTop />
     </>
   );

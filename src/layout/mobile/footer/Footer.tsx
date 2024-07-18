@@ -11,6 +11,7 @@ type FooterType = {
   dict: { [key: string]: string } | null;
 };
 const MobileFooter = ({ dict }: FooterType) => {
+  console.log(dict,'dict')
   return (
     <footer>
       <div className="container footer_mobile">
