@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
 interface CursorPosition {
@@ -7,8 +7,11 @@ interface CursorPosition {
 }
 
 const UseMousePointer: React.FC = () => {
-  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({ x: 0, y: 0 });
-  const [isBigCursor, setBigCursor] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
+    x: 0,
+    y: 0,
+  });
+
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
@@ -25,9 +28,22 @@ const UseMousePointer: React.FC = () => {
   return (
     <>
       {cursorPosition && (
-        <><div className={`mouseCursor cursor-outer ${isBigCursor ? "cursor-big" : ""}`} style={{ transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`, visibility: "visible" }}> </div>
-          <div className={`mouseCursor cursor-inner ${isBigCursor ? "cursor-big" : ""}`} style={{ transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`, visibility: "visible" }}>
-            <span>Drag</span></div></>
+        <>
+          <div
+            className="mouseCursor cursor-outer"
+            style={{
+              transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
+              visibility: "visible",
+            }}
+          ></div>
+          <div
+            className="mouseCursor cursor-inner"
+            style={{
+              transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
+              visibility: "visible",
+            }}
+          ></div>
+        </>
       )}
     </>
   );

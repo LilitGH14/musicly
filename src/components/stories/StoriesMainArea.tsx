@@ -31,7 +31,7 @@ const StoriesMainArea = () => {
   }, []);
 
   useEffect(() => {
-    setSlicedIndex([(currentPage - 1) * 10, currentPage * 10]);
+    setSlicedIndex([(currentPage - 1) * 12, currentPage * 12]);
   }, [currentPage]);
 
   return (

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
@@ -14,6 +15,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@types/react-datepicker": "^4.19.5",
     "@types/react-redux": "^7.1.25",
+    "@types/ua-parser-js": "^0.7.39",
     "axios": "^1.7.2",
     "bootstrap": "5.2.2",
     "formik": "^2.4.2",
@@ -31,6 +33,7 @@
     "react-audio-voice-recorder": "^2.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-datepicker": "^6.1.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18",
     "react-h5-audio-player": "^3.9.1",
     "react-i18next": "^14.1.2",
@@ -48,6 +51,8 @@
     "sharp": "^0.33.2",
     "swiper": "^9.4.1",
     "tone": "^15.0.4",
+    "ua-parser-js": "^1.0.38",
+    "user-agent-parser": "^0.6.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {
@@ -55,6 +60,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-modal-video": "^1.2.0",
+    "cypress": "^13.13.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "typescript": "^5"

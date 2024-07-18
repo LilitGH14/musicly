@@ -56,56 +56,52 @@ const MobileMenu = () => {
             </>
           )}
           {item?.megaMenu === true && (
-            <>
-              <ul
-                className="mega-menu"
-                style={{
-                  display:
-                    openMegaMenu && megaMenuNum === item.id ? "block" : "none",
-                }}
-              >
-                {item?.mega_menus?.map((megaItem, mIndex) => (
-                  <li key={mIndex}>
-                    <Link href="#" className="mega-menu-title">
-                      {" "}
-                      {megaItem.title}{" "}
-                    </Link>
-                    <ul
-                      style={{
-                        display:
-                          opensubMegaMenu && megasubMenuNum === mIndex
-                            ? "block"
-                            : "none",
-                      }}
-                    >
-                      {megaItem?.submenus?.length &&
-                        megaItem?.submenus?.map((subMegaItem, subMegaIndex) => (
-                          <li key={subMegaIndex}>
-                            <Link href={subMegaItem.link}>
-                              {" "}
-                              {subMegaItem.title}{" "}
-                            </Link>
-                          </li>
-                        ))}
-                    </ul>
-                    <Link
-                      onClick={() => handleActivesubMegaMenu(mIndex)}
-                      className={`mean-expand ${
+            <ul
+              className="mega-menu"
+              style={{
+                display:
+                  openMegaMenu && megaMenuNum === item.id ? "block" : "none",
+              }}
+            >
+              {item?.mega_menus?.map((megaItem, mIndex) => (
+                <li key={mIndex}>
+                  <Link href="#" className="mega-menu-title">
+                    {megaItem.title}
+                  </Link>
+                  <ul
+                    style={{
+                      display:
                         opensubMegaMenu && megasubMenuNum === mIndex
-                          ? "mean-clicked"
-                          : ""
-                      }`}
-                      href="#"
-                      style={{ fontSize: "18px" }}
-                    >
-                      <i className="fal fa-plus"></i>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </>
+                          ? "block"
+                          : "none",
+                    }}
+                  >
+                    {megaItem?.submenus?.length &&
+                      megaItem?.submenus?.map((subMegaItem, subMegaIndex) => (
+                        <li key={subMegaIndex}>
+                          <Link href={subMegaItem.link}>
+                            {" "}
+                            {subMegaItem.title}{" "}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                  <Link
+                    onClick={() => handleActivesubMegaMenu(mIndex)}
+                    className={`mean-expand ${
+                      opensubMegaMenu && megasubMenuNum === mIndex
+                        ? "mean-clicked"
+                        : ""
+                    }`}
+                    href="#"
+                    style={{ fontSize: "18px" }}
+                  >
+                    <i className="fal fa-plus"></i>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           )}
-
           {item?.hasDropdown === true && (
             <Link
               onClick={() => handleActiveSubMenu(item.id)}

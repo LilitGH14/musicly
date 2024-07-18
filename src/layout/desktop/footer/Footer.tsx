@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import FooterLogo from "../../../public/assets/img/logo/logo.png";
-import FooterBg from "../../../public/assets/img/bg/main-bg.jpg";
+import FooterLogo from "../../../../public/assets/img/logo/logo.png";
+import FooterBg from "../../../../public/assets/img/bg/main-bg.jpg";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
 
@@ -165,7 +165,8 @@ const Footer = ({ dict }: FooterType) => {
         <div className="container">
           <div className="ms-footer-bottom-wrap text-center pt-35 pb-20">
             <div className="ms-footer-copy">
-              <p>© The Beats Beyond 2024, {dict?.All_Rights_Reserved}</p>
+              <span>© The Beats Beyond 2024</span>
+              <span>{dict?.All_Rights_Reserved}</span>
             </div>
           </div>
         </div>

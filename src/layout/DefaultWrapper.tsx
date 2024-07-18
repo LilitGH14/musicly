@@ -3,12 +3,16 @@
 import React, { useEffect, useState } from "react";
 import BacktoTop from "@/components/common/backToTop/BacktoTop";
 import UseGsapAnimation from "@/hooks/use-gsap-animation";
-import Header from "./header/Header";
-import Footer from "./footer/Footer";
+import Header from "./desktop/header/Header";
+import Footer from "./desktop/footer/Footer";
 import { useSelector } from "react-redux";
 import { setTranslations } from "@/redux/slices/generalSlice";
 import { LanguageProvider } from "@/app/dictionaries/dictionaries";
 import { useDispatch } from "react-redux";
+import { isMobile } from "react-device-detect";
+import MobileHeader from "./mobile/header/Header";
+import MobileFooter from "./mobile/footer/Footer";
+import MobileMenu from "./mobile-menu/MobileMenu";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -35,6 +39,16 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   useEffect(() => {
     dictSelector && setDict(dictSelector);
   }, [dictSelector]);
+
+  if (isMobile) {
+    <>
+      <MobileHeader dict={dict} />
+      <UseGsapAnimation>{children}</UseGsapAnimation>
+      <MobileFooter dict={dict?.Footer} />
+      <MobileMenu />
+      <BacktoTop />
+    </>;
+  }
 
   return (
     <>
