@@ -25,8 +25,8 @@ interface WrapperProps {
 const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   const dispatch = useDispatch();
 
-  const dictSelector = useSelector((store: any) => store.general.dictionary);
   const selectedLang = useSelector((store: any) => store.general.selectedLang);
+  const dictSelector = useSelector((store: any) => store.general.dictionary);
 
   const [dict, setDict] = useState<any>({});
 
@@ -44,7 +44,11 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
     <>
       {isMobile ? <MobileHeader dict={dict} /> : <Header dict={dict} />}
       <UseGsapAnimation>{children}</UseGsapAnimation>
-      {isMobile ? <MobileFooter dict={dict?.Footer} /> : <Footer dict={dict?.Footer} />}
+      {isMobile ? (
+        <MobileFooter dict={dict?.Footer} />
+      ) : (
+        <Footer dict={dict?.Footer} />
+      )}
       <BacktoTop />
     </>
   );
