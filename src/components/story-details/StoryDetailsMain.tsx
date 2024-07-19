@@ -22,7 +22,7 @@ const StoryDetailsMain = () => {
     username: "",
     date: "",
     tags: [],
-    description: "",
+    description: null,
   });
 
   useEffect(() => {
@@ -49,7 +49,8 @@ const StoryDetailsMain = () => {
           <div className="row">
             <div className="col-xl-9 col-lg-12">
               <div className="ms-event-details-content mb-40">
-                <p className="mb-25">{story.description}</p>
+                {/* <span className="mb-25">{story.description}</span> */}
+                <div dangerouslySetInnerHTML={{__html:story.description}}></div>
               </div>
             </div>
             <div className="col-xl-3 col-lg-8">

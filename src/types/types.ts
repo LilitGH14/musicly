@@ -187,7 +187,7 @@ export type StoryDetailsType = {
   tags: string[];
   username: string;
   title: string;
-  description: string;
+  description: any;
   date: string;
 };
 
