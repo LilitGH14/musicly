@@ -30,7 +30,7 @@ const NewStoryForm = ({ dict, close }: NewStoryFormType) => {
 
   return (
     <form onSubmit={handleSubmit} className="mt-30 new-song">
-      <div className="ms-input2-box mb-20">
+      <div className="bb-input2-box mb-20">
         <input
           id="name"
           type="text"
@@ -43,7 +43,7 @@ const NewStoryForm = ({ dict, close }: NewStoryFormType) => {
         />
         {touched.songGivenName && <ErrorMsg error={errors.songGivenName} />}
       </div>
-      <div className="ms-input2-box mb-20">
+      <div className="bb-input2-box mb-20">
         <textarea
           id="pass"
           name="description"
@@ -55,8 +55,8 @@ const NewStoryForm = ({ dict, close }: NewStoryFormType) => {
         />
         {touched.description && <ErrorMsg error={errors.description} />}
       </div>
-      <div className="ms-input2-box mb-20">
-        <label className="ms-checkbox">
+      <div className="bb-input2-box mb-20">
+        <label className="bb-checkbox">
           <span>{dict?.Make_Public}</span>
           <input
             name="isShared"
@@ -67,7 +67,7 @@ const NewStoryForm = ({ dict, close }: NewStoryFormType) => {
           <span className="checkmark"></span>
         </label>
       </div>
-      <div className="ms-submit-btn mb-10">
+      <div className="bb-submit-btn mb-10">
         <button className="unfill__btn d-block w-100" type="submit">
           {dict?.Save}
         </button>

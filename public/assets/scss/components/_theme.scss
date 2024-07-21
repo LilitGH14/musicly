@@ -205,7 +205,7 @@ i[class^="flaticon-"] {
 }
 
 .mh-200 {
-  @media #{$xxs} {
+  @media #{$sm} {
     min-height: 200px;
     object-fit: cover;
   }
@@ -243,7 +243,7 @@ i[class^="flaticon-"] {
   overflow-x: clip;
 }
 
-.ms-cp {
+.bb-cp {
   cursor: pointer;
 }
 
@@ -302,20 +302,20 @@ a {
 /*----------------------------------------
 	Max Width CSS
 -----------------------------------------*/
-.ms-maw-1710 {
+.bb-maw-1710 {
   max-width: 1710px;
   padding: 0;
 }
 
-.ms-maw-1810 {
+.bb-maw-1810 {
   max-width: 1810px;
 }
 
-.ms-mw-142 {
+.bb-mw-142 {
   max-width: 142px;
 }
 
-.ms-mih-400 {
+.bb-mih-400 {
   min-height: 400px;
 }
 
@@ -333,13 +333,13 @@ a {
     right: auto;
     inset-inline-start: 50px;
 
-    @media #{$xs} {
+    @media #{$sm} {
       inset-inline-start: 15px;
       right: auto;
     }
   }
 
-  @media #{$xs} {
+  @media #{$sm} {
     right: 15px;
     bottom: 15px;
   }
@@ -359,7 +359,7 @@ a {
       justify-content: center;
       flex-wrap: wrap;
 
-      @media #{$xs,$sm,$md} {
+      @media #{$sm,$sm,$md} {
         justify-content: flex-start;
       }
 
@@ -397,11 +397,7 @@ a {
             color: var(--clr-border-1);
             inset-block-start: 0;
             inset-inline-start: 0;
-            background: linear-gradient(
-              180deg,
-              #a76cd1 0%,
-              var(--clr-bg-3) 100%
-            );
+            background: linear-gradient(142.4deg, rgb(195, 101, 218) 5%, rgb(156, 110, 206) 28.2%, rgb(111, 119, 216) 62.5%, rgb(93, 97, 161) 89.1%);
             border-color: transparent;
             color: var(--clr-common-white);
             content: "";
@@ -424,7 +420,7 @@ a {
         }
 
         .current {
-          background: linear-gradient(180deg, #a76cd1 0%, var(--clr-bg-3) 100%);
+          background: linear-gradient(142.4deg, rgb(195, 101, 218) 5%, rgb(156, 110, 206) 28.2%, rgb(111, 119, 216) 62.5%, rgb(93, 97, 161) 89.1%);
           border-color: transparent;
           color: var(--clr-common-white);
           font-weight: 600;
@@ -453,16 +449,16 @@ input[type="file"] {
   }
 }
 
-.ms-xxl-none {
-  @media #{$xxl} {
+.bb-sm-none {
+  @media #{$sm} {
     display: none;
   }
 }
 
-.ms-all-content-space {
+.bb-all-content-space {
   padding-top: 90px;
 
-  @media #{$lg, $md, $sm, $xs} {
+  @media #{$lg, $md, $sm, $sm} {
     padding-top: 100px;
   }
 }
@@ -561,8 +557,8 @@ a:visited.ui-button,
   cursor: pointer;
 }
 
-.ms-content-mobile-space {
-  @media #{$lg, $md, $sm, $xs} {
+.bb-content-mobile-space {
+  @media #{$lg, $md, $sm, $sm} {
     padding-top: 96px;
   }
 }
@@ -609,7 +605,7 @@ a:visited.ui-button,
 }
 
 //update
-.ms-date-picker-calander {
+.bb-date-picker-calander {
   .react-datepicker {
     background-color: var(--clr-bg-7);
   }

@@ -6,19 +6,20 @@ import "swiper/css/bundle";
 import TextScrollBg from "../../../public/assets/img/bg/text-scroll-bg.png";
 
 type RunningLinesType = {
-  dict: { [key: string]: string }|null;
+  dict: { [key: string]: string } | null;
+  ordering: number;
 };
-const RunningLines = ({ dict }: RunningLinesType) => {
+const RunningLines = ({ dict, ordering }: RunningLinesType) => {
   return (
     <section
-      className="text__scroll-area include__bg ms-ts-space p-relative fix"
+      className="bb-rt-area include__bg ms-ts-space p-relative fix"
       style={{ backgroundImage: `url(${TextScrollBg.src})` }}
       data-background="assets/img/bg/text-scroll-bg.png"
     >
-      <div className="text__scroll-wrapper">
-        <div className="ms-text-line-1">
-          <div className="ms-st-active scroll__text pt-20 pb-20">
-            <div className="ms-st-active-wrapper">
+      <div className="bb-rt__scroll-wrapper">
+        <div className="bb-rt-text-line-1">
+          <div className="bb-rt-text-st-active pt-20 pb-20">
+            <div className="bb-rt-text-st-active-wrapper">
               <Swiper
                 modules={[Autoplay]}
                 loop={true}
@@ -39,7 +40,7 @@ const RunningLines = ({ dict }: RunningLinesType) => {
                           idx % 2 == 0 ? "text-color-1" : "text-color-2"
                         }
                       >
-                        {dict?.Running_line_one}
+                        {dict?.Running_line?.[ordering][0]}
                       </span>
                     </h3>
                   </SwiperSlide>
@@ -48,9 +49,9 @@ const RunningLines = ({ dict }: RunningLinesType) => {
             </div>
           </div>
         </div>
-        <div className="ms-text-line-2">
-          <div className="ms-str-active scroll__text pt-20 pb-20">
-            <div className="ms-str-active-wrapper">
+        <div className="bb-rt-text-line-2">
+          <div className="bb-rt-text-st-active pt-20 pb-20">
+            <div className="bb-rt-text-st-active-wrapper">
               <Swiper
                 modules={[Autoplay]}
                 loop={true}
@@ -68,7 +69,7 @@ const RunningLines = ({ dict }: RunningLinesType) => {
                   <SwiperSlide key={idx}>
                     <h3>
                       <span className={idx % 2 == 0 ? "text-color-2" : ""}>
-                        {dict?.Running_line_two}
+                        {dict?.Running_line?.[ordering][1]}
                       </span>
                     </h3>
                   </SwiperSlide>

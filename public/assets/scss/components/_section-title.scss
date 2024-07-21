@@ -17,11 +17,11 @@
     text-transform: capitalize;
     color: $secondary1TextColor;
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       font-size: 30px;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
       font-size: 28px;
     }
 
@@ -117,7 +117,7 @@
   font-weight: 600;
   font-size: 30px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     font-size: 22px;
   }
 
@@ -140,7 +140,7 @@
   color: inherit;
   margin: 0 10px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     display: initial;
   }
 }
@@ -160,12 +160,12 @@
     bottom: 5px;
   }
 
-  @media #{$sm,$xs} {
+  @media #{$sm,$sm} {
     height: 3px;
     bottom: 4px;
   }
 
-  @media #{$xxs} {
+  @media #{$sm} {
     width: 50% !important;
     inset-inline-start: 0;
     right: 0;
@@ -178,7 +178,7 @@
   animation: width-animation 0.5s forwards;
 }
 
-.ms-title-border {
+.bb-title-border {
   position: relative;
   display: inline;
   background-image: -webkit-gradient(
@@ -209,7 +209,7 @@
 }
 
 // Text stroke color
-.ms-text-stroke {
+.bb-text-stroke {
   font-size: 100px;
   font-weight: 700;
   -webkit-text-fill-color: transparent;
@@ -225,7 +225,7 @@
 }
 
 // Text Color CSS
-.ms-text1 {
+.bb-text1 {
   color: var(--clr-bg-1);
 }
 
@@ -233,7 +233,7 @@
   color: var(--clr-common-white);
 }
 
-.ms-text2 {
+.bb-text2 {
   color: var(--clr-text-6);
 }
 

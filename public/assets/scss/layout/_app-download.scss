@@ -3,11 +3,11 @@
 /* ------------------------------------------ */
 /*  30 - app-download css  */
 /* ------------------------------------------ */
-.ms-app-text {
+.bb-app-text {
     max-width: 570px;
 }
 
-.ms-app-list {
+.bb-app-list {
     a {
         margin-inline-end: 10px;
         margin-bottom: 15px;
@@ -19,7 +19,7 @@
     }
 }
 
-.ms-app-opacity {
+.bb-app-opacity {
     a {
         img {
             opacity: 0.3;
@@ -56,12 +56,12 @@
     @include border-radius(50%);
     background-repeat: no-repeat;
 
-    @media #{$xxl} {
+    @media #{$sm} {
         width: 800px;
         height: 800px
     }
 
-    @media #{$xl,$lg} {
+    @media #{$lg} {
         width: 750px;
         height: 750px
     }
@@ -76,12 +76,12 @@
         height: 430px;
     }
 
-    @media #{$xs} {
+    @media #{$sm} {
         width: 350px;
         height: 350px;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
         width: 260px;
         height: 260px;
     }
@@ -394,7 +394,7 @@
                 width: 116px;
             }
 
-            @media #{$xs} {
+            @media #{$sm} {
                 height: 100px;
                 width: 100px;
             }

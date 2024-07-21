@@ -50,9 +50,9 @@ const MobileFooter = ({ dict }: FooterType) => {
             </div>
           </div>
           <div className="col-12">
-            <div className="ms-footer2-widget">
-              <h3 className="ms-footer2-title">{dict?.Get_in_touch}</h3>
-              <div className="ms-footer2-contact pb-30">
+            <div className="bb-footer2-widget">
+              <h3 className="bb-footer2-title">{dict?.Get_in_touch}</h3>
+              <div className="bb-footer2-contact pb-30">
                 <ul>
                   <li>
                     <i className="flaticon-pin"></i>
@@ -69,8 +69,8 @@ const MobileFooter = ({ dict }: FooterType) => {
             </div>
           </div>
           <div className="col-12">
-            <div className="ms-footer2-widget mb-50 mt-20">
-              <h3 className="ms-footer2-title">{dict?.Country_we_serve}</h3>
+            <div className="bb-footer2-widget mb-50 mt-20">
+              <h3 className="bb-footer2-title">{dict?.Country_we_serve}</h3>
               <div className="row served_container">
                 <div className="flag">
                   <Image
@@ -104,7 +104,7 @@ const MobileFooter = ({ dict }: FooterType) => {
           </div>
           <div className="col-6 mb-20">
             <div className="column">
-              <h3 className="ms-footer2-title">{dict?.Company}</h3>
+              <h3 className="bb-footer2-title">{dict?.Company}</h3>
               <ul>
                 <li>
                   <Link href="/about">{dict?.About_us}</Link>
@@ -120,7 +120,7 @@ const MobileFooter = ({ dict }: FooterType) => {
           </div>
           <div className="col-6 mb-20">
             <div className="column">
-              <h3 className="ms-footer2-title">{dict?.Genres}</h3>
+              <h3 className="bb-footer2-title">{dict?.Genres}</h3>
               <ul>
                 <li>
                   <Link href="/songs?category=New">{dict?.New}</Link>

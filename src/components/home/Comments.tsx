@@ -83,63 +83,59 @@ const Comments = ({ dict }: HomePageCommentsType) => {
 
   return (
     <>
-      <section className="ms-tm-area mt-30  mb-30">
-        <div className="container">
-          <div className="ms-tm-border">
-            <div className="row align-items-center bdFadeUp">
-              <div className="col-xl-12">
-                <div className="ms-tm-content-wrap ms-tm-content-space">
-                  <div className="section__title-wrapper mb-30 bd-title-anim">
-                    <div className="section__title-wrapper-top">
-                      <span className="section__subtitle">
-                        {dict?.Clients_Feedback}
-                      </span>
-                      <button onClick={() => openModal()}>
-                        {dict?.Leave_feedback_btn}
-                      </button>
-                    </div>
-                    <h2 className="section__title">
-                      <span className="animated-underline active">
-                        {dict?.Public_Awesome}
-                      </span>
-                      {dict?.Comments}
-                    </h2>
+      <section className="bb-comments container">
+        <div className="bb-comments__item">
+          <div className="row align-items-center bdFadeUp">
+            <div className="col-12">
+              <div>
+                <div className="section__title-wrapper mb-30 bd-title-anim">
+                  <div className="section__title-wrapper-top">
+                    <span className="section__subtitle">
+                      {dict?.Clients_Feedback}
+                    </span>
+                    <button onClick={() => openModal()}>
+                      {dict?.Leave_feedback_btn}
+                    </button>
                   </div>
-                  <div className="ms-tm-content">
-                    <div className="ms-tm-active">
-                      <Swiper
-                        modules={[Autoplay, Pagination]}
-                        speed={1000}
-                        slidesPerView={1}
-                        loop={true}
-                        autoplay={{
-                          delay: 1000,
-                        }}
-                        pagination={{
-                          el: ".ms-tm-dots",
-                          clickable: true,
-                        }}
-                        spaceBetween={0}
-                        freeMode={false}
-                      >
-                        {comments?.map((comment: CommentItem) => (
-                          <SwiperSlide key={comment.id}>
-                            <div className="ms-tm-slick">
-                              <div className="ms-tm-slick-item">
-                                <p>{comment.description}</p>
-                                <div className="ms-tm-author">
-                                  <h4 className="ms-tm-author-title">
-                                    {comment.authorName}
-                                  </h4>
-                                </div>
-                              </div>
+                  <h2 className="section__title">
+                    <span className="animated-underline active">
+                      {dict?.Public_Awesome}
+                    </span>
+                    {dict?.Comments}
+                  </h2>
+                </div>
+                <div>
+                  <div className="bb-tm-active">
+                    <Swiper
+                      modules={[Autoplay, Pagination]}
+                      speed={1000}
+                      slidesPerView={1}
+                      loop={true}
+                      autoplay={{
+                        delay: 1000,
+                      }}
+                      pagination={{
+                        el: ".bb-tm-dots",
+                        clickable: true,
+                      }}
+                      spaceBetween={0}
+                      freeMode={false}
+                    >
+                      {comments?.map((comment: CommentItem) => (
+                        <SwiperSlide key={comment.id}>
+                          <div className="bb-comments__item-slick">
+                            <p>{comment.description}</p>
+                            <div className="bb-tm-author">
+                              <h4 className="bb-tm-author-title">
+                                {comment.authorName}
+                              </h4>
                             </div>
-                          </SwiperSlide>
-                        ))}
-                      </Swiper>
-                    </div>
-                    <div className="ms-tm-dots"></div>
+                          </div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                   </div>
+                  <div className="bb-tm-dots"></div>
                 </div>
               </div>
             </div>
@@ -153,7 +149,7 @@ const Comments = ({ dict }: HomePageCommentsType) => {
       >
         <div className="comment-modal-content">
           <form onSubmit={handleSubmit}>
-            <div className="ms-input2-box mb-25">
+            <div className="bb-input2-box mb-25">
               <input
                 id="comment_title"
                 type="text"
@@ -166,7 +162,7 @@ const Comments = ({ dict }: HomePageCommentsType) => {
               />
               {touched.title && <ErrorMsg error={errors.title} />}
             </div>
-            <div className="ms-input2-box mb-50">
+            <div className="bb-input2-box mb-50">
               <input
                 id="comment_description"
                 name="description"
@@ -179,7 +175,7 @@ const Comments = ({ dict }: HomePageCommentsType) => {
               />
               {touched.description && <ErrorMsg error={errors.description} />}
             </div>
-            <div className="ms-submit-btn mb-40">
+            <div className="bb-submit-btn mb-40">
               <button type="submit">{dict?.Add}</button>
             </div>
           </form>

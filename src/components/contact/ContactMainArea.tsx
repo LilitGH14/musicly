@@ -18,11 +18,11 @@ const ContactMainArea = () => {
   return (
     <>
       <Breadcrumb title="Contact Us" />
-      <section className="ms-contact-area pb-30 pt-30">
+      <section className="bb-contact-area pb-30 pt-30">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
-              <div className="ms-contact-wrap ms-contact-space mb-30 ms-bg-2">
+              <div className="bb-contact-wrap ms-contact-space mb-30 ms-bg-2">
                 <ContactForm dict={dict} />
               </div>
             </div>

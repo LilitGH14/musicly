@@ -16,13 +16,13 @@ type TBorder = {
 const PartnerAreaMain = ({ borderWrapperClass, spacingClass }: TBorder) => {
     return (
         <>
-            <div className="ms-partner-area fix pb-130">
+            <div className="bb-partner-area fix pb-130">
                 <div className="container">
                     <div className={`${borderWrapperClass ? borderWrapperClass : ""} 
                     ${spacingClass ? spacingClass : ""}
                     `}>
 
-                        <div className="ms-partner-active">
+                        <div className="bb-partner-active">
                             <Swiper
                                 modules={[Autoplay]}
                                 loop={false}

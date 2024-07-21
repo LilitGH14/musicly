@@ -2,50 +2,33 @@
 import React from "react";
 import bannerBg from "../../../public/assets/img/banner/banner-thumb-01.jpg";
 import Link from "next/link";
-import Image from "next/image";
-import { imageLoader } from "@/hooks/ImageLoader";
-import arrowImg from "../../../public/assets/img/work/arrow.png";
 
 type HomePageBannerType = {
   dict: { [key: string]: string } | null;
 };
 const HomePageBanner = ({ dict }: HomePageBannerType) => {
   return (
-    <section className="ms-banner-area p-relative">
+    <section className="bb-banner-area p-relative">
       <div className="container-fluid ms-maw-1710">
         <div
-          className="mx-auto include__bg z-index-1 ms-overlay-1 ms-br-30"
+          className="mx-auto include__bg z-index-1 ms-overlay-1 bb-br-30"
           style={{ backgroundImage: `url(${bannerBg.src})`, height: "560px" }}
         >
-          <div className="container ms-br-30">
+          <div className="container">
             <div
               className="row justify-content-center align-items-center"
-              style={{ height: "460px" }}
+              style={{ height: "560px" }}
             >
               <div className="col-xl-11">
-                <div className="ms-banner__main-wrapper">
-                  <div className="ms-banner__content text-center">
-                    <h1 className="ms-banner__bg-title">
+                <div className="bb-banner__main-wrapper">
+                  <div className="bb-banner__content text-center">
+                    <h1 className="bb-banner__bg-title">
                       {dict?.Home_page_title}
                     </h1>
-                    <h2 className="ms-banner__title msg_title bd-title-anim">
+                    <h2 className="bb-banner__title msg_title bd-title-anim">
                       {dict?.Home_page_description}
                     </h2>
-                    <div className="ms-banner_btns_wrapper">
-                      <Link
-                        className="unfill__btn feature-unfill_btn"
-                        href="/songs"
-                      >
-                        {dict?.Generate_song_btn}
-                      </Link>
-                      <Image
-                        loader={imageLoader}
-                        priority
-                        width={143}
-                        height={45}
-                        src={arrowImg}
-                        alt={dict?.logo_img as string}
-                      />
+                    <div className="bb-banner_btns_wrapper">
                       <Link
                         className="unfill__btn feature-unfill_btn"
                         href="/blog"

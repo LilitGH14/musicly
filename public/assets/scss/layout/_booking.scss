@@ -4,7 +4,7 @@
 /*  36 - booking css  */
 /* ------------------------------------------ */
 
-.ms-booking-item {
+.bb-booking-item {
 	background: var(--clr-bg-4);
 	border-radius: 15px;
 	padding: 35px 40px;
@@ -13,7 +13,7 @@
 	border: 1px solid transparent;
 	@include transition(0.3s);
 
-	@media #{$xxs} {
+	@media #{$sm} {
 		padding: 20px 20px;
 	}
 
@@ -35,7 +35,7 @@
 	}
 }
 
-.ms-booking-price {
+.bb-booking-price {
 	position: absolute;
 	background: var(--clr-bg-3);
 	display: inline-block;
@@ -48,7 +48,7 @@
 	transform: rotate(42deg);
 	padding: 5px 0;
 
-	@media #{$xxs} {
+	@media #{$sm} {
 		inset-inline-end: -60px;
 		top: 15px;
 	}

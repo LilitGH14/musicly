@@ -26,7 +26,7 @@ const FaqArea = ({ dict }: { dict: any }) => {
           </div>
         </div>
         <div className="row bdFadeUp">
-          <div className="col-xxl-12">
+          <div className="col-sm-12">
             <div className="tab-content" id="nav-tabContent">
               <div
                 className="tab-pane fade show active"

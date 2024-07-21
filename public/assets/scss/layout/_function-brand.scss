@@ -4,86 +4,88 @@
 /*  24 - function-brand css  */
 /* ------------------------------------------ */
 
-.ms-fun-brand-content{
+.bb-fun-brand-content{
   width: 140px;
 }
-.ms-fun-brand-thumb {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  overflow: hidden;
-}
 
-.ms-fun-brand-thumb img {
-  width: 100%;
-}
+// .bb-fun-brand-thumb {
+//   width: 70px;
+//   height: 70px;
+//   border-radius: 50%;
+//   overflow: hidden;
+// }
 
-.ms-fun-brand-top {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.ms-fun-brand-title {
-  font-weight: 500;
-  color: var(--clr-text-3);
-  font-size: 14px;
-  height: 35px;
-  @include transition(0.3s);
-
-  &:hover {
-    color: rgb(156, 110, 206);
-  }
-}
-
-.ms-fun-brand-subtitle {
-  color: var(--clr-text-4);
-  font-size: 12px;
-}
-
-.ms-fun-brand-bottom{
-  i {
-    color: #c7b91b;
-    font-size: 12px;
-    margin: 0 2px;
-
-    &.unrate {
-      color: var(--clr-border-1);
-    }
-  }
-}
-
-.ms-fun-brand-bottom {
-  display: inline-flex;
-  @include border-radius(30px);
-  min-width: 100%;
-
-  i{
-    margin-right: 5px;
-  }
-
-  @media #{$lg} {
-    flex-direction: column;
-    flex-wrap: wrap;
+// .bb-fun-brand-thumb img {
+//   width: 100%;
+// }
 
 
-    @include border-radius(15px);
+// .bb-fun-brand-top {
+//   display: flex;
+//   gap: 20px;
+//   align-items: center;
+// }
 
-    .ms-fun-brand-rating {
-      position: relative;
-      padding-inline-start: 0;
-      margin-inline-start: 0;
-      display: flex;
-      justify-content: center;
+// .bb-fun-brand-title {
+//   font-weight: 500;
+//   color: var(--clr-text-3);
+//   font-size: 14px;
+//   height: 35px;
+//   @include transition(0.3s);
 
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
+//   &:hover {
+//     color: rgb(156, 110, 206);
+//   }
+// }
 
-.ms-fun-brand-location {
+// .bb-fun-brand-subtitle {
+//   color: var(--clr-text-4);
+//   font-size: 12px;
+// }
+
+// .bb-fun-brand-bottom{
+//   i {
+//     color: #c7b91b;
+//     font-size: 12px;
+//     margin: 0 2px;
+
+//     &.unrate {
+//       color: var(--clr-border-1);
+//     }
+//   }
+// }
+
+// .bb-fun-brand-bottom {
+//   display: inline-flex;
+//   @include border-radius(30px);
+//   min-width: 100%;
+
+//   i{
+//     margin-right: 5px;
+//   }
+
+//   @media #{$lg} {
+//     flex-direction: column;
+//     flex-wrap: wrap;
+
+
+//     @include border-radius(15px);
+
+//     .bb-fun-brand-rating {
+//       position: relative;
+//       padding-inline-start: 0;
+//       margin-inline-start: 0;
+//       display: flex;
+//       justify-content: center;
+
+//       &::after {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+.bb-fun-brand-location {
   a {
     @include transition(0.3s);
 
@@ -102,42 +104,42 @@
   }
 }
 
-.ms-fun-border {
-  border: 1px solid var(--clr-border-1);
-  border-radius: 15px;
-}
+// .bb-fun-border {
+//   border: 1px solid var(--clr-border-1);
+//   border-radius: 15px;
+// }
 
-.ms-fun-brand-wrap {
-  display: flex;
-  flex-direction: column;
+// .bb-fun-brand-wrap {
+//   display: flex;
+//   flex-direction: column;
 
-  .inner-container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+//   .inner-container {
+//     display: grid;
+//     grid-template-columns: 20% 20% 20% 20% 20%;
 
-    @media #{$xxs} {
-      display: flex;
-      flex-direction: column;
-      padding:  0 20px;
-    }
-  }
-}
+//     @media #{$sm} {
+//       display: flex;
+//       flex-direction: column;
+//       padding:  0 20px;
+//     }
+//   }
+// }
 
-.ms-fun-brand-item {
-  padding: 12px;
-  margin: 0 6px;
+// .bb-fun-brand-item {
+//   padding: 12px;
+//   margin: 0 6px;
 
-  @include transition(0.3s);
+//   @include transition(0.3s);
 
-  @media #{$xxs} {
-    margin:  0 0 12px;
-  }
+//   @media #{$sm} {
+//     margin:  0 0 12px;
+//   }
 
-  &:hover {
-    border-color: rgb(156, 110, 206);
-  }
-}
+//   &:hover {
+//     border-color: rgb(156, 110, 206);
+//   }
+// }
 
-.ms-fun-brand-bb {
+.bb-fun-brand-bb {
   border-bottom: 1px dashed var(--clr-border-1);
 }

@@ -32,7 +32,7 @@ const RegisterForm = ({ dict }: SignUpFormType) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="ms-input2-box mb-25">
+      <div className="bb-input2-box mb-25">
         <select
           name="role"
           value={values.role}
@@ -46,7 +46,7 @@ const RegisterForm = ({ dict }: SignUpFormType) => {
         </select>
         {touched.role && <ErrorMsg error={errors.role} />}
       </div>
-      <div className="ms-input2-box mb-25">
+      <div className="bb-input2-box mb-25">
         <input
           type="email"
           placeholder={dict?.Email}
@@ -58,7 +58,7 @@ const RegisterForm = ({ dict }: SignUpFormType) => {
         />
         {touched.email && <ErrorMsg error={errors.email} />}
       </div>
-      <div className="ms-input2-box mb-25">
+      <div className="bb-input2-box mb-25">
         <input
           type="password"
           placeholder={dict?.Password}
@@ -70,7 +70,7 @@ const RegisterForm = ({ dict }: SignUpFormType) => {
         />
         {touched.password && <ErrorMsg error={errors.password} />}
       </div>
-      <div className="ms-input2-box mb-50">
+      <div className="bb-input2-box mb-50">
         <input
           type="password"
           placeholder={dict?.Confirm_password}
@@ -82,12 +82,12 @@ const RegisterForm = ({ dict }: SignUpFormType) => {
         />
         {touched.confirmPassword && <ErrorMsg error={errors.confirmPassword} />}
       </div>
-      <div className="ms-submit-btn mb-40 text-center">
+      <div className="bb-submit-btn mb-40 text-center">
         <button className="unfill__btn d-block w-100" type="submit">
           {dict?.Create_account}
         </button>
       </div>
-      <div className="ms-not-account mb-35 text-center">
+      <div className="bb-not-account mb-35 text-center">
         <p>
           {dict?.Have_account} <Link href="/login">{dict?.Login}</Link>
         </p>

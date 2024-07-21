@@ -115,7 +115,7 @@
     max-width: 400px;
     width: 400px;
 
-    @media #{$xs,$sm} {
+    @media #{$sm,$sm} {
         max-width: 250px;
         width: 100%;
     }
@@ -160,7 +160,7 @@
     border: 1px solid #8c9ec5;
     width: 100%;
 
-    @media #{$xs,$sm} {
+    @media #{$sm,$sm} {
         width: 150px;
     }
 

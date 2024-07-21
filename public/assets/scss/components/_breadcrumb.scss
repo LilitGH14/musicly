@@ -5,17 +5,17 @@
 /* ------------------------------------------ */
 
 // Breadcrumb style
-.ms-page-title {
+.bb-page-title {
   font-weight: 600;
   font-size: 50px;
   color: var(--clr-common-white);
   line-height: 1.4 !important;
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     font-size: 40px;
   }
 
-  @media #{$xxs} {
+  @media #{$sm} {
     font-size: 34px;
   }
 }
@@ -60,7 +60,7 @@
     }
   }
 
-  @media #{$sm,$xs} {
+  @media #{$sm,$sm} {
     padding-top: 80px;
     padding-bottom: 80px;
   }

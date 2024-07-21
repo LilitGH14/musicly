@@ -13,21 +13,21 @@ import 'swiper/css/bundle';
 const LatestNewsThree = () => {
     return (
         <>
-            <section className="ms-news3-area ms-bg-2 p-relative fix pt-130 pb-90">
+            <section className="bb-news3-area ms-bg-2 p-relative fix pt-130 pb-90">
                 <div className="container">
                     <div className="row justify-content-center bdFadeUp">
                         <div className="col-xl-6">
                             <div className="section__title-wrapper text-center mb-25 bd-title-anim">
                                 <span className="section__subtitle">Latest News</span>
-                                <h2 className="section__title"><span className="ms-text1">Musicly</span>
+                                <h2 className="section__title"><span className="bb-text1">Musicly</span>
                                     Morning Insight
                                 </h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="ms-news3-wrap bdFadeUp">
-                    <div className="ms-news3-active">
+                <div className="bb-news3-wrap bdFadeUp">
+                    <div className="bb-news3-active">
                         <Swiper
                             modules={[Autoplay]}
                             slidesPerView={"auto"}
@@ -63,17 +63,17 @@ const LatestNewsThree = () => {
                             {
                                 latest_news_data.slice(6, 15).map((item) => (
                                     <SwiperSlide key={item.id}>
-                                        <div className="ms-news3-slick">
-                                            <div className="ms-news3-item p-relative">
-                                                <Link className="ms-news3-cat" href={`/blog-details/${item.id}`}>{item.category}</Link>
-                                                <h3 className="ms-news3-title"><Link href={`/blog-details/${item.id}`}>{item.title}</Link></h3>
-                                                <div className="ms-news-meta">
+                                        <div className="bb-news3-slick">
+                                            <div className="bb-news3-item p-relative">
+                                                <Link className="bb-news3-cat" href={`/blog-details/${item.id}`}>{item.category}</Link>
+                                                <h3 className="bb-news3-title"><Link href={`/blog-details/${item.id}`}>{item.title}</Link></h3>
+                                                <div className="bb-news-meta">
                                                     <ul>
                                                         <li><span>{item.date}</span></li>
                                                         <li><Link href={`/blog-details/${item.id}`}>{item.comment} Comments</Link></li>
                                                     </ul>
                                                 </div>
-                                                <div className="ms-news3-img w-img ms-br-15 fix">
+                                                <div className="bb-news3-img w-img ms-br-15 fix">
                                                     <Link href={`/blog-details/${item.id}`}>
                                                         <Image src={item.image} loader={imageLoader} placeholder="blur" loading='lazy' style={{ width: '100%', height: "auto" }}
                                                             alt="news image" />

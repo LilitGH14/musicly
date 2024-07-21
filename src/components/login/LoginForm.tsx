@@ -30,7 +30,7 @@ const LoginForm = ({ dict }: LoginFormType) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="ms-input2-box mb-25">
+      <div className="bb-input2-box mb-25">
         <input
           id="name"
           type="text"
@@ -43,7 +43,7 @@ const LoginForm = ({ dict }: LoginFormType) => {
         />
         {touched.email && <ErrorMsg error={errors.email} />}
       </div>
-      <div className="ms-input2-box mb-50">
+      <div className="bb-input2-box mb-50">
         <input
           id="pass"
           name="password"
@@ -56,18 +56,18 @@ const LoginForm = ({ dict }: LoginFormType) => {
         />
         {touched.password && <ErrorMsg error={errors.password} />}
       </div>
-      <div className="ms-submit-btn mb-40">
+      <div className="bb-submit-btn mb-40">
         <button className="unfill__btn d-block w-100" type="submit">
           {dict?.Login}
         </button>
       </div>
-      <div className="ms-not-account mb-35 text-center">
+      <div className="bb-not-account mb-35 text-center">
         <p>
           {dict?.Dont_have_account}{" "}
           <Link href="/signup">{dict?.Register_Now}</Link>
         </p>
       </div>
-      <div className="ms-forget-pass text-center">
+      <div className="bb-forget-pass text-center">
         <Link href="/forgot-password">{dict?.Forgot_password}</Link>
       </div>
     </form>

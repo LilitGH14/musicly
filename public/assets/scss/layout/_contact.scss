@@ -4,7 +4,7 @@
 /*  38 - contact css  */
 /* ------------------------------------------ */
 
-.ms-input-box {
+.bb-input-box {
   position: relative;
   margin-bottom: 55px;
 
@@ -37,7 +37,7 @@
     padding: 0 30px;
     @include transition(0.3s);
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 0 20px;
     }
 
@@ -59,7 +59,7 @@
     @include transition(0.3s);
     resize: none;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 20px;
     }
 
@@ -74,7 +74,7 @@
     min-height: 65px;
     padding: 0 30px;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 0 20px;
     }
 
@@ -89,7 +89,7 @@
       inset-inline-end: 30px;
       width: 10px;
 
-      @media #{$xxs} {
+      @media #{$sm} {
         inset-inline-end: 20px;
       }
     }
@@ -130,7 +130,7 @@
 }
 
 // Custom Check Box
-.ms-checkbox {
+.bb-checkbox {
   display: block;
   position: relative;
   padding-inline-start: 35px;
@@ -208,7 +208,7 @@
   }
 }
 
-.ms-model1 {
+.bb-model1 {
   .modal-content {
     background: var(--clr-bg-2);
     border-radius: 15px;
@@ -223,7 +223,7 @@
   }
 }
 
-.ms-model2 {
+.bb-model2 {
   .modal-content {
     background: var(--clr-bg-2);
     border-radius: 15px;
@@ -238,49 +238,49 @@
   }
 }
 
-.ms-genres-model-content {
+.bb-genres-model-content {
   padding: 40px;
 
-  @media #{$xs} {
+  @media #{$sm} {
     padding: 40px 20px;
   }
 
-  .ms-close-btn {
+  .bb-close-btn {
     position: absolute;
     right: 40px;
     top: 40px;
 
-    @media #{$xs} {
+    @media #{$sm} {
       right: 20px;
       top: 20px;
     }
   }
 }
 
-.ms-input-box.two {
+.bb-input-box.two {
   margin-bottom: 25px;
 }
 
-.ms-review-popup-title-wrap {
+.bb-review-popup-title-wrap {
   display: grid;
   align-items: center;
   grid-template-columns: 40% 50% 10%;
   gap: 10px;
 
-  @media #{$xs} {
+  @media #{$sm} {
     grid-template-columns: auto;
   }
 }
 
-.ms-review-popup-item {
-  .ms-review-num {
+.bb-review-popup-item {
+  .bb-review-num {
     color: var(--clr-common-white);
     font-weight: 600;
     font-size: 20px;
     margin-inline-end: 13px;
   }
 
-  .ms-review-star {
+  .bb-review-star {
     i {
       color: var(--clr-bg-3);
       top: -1px;
@@ -355,13 +355,13 @@
   text-shadow: 0 0 5px var(--clr-bg-3);
 }
 
-.ms-review-submit-btn {
+.bb-review-submit-btn {
   .unfill__btn {
     padding: 0 70px;
   }
 }
 
-.ms-map-area {
+.bb-map-area {
   iframe {
     width: 100%;
     height: 800px;
@@ -370,17 +370,17 @@
       height: 600px;
     }
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       height: 500px;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
       height: 400px;
     }
   }
 }
 
-.ms-input2-box {
+.bb-input2-box {
   position: relative;
 
   p {
@@ -408,7 +408,7 @@
     @include transition(0.3s);
     resize: none;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 0 20px;
     }
 
@@ -424,7 +424,7 @@
     min-height: 175px;
     border-radius: 16px;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 20px 20px;
     }
 
@@ -433,7 +433,7 @@
     }
   }
 
-  .ms-input2-search {
+  .bb-input2-search {
     position: absolute;
     top: 50%;
     @include transform(translateY(-50%));
@@ -447,16 +447,16 @@
   }
 }
 
-.ms-contact-space {
+.bb-contact-space {
   padding: 40px;
   border-radius: 15px;
 
-  @media #{$xs} {
+  @media #{$sm} {
     padding: 30px 20px;
   }
 }
 
-.ms-contact-content {
+.bb-contact-content {
   position: absolute;
   bottom: 35px;
   z-index: 1;
@@ -464,7 +464,7 @@
   right: 0;
 }
 
-.ms-contact-map-content {
+.bb-contact-map-content {
   ul {
     li {
       @include transition(0.5s);
@@ -476,7 +476,7 @@
   }
 }
 
-.ms-contact-map-item-wrapper {
+.bb-contact-map-item-wrapper {
   height: 155px;
   position: relative;
 
@@ -485,7 +485,7 @@
   }
 
   &:hover {
-    .ms-contact-map-item {
+    .bb-contact-map-item {
       transform: translateY(calc(-100% + 155px));
 
       @media (hover: none) {
@@ -495,7 +495,7 @@
   }
 }
 
-.ms-contact-map-item {
+.bb-contact-map-item {
   padding: 40px 90px 35px 30px;
   display: inline-block;
   @include transition(0.3s);
@@ -503,7 +503,7 @@
   top: 0;
   inset-inline-start: 0;
 
-  @media #{$xl, $lg, $md, $sm, $xs} {
+  @media #{ $lg, $md, $sm, $sm} {
     padding: 40px 30px 35px 30px;
   }
 
@@ -512,23 +512,23 @@
   }
 }
 
-.ms-contact-flag {
+.bb-contact-flag {
   display: inline-block;
   border-radius: 18px;
   overflow: hidden;
 }
 
-.ms-contact-map-area {
+.bb-contact-map-area {
   overflow: hidden;
   z-index: 5;
   position: relative;
 
-  @media #{$md, $sm, $xs} {
+  @media #{$md, $sm, $sm} {
     padding-bottom: 0;
   }
 }
 
-.ms-contact-map-grid {
+.bb-contact-map-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -538,35 +538,35 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     position: unset;
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.ms-contact-map-space {
+.bb-contact-map-space {
   @media #{$md} {
     padding-top: 130px;
     padding-bottom: 130px;
   }
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     padding-top: 80px;
     padding-bottom: 80px;
   }
 }
 
 // login css
-.ms-login-space {
+.bb-login-space {
   padding: 60px 40px;
   border-radius: 15px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 40px 20px;
   }
 }
 
-.ms-divided-btn {
+.bb-divided-btn {
   text-align: center;
   position: relative;
 
@@ -590,7 +590,7 @@
   }
 }
 
-.ms-not-account p {
+.bb-not-account p {
   color: var(--clr-common-body-text);
   font-weight: 500;
   font-size: 15px;
@@ -605,7 +605,7 @@
   }
 }
 
-.ms-forget-pass {
+.bb-forget-pass {
   a {
     font-weight: 500;
     font-size: 15px;
@@ -618,16 +618,16 @@
   }
 }
 
-.ms-maxw-510 {
+.bb-maxw-510 {
   max-width: 510px;
 }
 
-.ms-login-grid {
+.bb-login-grid {
   display: grid;
   grid-template-columns: 200px auto;
 }
 
-.ms-login-tab-btn {
+.bb-login-tab-btn {
   .nav-link {
     font-size: 18px;
     color: var(--clr-common-white);
@@ -653,24 +653,24 @@
 }
 
 // join css
-.ms-join-space {
+.bb-join-space {
   opacity: 0.95;
   border: 1px solid var(--clr-border-1);
   border-radius: 15px;
   padding: 60px;
   margin-top: 190px;
 
-  @media #{$sm,$xs} {
+  @media #{$sm,$sm} {
     padding: 40px 30px;
     margin-top: 120px;
   }
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 30px 20px;
   }
 }
 
-.ms-input-box.style-2 {
+.bb-input-box.style-2 {
   margin-bottom: 25px;
 
   label {
@@ -682,13 +682,13 @@
   }
 }
 
-.ms-upload-img {
+.bb-upload-img {
   display: flex;
   align-items: center;
   gap: 23px;
 }
 
-.ms-upload-item {
+.bb-upload-item {
   width: 90px;
   height: 83px;
 
@@ -698,7 +698,7 @@
   }
 }
 
-.ms-upload-file {
+.bb-upload-file {
   width: 90px;
   height: 83px;
   position: relative;
@@ -737,7 +737,7 @@
   }
 }
 
-.ms-input-box-file {
+.bb-input-box-file {
   label {
     color: var(--clr-text-5);
     font-weight: 500;
@@ -746,13 +746,13 @@
   }
 }
 
-.ms-join-img-grid {
+.bb-join-img-grid {
   display: grid;
   grid-template-columns: auto 600px auto;
   justify-content: space-between;
 }
 
-.ms-join-position {
+.bb-join-position {
   inset-inline-start: 0;
   right: 0;
   width: 100%;

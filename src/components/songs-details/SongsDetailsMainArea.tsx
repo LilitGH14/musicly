@@ -33,12 +33,12 @@ const SongsDetailsMainArea = () => {
   }, [dictSelector]);
 
   return (
-    <section className="ms-genres-area pb-70 mt-30">
+    <section className="bb-genres-area pb-70 mt-30">
       <div className="container">
         <div className="row">
-          <div className="col-xxl-8 col-xl-7">
-            <div className="ms-genres-left-wrap mb-60">
-              <div className="ms-genres-tab2 mb-20">
+          <div className="col-sm-8 col-xl-7">
+            <div className="bb-genres-left-wrap mb-60">
+              <div className="bb-genres-tab2 mb-20">
                 <nav>
                   <div
                     className="nav nav-tabs ms-tab-button border-0 ms-border2-btn ms-tab-prevent"
@@ -72,7 +72,7 @@ const SongsDetailsMainArea = () => {
                   </div>
                 </nav>
               </div>
-              <div className="ms-genres-tab2-content">
+              <div className="bb-genres-tab2-content">
                 <div className="tab-content" id="nav-tabContent2">
                   <div
                     className="tab-pane fade show active"

@@ -46,7 +46,7 @@ const MobileHeader = ({ dict }: HeaderType) => {
           )}
           {user && (
             <div className="header__action-inner d-flex align-items-center">
-              <div className="user__acount d-none d-xxl-inline-flex">
+              <div className="user__acount d-none d-sm-inline-flex">
                 <span role="button" onClick={() => setIsOpen(true)}>
                   <i className="flaticon-user"></i>
                 </span>

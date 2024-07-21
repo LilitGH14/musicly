@@ -1,6 +1,6 @@
 @use '../utils' as *;
 
-.ms-video-img1 {
+.bb-video-img1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,23 +19,23 @@
     }
 }
 
-.ms-video-img2 {
+.bb-video-img2 {
     img {
         animation: ms-rotation-360 10s linear infinite;
 
-        @media #{$xxs} {
+        @media #{$sm} {
             width: 280px;
         }
     }
 }
 
-.ms-video-img1 img {
-    @media #{$xxs} {
+.bb-video-img1 img {
+    @media #{$sm} {
         width: 220px;
     }
 }
 
-.ms-video-round .ms-video-icon {
+.bb-video-round .bb-video-icon {
     position: absolute;
     top: 50%;
     left: 50%;

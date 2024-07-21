@@ -31,7 +31,7 @@ const ContactForm = ({ dict }: any) => {
     <form onSubmit={handleSubmit}>
       <div className="row">
         <div className="col-md-6">
-          <div className="ms-input2-box mb-30">
+          <div className="bb-input2-box mb-30">
             <input
               type="text"
               placeholder={dict?.Name}
@@ -45,7 +45,7 @@ const ContactForm = ({ dict }: any) => {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="ms-input2-box mb-30">
+          <div className="bb-input2-box mb-30">
             <input
               name="email"
               value={values.email}
@@ -60,7 +60,7 @@ const ContactForm = ({ dict }: any) => {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="ms-input2-box mb-30">
+          <div className="bb-input2-box mb-30">
             <input
               type="text"
               name="subject"
@@ -74,7 +74,7 @@ const ContactForm = ({ dict }: any) => {
           </div>
         </div>
         <div className="col-md-6">
-          <div className="ms-input2-box mb-30">
+          <div className="bb-input2-box mb-30">
             <input
               type="text"
               name="number"
@@ -88,7 +88,7 @@ const ContactForm = ({ dict }: any) => {
           </div>
         </div>
         <div className="col-md-12">
-          <div className="ms-input2-box mb-30">
+          <div className="bb-input2-box mb-30">
             <textarea
               cols={30}
               rows={10}
@@ -103,7 +103,7 @@ const ContactForm = ({ dict }: any) => {
           </div>
         </div>
         <div className="col-md-12">
-          <div className="ms-submit-btn mt-40">
+          <div className="bb-submit-btn mt-40">
             <button className="unfill__btn" type="submit">
               {dict?.Send_message}
             </button>

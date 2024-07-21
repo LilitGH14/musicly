@@ -28,7 +28,7 @@ const OffcanvasArea = ({ isOpenInfoSidebar, setIsOpenInfoSidebar }: TSideInfoPro
                                     </button>
                                 </div>
                             </div>
-                            <div className="offcanvas__user mb-30 d-xxl-none">
+                            <div className="offcanvas__user mb-30 d-sm-none">
                                 <div className="user__acount">
                                     <span>
                                         <Link href="#"><i className="flaticon-user"></i></Link>
@@ -55,12 +55,12 @@ const OffcanvasArea = ({ isOpenInfoSidebar, setIsOpenInfoSidebar }: TSideInfoPro
                             </div>
                             <div className="hr-1 mt-30 mb-30 d-xl-block"></div>
                             <div className="offcanvas__btn mb-30">
-                                <Link className="ms-border-btn" href="/services">
+                                <Link className="bb-border-btn" href="/services">
                                     <i className="fa-solid fa-plus"></i> List Your
                                     Service</Link>
                             </div>
                             <div className="offcanvas__social">
-                                <div className="ms-footer-social mb-0">
+                                <div className="bb-footer-social mb-0">
                                     <Link href="https://www.linkedin.com/" title="Instagram" target="_blank">IN</Link>
                                     <Link href="https://twitter.com/" title="Twitter" target="_blank">TW</Link>
                                     <Link href="https://www.facebook.com/" title="Facebook" target="_blank">FB</Link>

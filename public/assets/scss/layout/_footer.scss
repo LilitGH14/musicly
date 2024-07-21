@@ -4,11 +4,11 @@
 /*  39 - footer css  */
 /* ------------------------------------------ */
 
-.ms-footer-copy {
+.bb-footer-copy {
   display: flex;
   flex-direction: column;
 }
-.ms-footer-overlay {
+.bb-footer-overlay {
   position: relative;
 
   &::after {
@@ -30,7 +30,7 @@
   }
 }
 
-.ms-footer-title {
+.bb-footer-title {
   font-weight: 500;
   font-size: 18px;
   color: var(--clr-common-white);
@@ -52,7 +52,7 @@
   }
 }
 
-.ms-footer-widget {
+.bb-footer-widget {
   ul {
     li {
       list-style: none;
@@ -96,7 +96,7 @@
   }
 }
 
-.ms-subscribe-form {
+.bb-subscribe-form {
   position: relative;
 
   & > i {
@@ -133,7 +133,7 @@
   }
 }
 
-.ms-subscribe-btn {
+.bb-subscribe-btn {
   position: absolute;
   top: 55%;
   inset-inline-end: 25px;
@@ -164,7 +164,7 @@
   }
 }
 
-.ms-footer-logo {
+.bb-footer-logo {
   max-width: 140px;
 
   img {
@@ -172,17 +172,17 @@
   }
 }
 
-.ms-footer-border {
+.bb-footer-border {
   border-bottom: 1px solid var(--clr-border-1);
 }
 
-.ms-footer-warning {
+.bb-footer-warning {
   p {
     font-size: 15px;
   }
 }
 
-.ms-footer-social {
+.bb-footer-social {
   display: flex;
   gap: 10px 40px;
 
@@ -217,7 +217,7 @@
 }
 
 // footer 2 css
-.ms-footer2-title {
+.bb-footer2-title {
   font-weight: 500;
   font-size: 18px;
   color: #d9d9d9;
@@ -225,12 +225,12 @@
   text-transform: capitalize;
   line-height: 1;
 
-  @media #{$xl, $lg, $md, $sm, $xs} {
+  @media #{ $lg, $md, $sm, $sm} {
     margin-bottom: 30px;
   }
 }
 
-.ms-footer2-widget {
+.bb-footer2-widget {
   ul {
     li {
       list-style: none;
@@ -272,7 +272,7 @@
   }
 }
 
-.ms-subscribe2-form {
+.bb-subscribe2-form {
   & > i {
     font-size: 20px;
     position: absolute;
@@ -300,7 +300,7 @@
     padding-inline-end: 170px;
     border-bottom: 1px solid transparent;
 
-    @media #{$md,$sm,$xs} {
+    @media #{$md,$sm,$sm} {
       border: 1px solid rgba(128, 128, 128, 0.3411764706);
       border-radius: 8px;
       padding-inline-end: 185px;
@@ -316,7 +316,7 @@
   }
 }
 
-.ms-subscribe2-btn {
+.bb-subscribe2-btn {
   position: absolute;
   top: 50%;
   inset-inline-end: 0;
@@ -329,7 +329,7 @@
   color: var(--clr-common-white);
   @include transition(0.3s);
 
-  @media #{$md,$sm,$xs} {
+  @media #{$md,$sm,$sm} {
     inset-inline-end: 20px;
   }
 
@@ -349,7 +349,7 @@
   }
 }
 
-.ms-subscribe2-mobile {
+.bb-subscribe2-mobile {
   input {
     height: 60px;
     background: transparent;
@@ -370,7 +370,7 @@
   }
 }
 
-.ms-subscribe2-m-btn {
+.bb-subscribe2-m-btn {
   font-weight: 500;
   font-size: 16px;
   color: var(--clr-common-white);
@@ -386,25 +386,25 @@
   }
 }
 
-.ms-footer2-top-inner {
+.bb-footer2-top-inner {
   padding: 10px 30px 0 30px;
 
-  @media #{$lg, $md, $sm, $xs} {
+  @media #{$lg, $md, $sm, $sm} {
     @include border-radius(10px);
     padding: 25px 30px 10px 30px;
   }
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 25px 20px 10px 20px;
   }
 }
 
-.ms-footer2-logo {
+.bb-footer2-logo {
   max-width: 142px;
   text-align: center;
 }
 
-.ms-subscribe2-form {
+.bb-subscribe2-form {
   &::before {
     content: "";
     inset-block-start: 0;
@@ -417,15 +417,15 @@
   }
 }
 
-.ms-social-border {
+.bb-social-border {
   padding-inline-start: 33px;
 
-  @media #{$sm,$xs} {
+  @media #{$sm,$sm} {
     padding-inline-start: 0;
   }
 
   &.two {
-    @media #{ $md, $sm, $xs} {
+    @media #{ $md, $sm, $sm} {
       margin-bottom: 30px;
       margin-top: 20px;
     }
@@ -441,13 +441,13 @@
     position: absolute;
     transform: translateY(-50%);
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       display: none;
     }
   }
 }
 
-.ms-footer2-contact {
+.bb-footer2-contact {
   ul {
     li {
       display: flex;
@@ -478,7 +478,7 @@
   }
 }
 
-.ms-footer2-rating {
+.bb-footer2-rating {
   h3 {
     font-size: 15px;
     color: var(--clr-common-body-text);
@@ -486,7 +486,7 @@
     display: flex;
     align-items: center;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       flex-wrap: wrap;
       gap: 20px 0;
     }
@@ -501,15 +501,15 @@
       padding: 0 14px;
       color: white;
 
-      @media #{$xxs} {
+      @media #{$sm} {
         margin-inline-start: 0;
       }
     }
   }
 }
 
-.ms-footer2-widget2 {
-  @media #{$xl} {
+.bb-footer2-widget2 {
+  @media #{$lg} {
     margin-inline-start: 40px;
   }
 
@@ -518,8 +518,8 @@
   }
 }
 
-.ms-footer2-rating.three {
-  @media #{$xs} {
+.bb-footer2-rating.three {
+  @media #{$sm} {
     margin-bottom: 25px;
   }
 }
@@ -532,7 +532,7 @@
     padding: 0 20px;
   }
 
-  .ms-footer2-title {
+  .bb-footer2-title {
     margin-bottom: 12px;
   }
 
@@ -546,7 +546,7 @@
     }
   }
 
-  .ms-footer-social {
+  .bb-footer-social {
     display: flex;
     justify-content: center;
 

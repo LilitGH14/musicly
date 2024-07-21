@@ -81,14 +81,14 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="ms-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15"
+        className="bb-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15"
       >
         <div>
           {Object.keys(lyrics).map((m: string, i: number) => {
             return (
               <div key={i}>
                 <div className="mt-10 mb-10">
-                  <span className="ms-singer-couplet">
+                  <span className="bb-singer-couplet">
                     {m.replace("/editable/", "")}
                   </span>
                 </div>
@@ -100,7 +100,7 @@ const SongLyrics = ({ dict, content }: SongLyricsType) => {
                           {row} <br />
                         </span>
                       ) : (
-                        <div className="ms-input2-box editable">
+                        <div className="bb-input2-box editable">
                           <input
                             style={{ minHeight: "40px" }}
                             value={

@@ -27,7 +27,7 @@ const CommentForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-xl-6">
-            <div className="ms-input2-box mb-30">
+            <div className="bb-input2-box mb-30">
               <input
                 type="text"
                 name="name"
@@ -41,7 +41,7 @@ const CommentForm = () => {
             </div>
           </div>
           <div className="col-xl-6">
-            <div className="ms-input2-box mb-30">
+            <div className="bb-input2-box mb-30">
               <input
                 type="email"
                 name="email"
@@ -55,7 +55,7 @@ const CommentForm = () => {
             </div>
           </div>
           <div className="col-xl-12">
-            <div className="ms-input2-box mb-30">
+            <div className="bb-input2-box mb-30">
               <input
                 type="url"
                 name="website"
@@ -69,7 +69,7 @@ const CommentForm = () => {
             </div>
           </div>
           <div className="col-xl-12">
-            <div className="ms-input2-box mb-30">
+            <div className="bb-input2-box mb-30">
               <textarea
                 cols={30}
                 rows={10}
@@ -83,7 +83,7 @@ const CommentForm = () => {
             </div>
           </div>
           <div className="col-xl-12">
-            <label className="ms-checkbox">
+            <label className="bb-checkbox">
               <span>
                 Save my name, email, and website in this browser for the next
                 time I comment.
@@ -95,7 +95,7 @@ const CommentForm = () => {
               />
               <span className="checkmark"></span>
             </label>
-            <div className="ms-submit-btn mt-40">
+            <div className="bb-submit-btn mt-40">
               <button className="unfill__btn" type="submit">
                 Post Comment
               </button>

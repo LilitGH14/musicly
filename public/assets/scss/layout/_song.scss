@@ -4,13 +4,13 @@
 /*  18 - song css  */
 /* ------------------------------------------ */
 
-.ms-song-item {
+.bb-song-item {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.ms-song-img {
+.bb-song-img {
   width: 55px;
   height: 50px;
   padding-inline-end: 5px;
@@ -23,7 +23,7 @@
   }
 }
 
-.ms-song-num {
+.bb-song-num {
   position: absolute;
   background: #b268da;
   width: 22px;
@@ -38,7 +38,7 @@
   top: 0;
 }
 
-.ms-song-title {
+.bb-song-title {
   font-weight: 500;
   font-size: 16px;
   color: var(--clr-text-3);
@@ -49,18 +49,18 @@
   }
 }
 
-.ms-song-text {
+.bb-song-text {
   font-size: 14px;
   color: var(--clr-text-4);
 }
 
-.ms-song-border {
+.bb-song-border {
   border-top: 1px dashed var(--clr-border-1);
   border-bottom: 1px dashed var(--clr-border-1);
 }
 
 // media player style
-.ms-header2-song {
+.bb-header2-song {
   .jp-play {
     width: 50px;
     height: 50px;
@@ -170,7 +170,7 @@
     width: 680px;
     height: 50px;
 
-    @media #{$xl} {
+    @media #{$lg} {
       width: 590px;
     }
   }
@@ -213,8 +213,8 @@
 }
 
 //update
-.ms-header2-item {
-  .ms-header2-song {
+.bb-header2-item {
+  .bb-header2-song {
     .audio_player {
       background-color: var(--clr-bg-2);
     }
@@ -229,15 +229,15 @@
   }
 }
 
-.ms-genres-tab2-text {
-  .ms-genres-audio {
+.bb-genres-tab2-text {
+  .bb-genres-audio {
     .audio_player {
       background-color: var(--clr-bg-2);
     }
   }
 }
 
-.ms-genres-audio {
+.bb-genres-audio {
   .jp-playlist {
     .audio-playlist-current {
       width: 30px;
@@ -256,8 +256,8 @@
   }
 }
 
-.ms-wrapper-audio-player {
-  @media #{$xxs, $sm} {
+.bb-wrapper-audio-player {
+  @media #{$sm, $sm} {
     .rhap_progress-section {
       margin-bottom: 15px;
     }

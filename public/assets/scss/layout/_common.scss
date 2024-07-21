@@ -1,51 +1,37 @@
-@use '../utils' as *;
+@use "../utils" as *;
 
-@media #{$xxl} {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 90%!important;
-    }
-}
-
-@media #{$xl} {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl {
-        max-width: 1140px;
-    }
+@media #{$sm} {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-sm {
+    max-width: 90% !important;
+  }
 }
 
 @media #{$lg} {
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm {
-        max-width: 960px;
-    }
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
 }
 
 @media #{$md} {
-
-    .container,
-    .container-md,
-    .container-sm {
-        max-width: 720px;
-    }
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 1200px;
+  }
 }
 
 @media #{$sm} {
-
-    .container,
-    .container-sm {
-        max-width: 540px;
-    }
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
 }

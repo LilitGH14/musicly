@@ -19,15 +19,15 @@ const NavProfileTab = () => {
   };
 
   return (
-    <div className="ms-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15">
-      <h4 className="ms-title3 white-text text-center mb-25">
+    <div className="bb-genres-tab2-text ms-genres-tab2-padding ms-bg-2 ms-br-15">
+      <h4 className="bb-title3 white-text text-center mb-25">
         RM – Wild Flower
       </h4>
-      <div className="ms-border2 mb-30">
-        <h4 className="ms-title3 white-text text-center mb-30">Demo Tracks</h4>
+      <div className="bb-border2 mb-30">
+        <h4 className="bb-title3 white-text text-center mb-30">Demo Tracks</h4>
       </div>
-      <div className="ms-genres-audio ms-wrapper-audio-player">
-        <div className="ms-header2-song">
+      <div className="bb-genres-audio ms-wrapper-audio-player">
+        <div className="bb-header2-song">
           <div id="jquery_jplayer_1" className="jp-jplayer"></div>
           <div
             id="jp_container_1"

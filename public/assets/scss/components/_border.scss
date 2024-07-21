@@ -7,23 +7,23 @@
 /*----------------------------------------
 	Border Color CSS
 -----------------------------------------*/
-.ms-border1 {
+.bb-border1 {
 	border: 1px solid var(--clr-border-3);
 }
 
-.ms-border2 {
+.bb-border2 {
 	border-bottom: 1px solid var(--clr-border-1);
 }
 
-.ms-border3 {
+.bb-border3 {
 	border-bottom: 1px solid #a76cd1;
 }
 
-.ms-border4 {
+.bb-border4 {
 	border-bottom: 1px solid var(--clr-border-1);
 }
 
-.ms-border5 {
+.bb-border5 {
 	border-top: 1px solid var(--clr-border-1);
 }
 
@@ -31,7 +31,7 @@
 /*----------------------------------------
 	Border Radius CSS
 -----------------------------------------*/
-.ms-br-15 {
+.bb-br-15 {
 	@include border-radius(15px);
 
 	img {
@@ -39,7 +39,7 @@
 	}
 }
 
-.ms-br-20 {
+.bb-br-20 {
 	@include border-radius(20px);
 
 	img {
@@ -47,7 +47,7 @@
 	}
 }
 
-.ms-br-100 {
+.bb-br-100 {
 	@include border-radius(100px);
 
 	img {
@@ -55,7 +55,7 @@
 	}
 }
 
-.ms-br-30 {
+.bb-br-30 {
 	@include border-radius(30px);
 
 	img {

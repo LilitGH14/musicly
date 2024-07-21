@@ -327,7 +327,7 @@ const genres_listing_data: TGenresListing[] = [
     mapLink: "https://www.google.com/maps",
     ratings: 5,
     date: "March 2023",
-    wrapperBorderClass: "ms-border2",
+    wrapperBorderClass: "bb-border2",
   },
   {
     id: 25,
@@ -338,7 +338,7 @@ const genres_listing_data: TGenresListing[] = [
     mapLink: "https://www.google.com/maps",
     ratings: 4,
     date: "May 2023",
-    wrapperBorderClass: "ms-border2",
+    wrapperBorderClass: "bb-border2",
   },
   {
     id: 26,

@@ -180,6 +180,7 @@ export type StoryType = {
   description: string;
   date: string;
   votedCount: number;
+  category:string;
 };
 
 export type StoryDetailsType = {

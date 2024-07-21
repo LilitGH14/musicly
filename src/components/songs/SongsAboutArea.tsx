@@ -19,25 +19,25 @@ const SongsAboutArea = ({
   selectHandler,
 }: SongsAboutAreaProps) => {
   return (
-    <section className="ms-genres-area">
+    <section className="bb-genres-area">
       <div
-        className="ms-about-bg include__bg p-relative zindex-1 pt-130 pb-30"
+        className="bb-about-bg include__bg p-relative zindex-1 pt-130 pb-30"
         style={{ backgroundImage: `url(${bg.src})` }}
       >
-        <div className="ms-overlay ms-overlay5 p-absolute zindex--1"></div>
+        <div className="bb-overlay ms-overlay5 p-absolute zindex--1"></div>
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-xxl-10">
-              <div className="ms-about-content text-center">
-                <h2 className="ms-title2 white-text mb-30">
+            <div className="col-sm-10">
+              <div className="bb-about-content text-center">
+                <h2 className="bb-title2 white-text mb-30">
                   {dict.Songs_title}
                 </h2>
                 <p className="capitalize mb-65">{dict.Songs_description}</p>
-                <div className="ms-genres-search">
-                  <div className="ms-banner__form two">
+                <div className="bb-genres-search">
+                  <div className="bb-banner__form two">
                     <form action="#">
-                      <div className="ms-banner__from-inner two ms-bg-2 wrapper-nice-select">
-                        <div className="ms-banner__form-select m-nice-select-2">
+                      <div className="bb-banner__from-inner two ms-bg-2 wrapper-nice-select">
+                        <div className="bb-banner__form-select m-nice-select-2">
                           <NiceSelect
                             value={filters.generatedSong}
                             options={bannerFormSelect}
@@ -48,7 +48,7 @@ const SongsAboutArea = ({
                             name="generatedSong"
                           />
                         </div>
-                        <div className="ms-banner__form-select m-nice-select-2">
+                        <div className="bb-banner__form-select m-nice-select-2">
                           <NiceSelect
                             value={filters.originalSong}
                             options={bannerFormSelect}

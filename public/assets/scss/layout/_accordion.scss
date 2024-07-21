@@ -24,7 +24,7 @@
       position: absolute;
       top: 22px;
 
-      @media #{$xxs} {
+      @media #{$sm} {
         inset-inline-end: 20px;
       }
     }
@@ -45,7 +45,7 @@
     padding-inline-end: 70px;
     line-height: 1.6;
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 20px 20px;
       padding-inline-end: 60px;
       font-size: 18px;
@@ -75,11 +75,11 @@
     color: var(--clr-text-5);
     text-transform: capitalize;
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       padding: 0 30px 22px 30px;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
       padding: 0 20px 22px 20px;
     }
 
@@ -91,7 +91,7 @@
   & > div {
     width: calc((100% - 24px) / 2);
 
-    @media #{$md, $sm, $xs} {
+    @media #{$md, $sm, $sm} {
       width: calc((100% - 0px) / 1);
     }
   }

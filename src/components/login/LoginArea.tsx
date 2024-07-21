@@ -16,11 +16,11 @@ const LoginArea = () => {
 
   return (
     <main className="pt-90">
-      <section className="ms-login-area pb-30 pt-30">
+      <section className="bb-login-area pb-30 pt-30">
         <div className="container">
-          <div className="ms-maxw-510 mx-auto">
-            <div className="ms-login-wrap  ms-login-space ms-bg-2">
-              <h3 className="ms-title4 mb-50 text-center">
+          <div className="bb-maxw-510 mx-auto">
+            <div className="bb-login-wrap  ms-login-space ms-bg-2">
+              <h3 className="bb-title4 mb-50 text-center">
                 {dict?.Login_description}
               </h3>
               <LoginForm dict={dict} />

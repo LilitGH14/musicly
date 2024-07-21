@@ -23,11 +23,11 @@ const NavigationSliderArea = () => {
     }
     return (
         <>
-            <div className="ms-navigation-area fix">
+            <div className="bb-navigation-area fix">
                 <div className=" ms-navigation-wrap ms-bg-3">
                     <div className="d-none d-xl-block">
-                        <div className="ms-nl-wrap ms-bg-5">
-                            <div className="ms-nl-item">
+                        <div className="bb-nl-wrap ms-bg-5">
+                            <div className="bb-nl-item">
                                 <div className="ml-nl-logo ms-mw-142 m-img">
                                     <Link href="/">
                                         <Image src={FooterLogo} loader={imageLoader} placeholder="blur" loading='lazy' style={{ width: '100%', height: "auto" }}
@@ -35,22 +35,22 @@ const NavigationSliderArea = () => {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="ms-nl-item">
-                                <button onClick={handleInfoToggle} className="ms-dot-toggle ms-cp sidebar__toggle">
+                            <div className="bb-nl-item">
+                                <button onClick={handleInfoToggle} className="bb-dot-toggle ms-cp sidebar__toggle">
                                     <Image src={FooterDot} loader={imageLoader} loading='lazy' width={40} height={38}
                                         alt="menu dot" />
                                 </button>
                             </div>
-                            <div className="ms-nl-item">
-                                <div className="ms-nl-search">
-                                    <button onClick={SerchPopupToggle} className="ms-search-btn"><i className="flaticon-loupe"></i> Find
+                            <div className="bb-nl-item">
+                                <div className="bb-nl-search">
+                                    <button onClick={SerchPopupToggle} className="bb-search-btn"><i className="flaticon-loupe"></i> Find
                                         Acts</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="ms-navigation-slider">
-                        <div className="ms-ns-active marquee-slide">
+                    <div className="bb-navigation-slider">
+                        <div className="bb-ns-active marquee-slide">
                             <Swiper
                                 modules={[Autoplay]}
                                 slidesPerView={"auto"}
@@ -64,43 +64,43 @@ const NavigationSliderArea = () => {
                             >
 
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">dancer</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">dancer</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">Singer</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">Singer</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">Bands</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">Bands</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">magician</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">magician</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">dancer</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">dancer</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">Singer</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">Singer</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">Bands</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">Bands</Link></h3>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className="ms-ns-slick">
-                                        <h3 className="ms-ns-title ms-text-stroke"><Link href="#">Party</Link></h3>
+                                    <div className="bb-ns-slick">
+                                        <h3 className="bb-ns-title ms-text-stroke"><Link href="#">Party</Link></h3>
                                     </div>
                                 </SwiperSlide>
                             </Swiper>

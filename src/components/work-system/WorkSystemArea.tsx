@@ -30,10 +30,10 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
   }, []);
 
   return (
-    <section className="ms-work-system-area pt-50">
+    <section className="bb-work-system-area pt-50">
       <div className="container">
-        <div className="ms-work-system-wrap">
-          <div className="ms-work-system-grid mb-10">
+        <div className="bb-work-system-wrap">
+          <div className="bb-work-system-grid mb-10">
             {instructions.map((item: InstructionType) => (
               <div className="work__features-item" key={item.id}>
                 <div className="features-icon">
@@ -48,7 +48,7 @@ const WorkSystemArea = ({ dict }: { dict: any }) => {
           </div>
           <div className="row justify-content-center">
             <div className="col-xl-10">
-              <div className="ms-work-system-inner text-center">
+              <div className="bb-work-system-inner text-center">
                 <p className="text-center">{dict?.How_it_works_description}</p>
                 <div className="work__features-bottom d-inline-block">
                   <div className="work__features-action">
