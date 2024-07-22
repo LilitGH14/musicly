@@ -5,7 +5,9 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <AboutMainArea />
+      <main className="bb-all-content">
+        <AboutMainArea />
+      </main>
     </Wrapper>
   );
 };

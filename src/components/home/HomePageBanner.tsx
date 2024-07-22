@@ -3,22 +3,19 @@ import React from "react";
 import bannerBg from "../../../public/assets/img/banner/banner-thumb-01.jpg";
 import Link from "next/link";
 
-type HomePageBannerType = {
+type HomePageBannerProps = {
   dict: { [key: string]: string } | null;
 };
-const HomePageBanner = ({ dict }: HomePageBannerType) => {
+const HomePageBanner = ({ dict }: HomePageBannerProps) => {
   return (
     <section className="bb-banner-area p-relative">
       <div className="container-fluid ms-maw-1710">
         <div
-          className="mx-auto include__bg z-index-1 ms-overlay-1 bb-br-30"
-          style={{ backgroundImage: `url(${bannerBg.src})`, height: "560px" }}
+          className="bb-banner-area-container"
+          style={{ backgroundImage: `url(${bannerBg.src})` }}
         >
           <div className="container">
-            <div
-              className="row justify-content-center align-items-center"
-              style={{ height: "560px" }}
-            >
+            <div className=" bb-banner-area-container-inner">
               <div className="col-xl-11">
                 <div className="bb-banner__main-wrapper">
                   <div className="bb-banner__content text-center">

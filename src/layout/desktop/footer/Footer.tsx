@@ -23,7 +23,7 @@ const Footer = ({ dict }: FooterType) => {
   return (
     <footer>
       <div
-        className="bb-footer2-top  zindex-1 include__bg"
+        className="bb-footer2-top zindex-1 include__bg"
         style={{ backgroundImage: `url(${FooterBg.src})` }}
       >
         <div className="container">

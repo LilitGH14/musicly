@@ -15,10 +15,10 @@ const FaqArea = ({ dict }: { dict: any }) => {
   }, []);
 
   return (
-    <section className="pt-50 pb-30 fix">
+    <section className="fix bb-choose__faqArea">
       <div className="container">
-        <div className="row align-items-center mb-15 bdFadeUp">
-          <div className="col-xl-7 col-lg-10 mb-40">
+        <div className="row align-items-center bdFadeUp">
+          <div className="col-xl-7 col-lg-10">
             <h2 className="section__title mb-40 bd-title-anim">
               {dict?.Faq_area_title}
             </h2>
@@ -26,7 +26,7 @@ const FaqArea = ({ dict }: { dict: any }) => {
           </div>
         </div>
         <div className="row bdFadeUp">
-          <div className="col-sm-12">
+          <div className="col-12">
             <div className="tab-content" id="nav-tabContent">
               <div
                 className="tab-pane fade show active"

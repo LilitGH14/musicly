@@ -9,11 +9,11 @@ import { fetchSongsData } from "@/services/songs";
 import image1 from "../../../public/assets/img/popular/popular-01.png";
 import Pagination from "../common/pagination/pagination-data";
 
-type SharedStoriesSectionType = {
+type SharedStoriesSectionProps = {
   dict: { [key: string]: string } | null;
 };
-const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
-  const [sharedSongs, setSharedSongs] = useState<SongType[]>([]);
+const SharedStoriesSection = ({ dict }: SharedStoriesSectionProps) => {
+  const [sharedStories, setSharedStories] = useState<SongType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [slicedIndex, setSlicedIndex] = useState<number[]>([]);
 
@@ -24,7 +24,7 @@ const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
   useEffect(() => {
     fetchSongsData("shared").then((res) => {
       if (res.ResponseCode == 200) {
-        setSharedSongs(res.ResponseData);
+        setSharedStories(res.ResponseData);
       }
     });
   }, []);
@@ -33,7 +33,7 @@ const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
     <section className="bb-shared__area">
       <div className="row justify-content-center bdFadeUp">
         <div className="col-xl-7">
-          <div className="section__title-wrapper mb-65 text-center bd-title-anim">
+          <div className="section__title-wrapper text-center bd-title-anim">
             <span className="section__subtitle">
               {dict?.Inspired_story_titile}
             </span>
@@ -45,7 +45,7 @@ const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
       </div>
       <div className="bb-shared__content-space bdFadeUp">
         <div className="bb-shared__content-space-inner">
-          {sharedSongs.slice(...slicedIndex).map((item) => (
+          {sharedStories.slice(...slicedIndex).map((item) => (
             <div className="bb-shared__content-space-inner-item" key={item.id}>
               <Link href={`/song-details/${item.id}`} className="row">
                 <div className="thumb">
@@ -55,7 +55,7 @@ const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
                     loading="lazy"
                     style={{ width: "100%", height: "auto" }}
                     src={image1}
-                    alt={dict?.Avatar ?? ""}
+                    alt={dict?.AvatarAlt ?? ""}
                   />
                 </div>
                 <div className="content">
@@ -70,7 +70,7 @@ const SharedStoriesSection = ({ dict }: SharedStoriesSectionType) => {
           ))}
         </div>
         <Pagination
-          pagesCount={Math.ceil(sharedSongs.length / 5)}
+          pagesCount={Math.ceil(sharedStories.length / 5)}
           currentPage={currentPage}
           changeCurrentPage={setCurrentPage}
         />

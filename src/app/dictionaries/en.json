@@ -2,7 +2,8 @@
   "ErrorMessage": {
     "Error_404": "Error 404",
     "Page_Not_Found": "Sorry Page Not Found",
-    "Back_To_Home": "Back To Home"
+    "Back_To_Home": "Back To Home",
+    "Error_Image_Alt":"404 page image"
   },
   "Header": {
     "Home": "Home",
@@ -42,7 +43,7 @@
   },
   "About": {
     "About_title": "Unleash Your Creativity, Inspire the World",
-    "About_text": "Welcome to The Beats Beyond Transform Your Favorite Songs with Your Unique Touch",
+    "About_text": "Welcome to The Beats Beyond, Inspire Your Favorite Artist with a Unique Touch",
     "Choose_us_title1": "Personalize Your Experience",
     "Choose_us_text1": "Modify the lyrics of your favorite songs to reflect your personal experiences, emotions, and milestones. Whether it's a love song, a motivational anthem, or a soulful ballad, make it yours",
     "Choose_us_title2": "Share Your Story",
@@ -139,8 +140,8 @@
     "Alt_arrow": "Arrow",
     "Inspired_story_titile": "Stories that Inspired",
     "Inspired_story_description": "Popular stories",
-    "Avatar": "Avatar",
-    "CategoryImage": "Category Image",
+    "AvatarAlt": "Avatar",
+    "CategoryImageAlt": "Category Image",
     "Clients_Feedback": "Clients Feedback",
     "Public_Awesome": "Public Awesome",
     "Comments": "Comments",

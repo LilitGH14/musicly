@@ -15,20 +15,18 @@ const ForgetPasswordMainArea = () => {
   }, [dictSelector]);
 
   return (
-    <main className="pt-90">
-      <section className="bb-login-area pb-30 pt-30">
-        <div className="container">
-          <div className="bb-maxw-510 mx-auto">
-            <div className="bb-login-wrap  ms-login-space ms-bg-2">
-              <h3 className="bb-title4 mb-50 text-center">
-                {dict?.ForgetPassword_description}
-              </h3>
-              <ForgetForm dict={dict} />
-            </div>
+    <section className="bb-login-area">
+      <div className="container">
+        <div className="bb-maxw-510 mx-auto">
+          <div className="bb-login-wrap  ms-login-space ms-bg-2">
+            <h3 className="bb-title4 text-center">
+              {dict?.ForgetPassword_description}
+            </h3>
+            <ForgetForm dict={dict} />
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

@@ -18,7 +18,7 @@ const AboutMainArea = () => {
   }, [dictSelector]);
 
   return (
-    <main className="pt-90">
+    <>
       <PageHeader
         dict={dict}
         imageSrc={aboutBgImg.src}
@@ -27,7 +27,7 @@ const AboutMainArea = () => {
       />
       <ChooseUsArea dict={dict} />
       <FaqArea dict={dict} />
-    </main>
+    </>
   );
 };
 export default AboutMainArea;

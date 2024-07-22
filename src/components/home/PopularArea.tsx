@@ -11,10 +11,10 @@ import { Category, StoryType } from "@/types/types";
 import storyBgImage from "../../../public/assets/img/blog/story.jpg";
 import { fetchStoriesData } from "@/services/stories";
 
-type PopularAreaType = {
+type PopularAreaProps = {
   dict: { [key: string]: string } | null;
 };
-const PopularArea = ({ dict }: PopularAreaType) => {
+const PopularArea = ({ dict }: PopularAreaProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("Latest");
   const [stories, setStories] = useState<StoryType[]>([]);
 
@@ -126,7 +126,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                                     loading="lazy"
                                     style={{ width: "100%", height: "auto" }}
                                     src={storyBgImage}
-                                    alt={dict?.CategoryImage as string}
+                                    alt={dict?.CategoryImageAlt as string}
                                   />
                                   <h4 className="bb-popular__title">
                                     {story.title}

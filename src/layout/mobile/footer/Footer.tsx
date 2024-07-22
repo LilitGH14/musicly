@@ -4,6 +4,7 @@ import FooterLogo from "../../../../public/assets/img/logo/logo.png";
 import usFlag from "../../../../public/assets/img/flags/us.jpeg";
 import canadaFlag from "../../../../public/assets/img/flags/canada.png";
 import koreaFlag from "../../../../public/assets/img/flags/korea.png";
+import FooterBg from "../../../../public/assets/img/bg/main-bg.jpg";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
 
@@ -11,10 +12,12 @@ type FooterType = {
   dict: { [key: string]: string } | null;
 };
 const MobileFooter = ({ dict }: FooterType) => {
-  console.log(dict,'dict')
   return (
-    <footer>
-      <div className="container footer_mobile">
+    <footer
+      className="footer_mobile"
+      style={{ backgroundImage: `url(${FooterBg.src})` }}
+    >
+      <div className="container">
         <div className="row">
           <div className="col-12 logo_container">
             <Link href="/">
@@ -28,7 +31,7 @@ const MobileFooter = ({ dict }: FooterType) => {
               />
             </Link>
           </div>
-          <div className="col-12 mt-30 mb-30 ms-footer-social">
+          <div className="col-12 mt-30 mb-30 bb-footer-social">
             <div>
               <Link
                 href="https://www.linkedin.com/"
