@@ -22,7 +22,7 @@ const StoryDetailsMain = () => {
     username: "",
     date: "",
     tags: [],
-    description: "",
+    description: null,
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const StoryDetailsMain = () => {
       .split("/")
       [pathname.split("/").length - 1].replace("story_", "");
 
-      fetchStoryById(id).then((res) => {
+    fetchStoryById(id).then((res) => {
       if (res.ResponseCode == 200) {
         setStory(res.ResponseData);
       }
@@ -42,14 +42,16 @@ const StoryDetailsMain = () => {
   }, [pathname]);
 
   return (
-    <main className="pt-90">
+    <main>
       <PageHeader imageSrc={EventBg.src} title={story?.title} dict={dict} />
-      <section className="ms-event-details-area pt-70 pb-30">
+      <section className="bb-story-details-area pt-30 pb-30">
         <div className="container">
           <div className="row">
             <div className="col-xl-9 col-lg-12">
-              <div className="ms-event-details-content mb-40">
-                <p className="mb-25">{story.description}</p>
+              <div className="bb-story-details-content">
+                <div
+                  dangerouslySetInnerHTML={{ __html: story.description }}
+                ></div>
               </div>
             </div>
             <div className="col-xl-3 col-lg-8">

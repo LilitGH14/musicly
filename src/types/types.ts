@@ -180,6 +180,7 @@ export type StoryType = {
   description: string;
   date: string;
   votedCount: number;
+  category:string;
 };
 
 export type StoryDetailsType = {
@@ -187,7 +188,7 @@ export type StoryDetailsType = {
   tags: string[];
   username: string;
   title: string;
-  description: string;
+  description: any;
   date: string;
 };
 

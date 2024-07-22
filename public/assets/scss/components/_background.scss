@@ -4,7 +4,7 @@
 /*  02 - background css  */
 /* ------------------------------------------ */
 
-.ms-bg {
+.bb-bg {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -44,7 +44,7 @@
 }
 
 
-.ms-text-gradient1 {
+.bb-text-gradient1 {
 	background: linear-gradient(90.2deg, #a76cd1 35.25%, #753EBA 51.2%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -52,7 +52,7 @@
 	text-fill-color: transparent;
 }
 
-.ms-text-gradient2 {
+.bb-text-gradient2 {
 	background: linear-gradient(90.62deg, var(--clr-bg-3) 62.36%, #a76cd1 88.12%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -60,34 +60,34 @@
 	text-fill-color: transparent;
 }
 
-.ms-color-1 {
+.bb-color-1 {
 	color: var(--clr-text-6);
 }
 
-.ms-bg-1 {
+.bb-bg-1 {
 	background-color: var(--clr-bg-1);
 }
 
-.ms-bg-2 {
+.bb-bg-2 {
 	background-color: var(--clr-bg-2);
 }
 
-.ms-bg-3 {
+.bb-bg-3 {
 	background-color: var(--clr-bg-3);
 }
 
-.ms-bg-4 {
+.bb-bg-4 {
 	background-color: var(--clr-bg-4);
 }
 
-.ms-bg-5 {
+.bb-bg-5 {
 	background-color: var(--clr-bg-5);
 }
 
-.ms-bg-body {
+.bb-bg-body {
 	background-color: var(--clr-common-body);
 }
 
-.ms-bg-6 {
+.bb-bg-6 {
 	background-color: var(--clr-bg-6);
 }

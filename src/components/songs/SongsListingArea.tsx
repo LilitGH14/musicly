@@ -26,13 +26,13 @@ const SongsListingArea = ({
   slicedIndex,
 }: SongsListingAreaProps) => {
   return (
-    <div className="ms-genres-listing pb-110 ">
+    <div className="bb-genres-listing pb-110 ">
       <div className="container">
-        <div className="ms-border2 pb-30 mb-20">
+        <div className="bb-border2 pb-30 mb-20">
           <div className="row">
             <div className="col-sm-8">
-              <div className="ms-genres-filter ms-genres-select ms-genres-nice-select">
-                <span className="ms-genres-text">
+              <div className="bb-genres-filter ms-genres-select ms-genres-nice-select">
+                <span className="bb-genres-text">
                   {dict?.Results}({resultCount})
                 </span>
               </div>
@@ -54,7 +54,7 @@ const SongsListingArea = ({
                     aria-controls="home-tab-pane"
                     aria-selected="true"
                   >
-                    <span className="ms-genres-tab-bar">
+                    <span className="bb-genres-tab-bar">
                       <span></span>
                       <span></span>
                     </span>
@@ -71,7 +71,7 @@ const SongsListingArea = ({
                     aria-controls="profile-tab-pane"
                     aria-selected="false"
                   >
-                    <span className="ms-genres-tab-bar">
+                    <span className="bb-genres-tab-bar">
                       <span></span>
                       <span></span>
                       <span></span>
@@ -94,8 +94,8 @@ const SongsListingArea = ({
               {songs.slice(...slicedIndex).map((item) => (
                 <div className="col-xl-6" key={item.id}>
                   <Link href={`/song-details/${item.id}`}>
-                    <div className="ms-genres-item ms-genres-flex mb-25">
-                      <div className="ms-genres-img ms-br-15">
+                    <div className="bb-genres-item ms-genres-flex mb-25">
+                      <div className="bb-genres-img ms-br-15">
                         <Image
                           src={eventImg1}
                           loader={imageLoader}
@@ -113,13 +113,13 @@ const SongsListingArea = ({
                           </Link>
                         )}
                       </div>
-                      <div className="ms-genres-content p-relative">
-                        <h4 className="ms-genres-title">
+                      <div className="bb-genres-content p-relative">
+                        <h4 className="bb-genres-title">
                           {item.songGivenName}
                         </h4>
                         <p className="mb-30">{item.description}</p>
-                        <div className="ms-fun-brand-bottom ms-genres-rating">
-                          <div className="ms-fun-brand-rating">
+                        <div className="bb-fun-brand-bottom ms-genres-rating">
+                          <div className="bb-fun-brand-rating">
                             <span>
                               {dict.Votes}: {item.rating}
                             </span>
@@ -151,8 +151,8 @@ const SongsListingArea = ({
             <div className="row">
               {songs.slice(...slicedIndex).map((item) => (
                 <div className="col-xl-4 col-lg-6" key={item.id}>
-                  <div className="ms-genres-item mb-25">
-                    <div className="ms-genres-img ms-br-15 fix w-img mb-30">
+                  <div className="bb-genres-item mb-25">
+                    <div className="bb-genres-img ms-br-15 fix w-img mb-30">
                       <Link href={`/genres-details/${item.id}`}>
                         <Image
                           src={eventImg1}
@@ -172,15 +172,15 @@ const SongsListingArea = ({
                         </Link>
                       )}
                     </div>
-                    <div className="ms-genres-content p-relative">
-                      <h4 className="ms-genres-title">
+                    <div className="bb-genres-content p-relative">
+                      <h4 className="bb-genres-title">
                         <Link href={`/genres-details/${item.id}`}>
                           {item.songGivenName}
                         </Link>
                       </h4>
                       <p className="mb-30">{item.description}</p>
-                      <div className="ms-fun-brand-bottom ms-genres-rating">
-                        <div className="ms-fun-brand-rating">
+                      <div className="bb-fun-brand-bottom ms-genres-rating">
+                        <div className="bb-fun-brand-rating">
                           <span>
                             {dict.Votes}: {item.rating}
                           </span>

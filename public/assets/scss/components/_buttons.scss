@@ -97,7 +97,7 @@
 }
 
 // round play btn border
-.ms-fill-btn {
+.bb-fill-btn {
   font-weight: 600;
   font-size: 16px;
   display: inline-block;
@@ -115,7 +115,7 @@
   }
 }
 
-.ms-play-border {
+.bb-play-border {
   border: 1px solid var(--clr-common-white);
   width: 94px;
   height: 94px;
@@ -134,7 +134,7 @@
   }
 }
 
-.ms-white-bg {
+.bb-white-bg {
   background-color: var(--clr-common-white);
   color: #a76cd1;
   font-weight: 600;
@@ -157,7 +157,7 @@
   }
 }
 
-.ms-round-btn {
+.bb-round-btn {
   width: 45px;
   height: 45px;
   display: inline-block;
@@ -186,7 +186,7 @@
   }
 }
 
-.ms-round2-btn {
+.bb-round2-btn {
   width: 76px;
   height: 76px;
   background-color: #a76cd1;
@@ -223,7 +223,7 @@
   }
 }
 
-.ms-border-btn {
+.bb-border-btn {
   font-weight: 600;
   font-size: 16px;
   color: var(--clr-common-white);
@@ -252,7 +252,7 @@
   }
 }
 
-.ms-border2-btn {
+.bb-border2-btn {
   button {
     font-weight: 500;
     color: #858585;
@@ -272,7 +272,7 @@
   }
 }
 
-.ms-profile-btn {
+.bb-profile-btn {
   width: 60px;
   height: 60px;
   border: 1px solid var(--clr-border-1);
@@ -291,7 +291,7 @@
 }
 
 // round dots
-.ms-round-dots {
+.bb-round-dots {
   ul {
     li {
       width: 22px;
@@ -331,7 +331,7 @@
   }
 }
 
-.ms-video-text {
+.bb-video-text {
   border: 1px solid var(--clr-border-1);
   border-radius: 30px;
   display: inline-block;
@@ -365,7 +365,7 @@
   }
 }
 
-.ms-audio-play-btn {
+.bb-audio-play-btn {
   color: var(--clr-common-body-text);
 
   i {
@@ -388,7 +388,7 @@
   }
 }
 
-.ms-load-btn {
+.bb-load-btn {
   border: 1px solid var(--clr-border-1);
   border-radius: 30px;
   display: inline-block;
@@ -406,7 +406,7 @@
   }
 }
 
-.ms-slider-round {
+.bb-slider-round {
   display: inline-block;
   border: 1px solid var(--clr-border-1);
   width: 45px;
@@ -423,13 +423,13 @@
   }
 }
 
-.ms-submit-btn {
+.bb-submit-btn {
   .unfill__btn {
     padding: 0 42px;
   }
 }
 
-.ms-round-icon {
+.bb-round-icon {
   border: 1px solid #ffffff;
   width: 60px;
   height: 60px;
@@ -439,7 +439,7 @@
   color: var(--clr-common-white);
 }
 
-.ms-fb-btn {
+.bb-fb-btn {
   display: block;
   height: 60px;
   line-height: 60px;

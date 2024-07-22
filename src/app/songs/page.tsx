@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <main className="ms-all-content ms-content-mobile-space pt-125">
+      <main className="bb-all-content ms-content-mobile-space pt-125">
         <SongsMainArea />
       </main>
     </Wrapper>

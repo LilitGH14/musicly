@@ -15,20 +15,16 @@ import avatar7 from "../../public/assets/img/avatars/v.jpg";
 export const CATEGORIES: Category[] = [
   {
     id: 1,
-    name: "New",
+    name: "Latest",
   },
   {
     id: 2,
-    name: "Groups",
+    name: "Popular",
   },
   {
     id: 3,
-    name: "Duets",
-  },
-  {
-    id: 4,
-    name: "Solos",
-  },
+    name: "Inspired",
+  }
 ];
 
 export const Languages: LangItem[] = [

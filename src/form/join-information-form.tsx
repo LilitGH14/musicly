@@ -46,7 +46,7 @@ const JoinInformationForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>First Name</label>
                             <input
                                 type="text"
@@ -61,7 +61,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Last Name</label>
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Agency Name *</label>
                             <input
                                 type="text"
@@ -91,7 +91,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Service Type *</label>
                             <NiceSelect
                                 options={serviceSelectData}
@@ -104,7 +104,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Service Category *</label>
                             <NiceSelect
                                 options={serviceCategory}
@@ -117,7 +117,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Starting From</label>
                             <NiceSelect
                                 options={startingSelect}
@@ -130,7 +130,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Total Team Member</label>
                             <NiceSelect
                                 options={totalTeamSelect}
@@ -143,7 +143,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>Location</label>
                             <NiceSelect
                                 options={locationSelect}
@@ -156,7 +156,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-12">
-                        <div className="ms-input-box style-2">
+                        <div className="bb-input-box style-2">
                             <label>About Agency</label>
                             <textarea cols={30} rows={10}
                                 name="aboutAgency"
@@ -168,17 +168,17 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-12">
-                        <div className="ms-input-box-file style-2">
+                        <div className="bb-input-box-file style-2">
                             <label>Attach Cover Photo</label>
-                            <div className="ms-upload-img">
-                                <div className="ms-upload-item ms-br-15">
+                            <div className="bb-upload-img">
+                                <div className="bb-upload-item ms-br-15">
                                     {selectedFile ? (
                                         <Image src={URL.createObjectURL(selectedFile)} width={90} height={83} alt="uploaded image" />
                                     ) :
                                         <Image src={GenresImg} width={90} height={83} alt="default image" />
                                     }
                                 </div>
-                                <div className="ms-upload-file">
+                                <div className="bb-upload-file">
                                     <input type="file" onChange={handleFileChange} />
                                     <i className="fas fa-plus"></i>
                                 </div>
@@ -187,7 +187,7 @@ const JoinInformationForm = () => {
                         </div>
                     </div>
                     <div className="col-lg-12">
-                        <div className="ms-submit-btn mt-70">
+                        <div className="bb-submit-btn mt-70">
                             <button className="unfill__btn" type="submit">Post
                                 Comment</button>
                         </div>

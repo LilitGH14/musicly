@@ -21,11 +21,11 @@ const TeamForm = () => {
         });
     return (
         <>
-            <div className="ms-contact-wrap ms-contact-space ms-bg-2">
+            <div className="bb-contact-wrap ms-contact-space ms-bg-2">
                 <form onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="col-md-6">
-                            <div className="ms-input2-box mb-30">
+                            <div className="bb-input2-box mb-30">
                                 <input
                                     name="name"
                                     value={values.name}
@@ -39,7 +39,7 @@ const TeamForm = () => {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="ms-input2-box mb-30">
+                            <div className="bb-input2-box mb-30">
                                 <input name="email"
                                     value={values.email}
                                     onChange={handleChange}
@@ -52,7 +52,7 @@ const TeamForm = () => {
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="ms-input2-box mb-30">
+                            <div className="bb-input2-box mb-30">
                                 <textarea cols={30} rows={10}
                                     name="massage"
                                     value={values.massage}
@@ -65,7 +65,7 @@ const TeamForm = () => {
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="ms-submit-btn mt-20">
+                            <div className="bb-submit-btn mt-20">
                                 <button className="unfill__btn" type="submit">Send
                                     Message</button>
                             </div>

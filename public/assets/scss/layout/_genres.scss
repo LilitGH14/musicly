@@ -4,7 +4,7 @@
 /*  35 - genres css  */
 /* ------------------------------------------ */
 
-.ms-genres-tab-bar {
+.bb-genres-tab-bar {
   display: flex;
   gap: 0 5px;
 
@@ -15,16 +15,16 @@
   }
 }
 
-.ms-genres-tab {
+.bb-genres-tab {
   display: flex;
   gap: 0 10px;
 
-  @media #{$xs} {
+  @media #{$sm} {
     margin-top: 10px;
   }
 }
 
-.ms-genres-tab {
+.bb-genres-tab {
   li button {
     background: transparent !important;
     border: 1px solid var(--clr-border-1) !important;
@@ -35,7 +35,7 @@
       background: var(--clr-border-1) !important;
       border-radius: 4px;
 
-      .ms-genres-tab-bar {
+      .bb-genres-tab-bar {
         span {
           background: var(--clr-bg-1);
         }
@@ -44,7 +44,7 @@
   }
 }
 
-.ms-genres-select {
+.bb-genres-select {
   .nice-select {
     background-color: transparent;
     display: inline-block;
@@ -62,7 +62,7 @@
     }
   }
 
-  .ms-nice-select {
+  .bb-nice-select {
     .current {
       font-weight: 600;
       font-size: 16px;
@@ -71,17 +71,17 @@
   }
 }
 
-.ms-genres-text {
+.bb-genres-text {
   color: var(--clr-text-5);
 }
 
-.ms-genres-item {
+.bb-genres-item {
   background: rgba(24, 24, 24, 0.5);
   border: 1px solid var(--clr-border-1);
   border-radius: 15px;
   padding: 25px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 20px;
   }
 }
@@ -90,22 +90,22 @@
   min-width: 214px;
 }
 
-.ms-genres-flex {
+.bb-genres-flex {
   display: grid;
   align-items: center;
   grid-template-columns: 30% auto;
   gap: 30px 20px;
 
-  @media #{$xl} {
+  @media #{$lg} {
     grid-template-columns: 44% auto;
   }
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     grid-template-columns: auto;
   }
 }
 
-.ms-genres-title {
+.bb-genres-title {
   font-size: 20px;
   color: var(--clr-common-white);
   margin-bottom: 20px;
@@ -117,7 +117,7 @@
   }
 }
 
-.ms-genres-img {
+.bb-genres-img {
   position: relative;
   @include transition(0.5s);
   width: 100%;
@@ -142,7 +142,7 @@
   }
 }
 
-.ms-genres-star {
+.bb-genres-star {
   position: absolute;
   inset-inline-end: 0;
   font-size: 20px;
@@ -165,7 +165,7 @@
   }
 }
 
-.ms-genres-price {
+.bb-genres-price {
   color: var(--clr-bg-4);
   font-weight: 500;
   position: absolute;
@@ -183,7 +183,7 @@
   }
 }
 
-.ms-genres-video {
+.bb-genres-video {
   width: 46px;
   height: 46px;
   display: inline-block;
@@ -204,13 +204,13 @@
   }
 }
 
-.ms-fun-brand-bottom.ms-genres-rating {
-  @media #{$xl} {
+.bb-fun-brand-bottom.bb-genres-rating {
+  @media #{$lg} {
     flex-direction: column;
     flex-wrap: wrap;
     @include border-radius(15px);
 
-    .ms-fun-brand-rating {
+    .bb-fun-brand-rating {
       padding-inline-start: 0;
       margin-inline-start: 0;
 
@@ -221,23 +221,23 @@
   }
 }
 
-.ms-genres-area {
-  .ms-fun-brand-rating i {
+.bb-genres-area {
+  .bb-fun-brand-rating i {
     margin: 0px 4px;
   }
 }
 
 // genres details area
 
-.ms-genres-tab2-padding {
+.bb-genres-tab2-padding {
   padding: 35px 40px 10px 40px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 35px 20px 10px 20px;
   }
 }
 
-.ms-genres-tab2-text {
+.bb-genres-tab2-text {
   .btns-wrapper {
   :nth-child(2){
     margin-left: 10px;
@@ -275,7 +275,7 @@
     }
   }
 
-  .ms-singer-couplet {
+  .bb-singer-couplet {
     color: white;
   }
 
@@ -286,11 +286,11 @@
     color: var(--clr-text-5);
     line-height: 1.6;
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       font-size: 24px;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
       font-size: 20px;
     }
   }
@@ -301,7 +301,7 @@
 }
 
 .add-enquiry-btn {
-  .ms-border-btn {
+  .bb-border-btn {
     i {
       color: #a76cd1;
     }
@@ -314,8 +314,8 @@
   }
 }
 
-.ms-genres-review-btn {
-  .ms-border-btn {
+.bb-genres-review-btn {
+  .bb-border-btn {
     color: var(--clr-common-body-text);
     padding: 0 28px;
 
@@ -333,7 +333,7 @@
   }
 }
 
-.ms-genres-audio {
+.bb-genres-audio {
   display: block;
 
   .jp-gui {
@@ -352,11 +352,11 @@
     gap: 20px 30px;
     margin-bottom: 30px;
 
-    @media #{$xl,$md} {
+    @media #{$md} {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -386,7 +386,7 @@
     }
   }
 
-  .ms-header2-song .jp-type-playlist {
+  .bb-header2-song .jp-type-playlist {
     flex-direction: column;
     gap: 30px;
     align-items: flex-start;
@@ -399,21 +399,21 @@
   }
 
   .jp-controls-holder {
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       flex-direction: column;
       width: 100%;
     }
   }
 
   .jp-gui {
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
       flex-direction: column;
       width: 100%;
     }
   }
 }
 
-.ms-genres-review-img {
+.bb-genres-review-img {
   width: 182px;
   height: 182px;
   border-radius: 50%;
@@ -426,18 +426,18 @@
   }
 }
 
-.ms-genres-review-title {
+.bb-genres-review-title {
   font-size: 18px;
   color: var(--clr-text-5);
   margin-bottom: 20px;
 }
 
-.ms-genres-review-grid {
+.bb-genres-review-grid {
   display: grid;
   grid-template-columns: 29% auto;
   gap: 20px 0;
 
-  @media #{$xl} {
+  @media #{$lg} {
     grid-template-columns: 40% auto;
   }
 
@@ -445,22 +445,22 @@
     grid-template-columns: 36% auto;
   }
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     grid-template-columns: auto;
   }
 }
 
-.ms-genres-filter {
+.bb-genres-filter {
   .nice-select {
     padding-inline-end: 20px;
   }
 }
 
-.ms-fun-brand-text.lh-1 {
+.bb-fun-brand-text.lh-1 {
   padding-top: 7px;
 }
 
-.ms-genres-info-img {
+.bb-genres-info-img {
   top: 0;
   bottom: 0;
   z-index: -1;
@@ -468,14 +468,14 @@
   width: 100%;
 }
 
-.ms-genres-info-list {
+.bb-genres-info-list {
   display: grid;
   grid-template-columns: 50% 50%;
   border-top: 1px solid #353535;
   align-items: center;
-  padding: 35px 40px;
+  padding: 25px 30px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 20px 20px;
     grid-template-columns: 40% 60%;
   }
@@ -491,17 +491,17 @@
   }
 }
 
-.ms-genres-info-title {
-  padding: 45px 40px;
+.bb-genres-info-title {
+  padding: 25px 30px;
   line-height: 1;
   margin-bottom: 0;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 25px 20px;
   }
 }
 
-.ms-social {
+.bb-social {
   .public-btn,
   .private-btn {
     color: white;
@@ -530,23 +530,23 @@
   }
 }
 
-.ms-social-text {
+.bb-social-text {
   font-weight: 500;
   font-size: 16px;
   color: var(--clr-common-body-text);
   display: inline-block;
 }
 
-.ms-like-nav-gap {
+.bb-like-nav-gap {
   gap: 0 15px;
 }
 
-.ms-genres-review-content {
+.bb-genres-review-content {
   @media #{$lg} {
-    .ms-fun-brand-bottom {
+    .bb-fun-brand-bottom {
       flex-direction: row;
 
-      .ms-fun-brand-rating {
+      .bb-fun-brand-rating {
         padding-inline-start: 15px;
         margin-inline-start: 20px;
 
@@ -558,37 +558,37 @@
   }
 }
 
-.ms-tab-button.nav-tabs .nav-link {
+.bb-tab-button.nav-tabs .nav-link {
   margin-bottom: 20px;
 }
 
 // Enquiry list CSS
-.ms-genres-item-box {
+.bb-genres-item-box {
   background: rgba(24, 24, 24, 0.5);
   border: 1px solid var(--clr-border-1);
   border-radius: 15px;
   padding: 40px;
 
-  @media #{$xxs} {
+  @media #{$sm} {
     padding: 20px;
   }
 }
 
-.ms-genres-grid {
+.bb-genres-grid {
   display: grid;
   grid-template-columns: 213px auto;
   gap: 30px;
 
-  @media #{$xl, $lg, $md, $sm, $xs} {
+  @media #{ $lg, $md, $sm, $sm} {
     grid-template-columns: 265px auto;
   }
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     grid-template-columns: auto;
   }
 }
 
-.ms-genres2-item {
+.bb-genres2-item {
   padding-bottom: 30px;
   margin-bottom: 30px;
 
@@ -599,15 +599,15 @@
   }
 }
 
-.ms-genres2-content {
+.bb-genres2-content {
   padding-inline-end: 100px;
 
-  @media #{$xl, $lg, $md, $sm, $xs} {
+  @media #{ $lg, $md, $sm, $sm} {
     padding-inline-end: 50px;
   }
 }
 
-.ms-genres2-title {
+.bb-genres2-title {
   margin-bottom: 15px;
   font-size: 20px;
   color: var(--clr-common-white);
@@ -619,7 +619,7 @@
 }
 
 // date picker css
-.ms-enquiry-date {
+.bb-enquiry-date {
   input {
     background: var(--clr-bg-2);
     border: 1px solid var(--clr-border-3);
@@ -650,17 +650,17 @@
 }
 
 // Ideas Advice CSS
-.ms-ideas-item-grid {
+.bb-ideas-item-grid {
   display: grid;
   grid-template-columns: auto auto;
   gap: 55px 24px;
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     grid-template-columns: auto;
   }
 }
 
-.ms-ideas-img {
+.bb-ideas-img {
   overflow: hidden;
 
   img {
@@ -674,12 +674,12 @@
   }
 }
 
-.ms-title4 {
+.bb-title4 {
   color: white;
 }
 
-.ms-ideas-item {
-  .ms-title3 {
+.bb-ideas-item {
+  .bb-title3 {
     @include transition(0.3s);
     font-size: 19px;
 
@@ -690,12 +690,12 @@
 }
 
 // update
-.ms-genres-nice-select {
+.bb-genres-nice-select {
   display: flex;
   gap: 5px;
   align-items: center;
 
-  .ms-nice-select {
+  .bb-nice-select {
     .nice-select .list .option:hover,
     .nice-select .list .option.focus,
     .nice-select .list .option.selected.focus {
@@ -704,13 +704,13 @@
   }
 }
 
-.ms-genres-nice-select-two {
+.bb-genres-nice-select-two {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
 
-  @media #{$sm, $xs} {
+  @media #{$sm, $sm} {
     justify-content: start;
   }
 }

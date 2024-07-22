@@ -11,11 +11,11 @@ import future_partner_data from '../../../data/future-partner-data';
 const AboutPartnerArea = () => {
     return (
         <>
-            <div className="ms-partner-area fix pb-130">
+            <div className="bb-partner-area fix pb-130">
                 <div className="container">
 
-                    <div className="ms-border5 pt-130">
-                        <div className="ms-partner-active">
+                    <div className="bb-border5 pt-130">
+                        <div className="bb-partner-active">
                             <Swiper
                                 modules={[Autoplay]}
                                 loop={false}

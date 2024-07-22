@@ -60,18 +60,18 @@
 /*  32 - choose css  */
 /* ------------------------------------------ */
 
-.ms-review-part {
+.bb-review-part {
   background: var(--clr-bg-2);
   border-radius: 10px;
   padding: 20px 27px;
 }
 
-.ms-review-gap {
+.bb-review-gap {
   gap: 15px 30px;
   flex-wrap: wrap;
 }
 
-.ms-review-left {
+.bb-review-left {
   h3 {
     font-size: 16px;
     color: var(--clr-text-7);
@@ -88,7 +88,7 @@
   }
 }
 
-.ms-review-right {
+.bb-review-right {
   min-width: 111px;
   background: var(--clr-bg-10);
   border-radius: 30px;
@@ -97,7 +97,7 @@
   line-height: 1;
 }
 
-.ms-choose-bg {
+.bb-choose-bg {
   img {
     min-height: 200px;
     object-fit: cover;

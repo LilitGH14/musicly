@@ -18,7 +18,7 @@ const PageHeader = ({
   return (
     <section className="bt-page-header-container fix">
       <div
-        className="include__bg p-relative zindex-1 pt-120 pb-130"
+        className="include__bg p-relative zindex-1 pt-70 pb-70"
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
         <div className="container">

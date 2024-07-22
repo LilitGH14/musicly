@@ -16,7 +16,7 @@ const TrendingAreaTwo = () => {
         <>
             <section className="trending__area p-relative fix pt-130 include__bg pb-130"
                 style={{ backgroundImage: `url(${trandingBg.src})` }}>
-                <div className="ms-overlay ms-overlay4 p-absolute"></div>
+                <div className="bb-overlay ms-overlay4 p-absolute"></div>
                 <div className="container">
                     <div className="row align-items-end mb-25 bdFadeUp ">
                         <div className="col-lg-8">
@@ -34,8 +34,8 @@ const TrendingAreaTwo = () => {
                         </div>
                     </div>
                 </div>
-                <div className="ms-trending-active-wrap bdFadeUp">
-                    <div className="ms-trending-active">
+                <div className="bb-trending-active-wrap bdFadeUp">
+                    <div className="bb-trending-active">
                         <div>
                             <PhotoProvider
                                 speed={() => 800}
@@ -69,30 +69,30 @@ const TrendingAreaTwo = () => {
                                     {
                                         trending_genre_data.slice(6, 16).map((item) => (
                                             <SwiperSlide key={item.id}>
-                                                <div className="ms-trending2-item fix">
-                                                    <div className="ms-trending2-overlay p-absolute"></div>
+                                                <div className="bb-trending2-item fix">
+                                                    <div className="bb-trending2-overlay p-absolute"></div>
                                                     <span className="trending__title">{item.title}</span>
                                                     <div className="trending__price">
                                                         <span>From ${item.price}</span>
                                                     </div>
-                                                    <div className="ms-trending2-img w-img">
+                                                    <div className="bb-trending2-img w-img">
                                                         <Link href={`/genres-details/${item.id}`}>
                                                             <Image src={item.image} loader={imageLoader} placeholder="blur" loading='lazy'
                                                                 style={{ width: '100%', height: "auto" }} alt="trending image" />
                                                         </Link>
                                                     </div>
-                                                    <div className="ms-trending2-content">
-                                                        <div className="ms-trending2-shape">
+                                                    <div className="bb-trending2-content">
+                                                        <div className="bb-trending2-shape">
                                                             {item.shapeImg &&
                                                                 <Image src={item.shapeImg} loader={imageLoader} loading='lazy'
                                                                     style={{ width: '100%', height: "auto" }} alt="trending shape" />
                                                             }
                                                         </div>
-                                                        <div className="ms-trending2-title-wrap">
-                                                            <Link className="ms-trending2-title p-relative ms-title-border"
+                                                        <div className="bb-trending2-title-wrap">
+                                                            <Link className="bb-trending2-title p-relative ms-title-border"
                                                                 href={`/genres-details/${item.id}`}>{item.subTitle}</Link>
                                                             <PhotoView src={item.image.src}>
-                                                                <button className="ms-round-btn popup-image">
+                                                                <button className="bb-round-btn popup-image">
                                                                     <i className="flaticon-right-arrow-1"></i></button>
                                                             </PhotoView>
                                                         </div>

@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <main className="ms-all-content">
+      <main className="bb-all-content">
         <ForgetPasswordMainArea />
       </main>
     </Wrapper>

@@ -4,7 +4,7 @@
 /*  33 - team css  */
 /* ------------------------------------------ */
 
-.ms-team-img {
+.bb-team-img {
     width: 306px;
     height: 306px;
     position: relative;
@@ -14,11 +14,11 @@
         margin-top: 15px;
     }
 
-    @media #{$sm,$xs} {
+    @media #{$sm,$sm} {
         margin-top: 0;
     }
 
-    @media #{$xxs} {
+    @media #{$sm} {
         width: 100%;
         height: auto;
     }
@@ -47,12 +47,12 @@
             right: -15px;
         }
 
-        @media #{$sm,$xs} {
+        @media #{$sm,$sm} {
             top: 0px;
             right: -10px;
         }
 
-        @media #{$xxs} {
+        @media #{$sm} {
             display: none;
         }
     }
@@ -72,7 +72,7 @@
     }
 }
 
-.ms-team-title {
+.bb-team-title {
     z-index: 4;
     position: relative;
 
@@ -124,7 +124,7 @@
     }
 }
 
-.ms-team-social {
+.bb-team-social {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -177,16 +177,16 @@
     }
 }
 
-.ms-team-item {
+.bb-team-item {
     &:hover {
-        .ms-team-img {
+        .bb-team-img {
             &::after {
                 opacity: 0.8;
                 visibility: visible;
             }
         }
 
-        .ms-team-social {
+        .bb-team-social {
             a {
                 visibility: visible;
                 opacity: 1;
@@ -195,39 +195,39 @@
     }
 }
 
-.ms-team-inner {
+.bb-team-inner {
     margin-bottom: 40px;
 
-    @media #{$lg, $md, $sm, $xs} {
+    @media #{$lg, $md, $sm, $sm} {
         margin-bottom: 0px;
     }
 }
 
-.ms-team-item-wrap {
+.bb-team-item-wrap {
     margin-bottom: 0px;
 
 
 
-    @media #{$lg, $md, $sm, $xs} {
+    @media #{$lg, $md, $sm, $sm} {
         margin-top: 0;
         text-align: center;
         margin-bottom: 40px;
     }
 }
 
-.ms-team-item {
+.bb-team-item {
     display: inline-block;
 }
 
-.ms-team-inner {
+.bb-team-inner {
     div {
 
         &:nth-child(2),
         &:nth-child(5) {
-            .ms-team-item-wrap {
+            .bb-team-item-wrap {
                 margin-top: 125px;
 
-                @media #{$lg, $md, $sm, $xs} {
+                @media #{$lg, $md, $sm, $sm} {
                     margin-top: 0;
                 }
             }
@@ -236,10 +236,10 @@
         &:nth-child(4),
         &:nth-child(5),
         &:nth-child(6) {
-            .ms-team-item-wrap {
+            .bb-team-item-wrap {
                 text-align: right;
 
-                @media #{$lg, $md, $sm, $xs} {
+                @media #{$lg, $md, $sm, $sm} {
                     text-align: center;
                 }
             }
@@ -249,7 +249,7 @@
 
 
 
-.ms-team-img-details {
+.bb-team-img-details {
     max-width: 600px;
 
     img {
@@ -264,8 +264,8 @@
     color: var(--clr-bg-8);
 }
 
-.ms-team-item-details {
-    .ms-team-role {
+.bb-team-item-details {
+    .bb-team-role {
         font-size: 30px;
         color: var(--clr-bg-8);
         font-weight: 500;
@@ -364,7 +364,7 @@
     inset-inline-end: 0;
 }
 
-.ms-tm2-active .swiper-pagination {
+.bb-tm2-active .swiper-pagination {
     margin-top: 55px;
     position: static;
 }

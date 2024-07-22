@@ -29,7 +29,7 @@ const RefundForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input type="text" placeholder="Name" name="name"
                                 value={values.name}
                                 onChange={handleChange}
@@ -39,7 +39,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input type="text"
                                 placeholder="Enter product id"
                                 name="productId"
@@ -52,7 +52,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input type="text"
                                 placeholder="Enter payment id"
                                 name="paymentId"
@@ -65,7 +65,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input type="text"
                                 placeholder="Product Name"
                                 name="productName"
@@ -79,7 +79,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input type="text" name="phone"
                                 value={values.phone}
                                 onChange={handleChange}
@@ -91,7 +91,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <input name="email"
                                 value={values.email}
                                 onChange={handleChange}
@@ -104,7 +104,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-12">
-                        <div className="ms-input2-box mb-30">
+                        <div className="bb-input2-box mb-30">
                             <textarea cols={30} rows={10}
                                 name='massage'
                                 value={values.massage}
@@ -117,7 +117,7 @@ const RefundForm = () => {
                         </div>
                     </div>
                     <div className="col-md-12">
-                        <div className="ms-submit-btn">
+                        <div className="bb-submit-btn">
                             <button className="unfill__btn" type="submit">Submit</button>
                         </div>
                     </div>

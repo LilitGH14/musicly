@@ -8,7 +8,7 @@
 	background-color: var(--clr-common-black);
 	border-radius: 10px;
 
-	@media #{$xs} {
+	@media #{$sm} {
 		padding: 30px;
 	}
 
@@ -19,11 +19,11 @@
 		text-transform: capitalize;
 		color: var(--clr-common-white);
 
-		@media #{$xs,$sm,$lg,$md} {
+		@media #{$sm,$sm,$lg,$md} {
 			font-size: 28px;
 		}
 
-		@media #{$xs} {
+		@media #{$sm} {
 			font-size: 26px;
 		}
 	}
@@ -92,7 +92,7 @@
 	border-radius: 12px;
 	border: 2px solid var(--clr-border-1);
 
-	@media #{$xs,$sm,$md} {
+	@media #{$sm,$sm,$md} {
 		margin-bottom: 30px;
 	}
 }

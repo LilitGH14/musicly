@@ -5,14 +5,11 @@ type RattingType = {
 };
 const Ratting = ({ averageRating }: RattingType) => {
   const getRating = (ratingsNum: number) => {
-    console.log(ratingsNum,'ratingsNum')
     const roundedRatings = Math.floor(ratingsNum);
     const isHalfStar = ratingsNum % 1 !== 0;
 
     const emptyRatingCount = 5 - roundedRatings - (isHalfStar ? 1 : 0);
     const ratings = [];
-
-    console.log(emptyRatingCount,'emptyRatingCount')
 
     for (let i = 0; i < roundedRatings; i++) {
       ratings.push(<i className="flaticon-star" key={`l-${i}`}></i>);

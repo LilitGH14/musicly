@@ -12,7 +12,7 @@ const PartnerAreaSliderOne = () => {
 
     return (
         <>
-            <section className="ms-partner-area fix pb-130">
+            <section className="bb-partner-area fix pb-130">
                 <div className="container">
                     <div className="row justify-content-center ms-partner-opacity bdFadeUp">
                         <div className="col-lg-6">
@@ -25,7 +25,7 @@ const PartnerAreaSliderOne = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="ms-partner-active">
+                    <div className="bb-partner-active">
                         <div>
                             <Swiper
                                 modules={[Autoplay]}

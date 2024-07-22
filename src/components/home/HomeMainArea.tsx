@@ -4,8 +4,8 @@ import WorkArea from "./WorkArea";
 import HomePageBanner from "./HomePageBanner";
 import RunningLines from "./RunningLines";
 import PopularArea from "./PopularArea";
-import SharedSongsSection from "./SharedSongsSection";
 import { useSelector } from "react-redux";
+import SharedStoriesSection from "./SharedStoriesSection";
 
 const HomeMainArea = () => {
   const dictSelector = useSelector(
@@ -19,13 +19,12 @@ const HomeMainArea = () => {
   }, [dictSelector]);
 
   return (
-    <main className="mt-90">
+    <main className="bb-home-area">
       <HomePageBanner dict={dict} />
-      <RunningLines dict={dict} />
+      <RunningLines dict={dict} ordering={1} />
       <PopularArea dict={dict} />
       <WorkArea dict={dict} />
-      <SharedSongsSection dict={dict} />
-      {/* <Comments dict={dict} /> */}
+      <SharedStoriesSection dict={dict} />
     </main>
   );
 };

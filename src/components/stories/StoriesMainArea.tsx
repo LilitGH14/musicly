@@ -31,42 +31,40 @@ const StoriesMainArea = () => {
   }, []);
 
   useEffect(() => {
-    setSlicedIndex([(currentPage - 1) * 6, currentPage * 6]);
+    setSlicedIndex([(currentPage - 1) * 12, currentPage * 12]);
   }, [currentPage]);
 
   return (
-    <main className="pt-90">
+    <main>
       <PageHeader
         dict={dict}
         imageSrc={EventBg.src}
         title="Stories_title"
         button={{ link: "/new-story", title: dict["Stories_btn"] }}
       />
-      <section className="ms-event3-area pt-30 pb-115">
-        <div className="container">
-          <div className="ms-border2 pb-40">
-            <div className="row ms-event3-wrap">
-              {storiesData.slice(...slicedIndex).map((item: StoryType) => (
-                <div className="col-xl-4 col-md-6" key={item.id}>
-                  <StoryItem
-                    id={"story_" + item.id}
-                    dict={dict}
-                    date={item.date}
-                    username={item.username}
-                    title={item.title}
-                  />
-                </div>
-              ))}
-            </div>
+      <section className="bb-story-area container">
+        <div className="bb-border2 pb-20">
+          <div className="row ms-story3-wrap">
+            {storiesData.slice(...slicedIndex).map((item: StoryType) => (
+              <div className="col-xl-3 col-md-6" key={item.id}>
+                <StoryItem
+                  id={"story_" + item.id}
+                  dict={dict}
+                  date={item.date}
+                  username={item.username}
+                  title={item.title}
+                />
+              </div>
+            ))}
           </div>
-          <div className="row">
-            <div className="col-xl-12">
-              <Pagination
-                pagesCount={Math.ceil(storiesData.length / 6)}
-                currentPage={currentPage}
-                changeCurrentPage={setCurrentPage}
-              />
-            </div>
+        </div>
+        <div className="row">
+          <div className="col-xl-12">
+            <Pagination
+              pagesCount={Math.ceil(storiesData.length / 6)}
+              currentPage={currentPage}
+              changeCurrentPage={setCurrentPage}
+            />
           </div>
         </div>
       </section>

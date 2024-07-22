@@ -39,7 +39,7 @@ const Language = () => {
           loader={imageLoader}
           priority
           src={selectedLang?.src}
-          alt={dict.flag}
+          alt={dict?.flag}
         />
         {dict?.[selectedLang?.name]}
       </div>
@@ -55,7 +55,7 @@ const Language = () => {
                 loader={imageLoader}
                 priority
                 src={lang?.src}
-                alt={dict.flag}
+                alt={dict?.flag}
               />
               {dict?.[lang.name]}
             </li>

@@ -13,8 +13,8 @@ type StoryItemType = {
 const StoryItem = ({ dict, id, date, username, title }: StoryItemType) => {
   return (
     <Link href={`/story-details/${id}`}>
-      <div className="ms-event3-item mb-25">
-        <div className="ms-event3-img ms-overlay10 fix ms-br-15 p-relative zindex-10">
+      <div className="bb-story-item mb-25">
+        <div className="bb-story-img ms-overlay10 fix ms-br-15 p-relative zindex-10">
           <Image
             src={blogBgImage}
             loader={imageLoader}
@@ -22,12 +22,12 @@ const StoryItem = ({ dict, id, date, username, title }: StoryItemType) => {
             loading="lazy"
             alt={dict?.Story_img}
           />
-          <span className="ms-event3-date">{date}</span>
-          <div className="ms-event3-content">
-            <div className="ms-event3-location-wrap">
-              <div className="ms-event3-location">{username}</div>
+          <span className="bb-story-date">{date}</span>
+          <div className="bb-story-content">
+            <div className="bb-story-location-wrap">
+              <div className="bb-story-location">{username}</div>
             </div>
-            <h3 className="ms-event3-title ms-title-border">{title}</h3>
+            <h3 className="bb-story-title ms-title-border">{title}</h3>
           </div>
         </div>
       </div>

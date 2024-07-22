@@ -7,42 +7,42 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css/bundle";
 import { CATEGORIES } from "@/constants/constants";
-import { Category, PopularCategory } from "@/types/types";
-import { fetchSongsByCategory } from "@/services/songs";
-import image4 from "../../../public/assets/img/genres/4.jpg";
+import { Category, StoryType } from "@/types/types";
+import storyBgImage from "../../../public/assets/img/blog/story.jpg";
+import { fetchStoriesData } from "@/services/stories";
 
-type PopularAreaType = {
+type PopularAreaProps = {
   dict: { [key: string]: string } | null;
 };
-const PopularArea = ({ dict }: PopularAreaType) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("New");
-  const [songs, setsSongs] = useState<PopularCategory[]>([]);
+const PopularArea = ({ dict }: PopularAreaProps) => {
+  const [selectedCategory, setSelectedCategory] = useState<string>("Latest");
+  const [stories, setStories] = useState<StoryType[]>([]);
 
   const changeCategory = (category: string) => {
     setSelectedCategory(category);
   };
 
   useEffect(() => {
-    fetchSongsByCategory(selectedCategory).then((res) => {
+    fetchStoriesData().then((res) => {
       if (res.ResponseCode == 200) {
-        setsSongs(res.ResponseData);
+        setStories(res.ResponseData);
       }
     });
   }, [selectedCategory]);
 
   return (
-    <section className="ms-popular__area pt-100 pb-30 fix">
-      <div className="container-fluid ms-maw-1710">
-        <div className="row align-items-end mb-25 bdFadeUp pl-20 pr-20">
+    <section className="bb-popular__area">
+      <div className="container-fluid">
+        <div className="row align-items-end bdFadeUp">
           <div className="col-xl-6 col-lg-6">
-            <div className="section__title-wrapper mb-40 bd-title-anim">
+            <div className="section__title-wrapper bd-title-anim">
               <h2 className="section__title msg_title">
                 <span className="active">{dict?.Categories}</span>
               </h2>
             </div>
           </div>
           <div className="col-xl-6 col-lg-6">
-            <div className="ms-popular__tab ms-popular-flex mb-40">
+            <div className="bb-popular__tab ms-popular-flex">
               <nav>
                 <div className="nav nav-tabs" id="nav-tab" role="tablist">
                   {CATEGORIES.map((category: Category) => {
@@ -69,8 +69,8 @@ const PopularArea = ({ dict }: PopularAreaType) => {
             </div>
           </div>
         </div>
-        <div className="row bdFadeUp">
-          <div className="col-xxl-12">
+        <div className="row bdFadeUp bb-popular__stories">
+          <div className="col-sm-12">
             <div className="tab-content" id="nav-tabContent">
               {CATEGORIES.map((category: Category) => {
                 return (
@@ -84,7 +84,7 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                     aria-labelledby={`nav-popular-${category.id}-tab`}
                     tabIndex={0}
                   >
-                    <div className="ms-popular-active fix">
+                    <div className="bb-popular-active fix">
                       <Swiper
                         modules={[Autoplay]}
                         loop={false}
@@ -109,29 +109,29 @@ const PopularArea = ({ dict }: PopularAreaType) => {
                             slidesPerView: 2,
                           },
                           0: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                           },
                         }}
                       >
-                        {songs.map((song: PopularCategory) => (
-                          <SwiperSlide key={song.id}>
+                        {stories.map((story: StoryType) => (
+                          <SwiperSlide key={story.id}>
                             <Link
-                              href={`/songs?category=${song.category?.toLowerCase()}`}
+                              href={`/songs?category=${story.category?.toLowerCase()}`}
                             >
-                              <div className="ms-popular__item p-relative mb-30">
-                                <div className="ms-popular__thumb">
+                              <div className="bb-popular__item p-relative">
+                                <div className="bb-popular__thumb">
                                   <Image
                                     loader={imageLoader}
                                     placeholder="blur"
                                     loading="lazy"
                                     style={{ width: "100%", height: "auto" }}
-                                    src={image4}
-                                    alt={dict?.CategoryImage as string}
+                                    src={storyBgImage}
+                                    alt={dict?.CategoryImageAlt as string}
                                   />
+                                  <h4 className="bb-popular__title">
+                                    {story.title}
+                                  </h4>
                                 </div>
-                                <h4 className="ms-popular__title">
-                                  {song.title}
-                                </h4>
                               </div>
                             </Link>
                           </SwiperSlide>

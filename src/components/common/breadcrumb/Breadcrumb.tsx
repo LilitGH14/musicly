@@ -10,11 +10,11 @@ const Breadcrumb = ({ title }: TProps) => {
       className="page-title-area page-title-spacing p-relative zindex-1 "
       style={{ backgroundImage: `url(${WorkBg.src})` }}
     >
-      <div className="ms-overlay ms-overlay8 p-absolute zindex--1"></div>
+      <div className="bb-overlay ms-overlay8 p-absolute zindex--1"></div>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-xxl-9">
-            <h3 className="ms-page-title text-center lh-1">{title}</h3>
+          <div className="col-sm-9">
+            <h3 className="bb-page-title text-center lh-1">{title}</h3>
           </div>
         </div>
       </div>

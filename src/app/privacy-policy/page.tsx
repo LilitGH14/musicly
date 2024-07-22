@@ -6,7 +6,7 @@ import React from "react";
 const page = () => {
   return (
     <Wrapper>
-      <div className="ms-all-content ms-all-content-space">
+      <div className="bb-all-content ms-all-content-space">
         <main>
           <Breadcrumb title="Privacy & Policy" />
           <PrivacyTermsAndRefund policyActive="active" />

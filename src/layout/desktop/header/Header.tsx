@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 import { imageLoader } from "@/hooks/ImageLoader";
-import headerLogo from "../../../public/assets/img/logo/big-logo.png";
+import headerLogo from "../../../../public/assets/img/logo/big-logo.png";
 import menu_data from "@/data/menu-data";
 import Language from "@/components/common/Language/Language";
 import { useSelector } from "react-redux";
@@ -42,6 +42,7 @@ const Header = ({ dict }: HeaderType) => {
                             src={headerLogo}
                             alt={dict?.Header?.logo_img as string}
                           />
+                          <span>Betta</span>
                         </Link>
                       </div>
                       <div className="mean__menu-wrapper">
@@ -67,7 +68,7 @@ const Header = ({ dict }: HeaderType) => {
                     </div>
                     <div className="header__right">
                       <Language />
-                      {user && (
+                      {!user && (
                         <div className="auth-btns">
                           <Link href="/login" className="signin">
                             {dict?.Header?.Sign_in}
@@ -77,9 +78,9 @@ const Header = ({ dict }: HeaderType) => {
                           </Link>
                         </div>
                       )}
-                      {!user && (
+                      {user && (
                         <div className="header__action-inner d-flex align-items-center">
-                          <div className="user__acount d-none d-xxl-inline-flex">
+                          <div className="user__acount d-none d-sm-inline-flex">
                             <span role="button" onClick={() => setIsOpen(true)}>
                               <i className="flaticon-user"></i>
                             </span>

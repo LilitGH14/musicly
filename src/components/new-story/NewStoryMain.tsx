@@ -17,9 +17,9 @@ const NewStoryMain = () => {
   }, [dictSelector]);
 
   return (
-    <main className="pt-90">
+    <main>
       <PageHeader imageSrc={EventBg.src} title="New_story_title" dict={dict} />
-      <section className="ms-event-details-area pt-70 pb-30">
+      <section className="bb-story-details-area">
         <div className="container">
           <div className="row">
             <div className="col-xl-12 col-lg-12">

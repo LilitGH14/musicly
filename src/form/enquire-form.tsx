@@ -45,7 +45,7 @@ const EnquireFormList = () => {
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>First Name</label>
                             <input
                                 type="text"
@@ -60,7 +60,7 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Last Name</label>
                             <input
                                 type="text"
@@ -75,7 +75,7 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Email Address</label>
                             <input
                                 type="email"
@@ -90,7 +90,7 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Phone Number</label>
                             <input
                                 name="number"
@@ -105,13 +105,13 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Event Date</label>
                             <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Event Type</label>
                             <NiceSelect
                                 options={EnquirySelectOption}
@@ -123,7 +123,7 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Event Location</label>
                             <textarea cols={30} rows={10}
                                 name="eventLocation"
@@ -135,7 +135,7 @@ const EnquireFormList = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-                        <div className="ms-input-box">
+                        <div className="bb-input-box">
                             <label>Write Something</label>
                             <textarea cols={30} rows={10}
                                 name="writeSomething"
@@ -149,7 +149,7 @@ const EnquireFormList = () => {
                     <div className="col-xl-12">
                         <div className="row align-items-center">
                             <div className="col-lg-6">
-                                <label className="ms-checkbox">
+                                <label className="bb-checkbox">
                                     <span>I Read Your <Link href="/terms-condition">Terms And Conditions</Link>
                                         {" "} Also {" "}
                                         <Link href="/privacy-policy">Privacy
@@ -159,7 +159,7 @@ const EnquireFormList = () => {
                                 </label>
                             </div>
                             <div className="col-lg-6">
-                                <div className="ms-submit-btn text-lg-end mb-10">
+                                <div className="bb-submit-btn text-lg-end mb-10">
                                     <button type="submit" className="unfill__btn">Send
                                         enquiry</button>
                                 </div>

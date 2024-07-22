@@ -29,7 +29,7 @@ const ForgetForm = ({ dict }: ForgetFormType) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="ms-input2-box mb-50">
+      <div className="bb-input2-box mb-50">
         <input
           id="name"
           type="text"
@@ -42,12 +42,12 @@ const ForgetForm = ({ dict }: ForgetFormType) => {
         />
         {touched.email && <ErrorMsg error={errors.email} />}
       </div>
-      <div className="ms-submit-btn mb-40">
+      <div className="bb-submit-btn mb-40">
         <button type="submit" className="unfill__btn d-block w-100">
           {dict?.Send_request}
         </button>
       </div>
-      <div className="ms-not-account mb-35 text-center">
+      <div className="bb-not-account mb-35 text-center">
         <p>
           {dict?.Remember_password} <Link href="/login">{dict?.Login}</Link>
         </p>

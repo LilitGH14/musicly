@@ -6,11 +6,11 @@
       font-size: 40px;
       color: $primaryTextColor;
 
-      @media #{$md,$sm,$xs} {
+      @media #{$md,$sm,$sm} {
         font-size: 40px;
       }
 
-      @media #{$xxs} {
+      @media #{$sm} {
         font-size: 34px;
       }
     }
